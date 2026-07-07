@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold-light: #FCF6BA;
+  --color-gold: #D4AF37;
+  --color-gold-accent: #BF953F;
+  --color-gold-dark: #B38728;
+  
+  --color-dark: #0c0a09;
+  --color-surface: #1c1917;
+  --color-surface-elevated: #292524;
+
+  --font-display: "Cinzel", serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold), var(--color-gold-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glass-panel {
+    background: rgba(28, 25, 23, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+  }
+}
+
+body {
+  background-color: var(--color-dark);
+  color: #f5f5f4;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* Base text styling for Lenis */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+/* Noise overlay for cinematic effect */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Utility to split lines/chars for GSAP */
+.split-line {
+  overflow: hidden;
+}

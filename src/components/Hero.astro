@@ -1,0 +1,89 @@
+---
+import { Scale, ArrowRight, Play } from 'lucide-astro';
+---
+
+<section class="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-dark pt-20 pb-16">
+  <!-- Background Image with Overlay -->
+  <div class="absolute inset-0 z-0">
+    <img 
+      src="/images/hero-bg.webp" 
+      alt="Advogada Especialista" 
+      class="w-full h-full object-cover object-[70%_15%] opacity-80 mix-blend-luminosity hero-image-scale"
+    />
+    <!-- Gradient Overlays for readability -->
+    <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/70 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-dark via-dark/50 to-transparent"></div>
+    
+    <!-- Ambient Gold Glows -->
+    <div class="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-gold/15 rounded-full blur-[140px] mix-blend-screen pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gold-accent/15 rounded-full blur-[120px] mix-blend-screen pointer-events-none"></div>
+  </div>
+
+  <!-- Content Container -->
+  <div class="container relative z-10 mx-auto px-6 lg:px-12 flex flex-col items-start justify-center">
+    
+    <!-- Badge -->
+    <div class="hero-reveal-item inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-gold/40 bg-dark/60 backdrop-blur-md mb-8 shadow-[0_0_15px_rgba(212,175,55,0.1)]">
+      <Scale class="w-3.5 h-3.5 text-gold" />
+      <span class="text-[11px] font-semibold tracking-[0.2em] uppercase text-gold-light">Especialistas em Direito Previdenciário</span>
+    </div>
+
+    <!-- Main Headline -->
+    <h1 class="hero-title font-display text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.15] mb-6 max-w-3xl">
+      <span class="block text-white mb-2">O seu benefício não é sorte.</span>
+      <span class="block text-gradient-gold pr-4">É o seu direito garantido.</span>
+    </h1>
+
+    <!-- Subheadline -->
+    <p class="hero-reveal-item text-gray-300 text-base sm:text-lg max-w-2xl leading-relaxed mb-10 font-light">
+      Atuamos com excelência e precisão contra as negativas do INSS. Protegemos sua história de trabalho para que você tenha a aposentadoria e a tranquilidade que merece.
+    </p>
+
+    <!-- CTAs -->
+    <div class="hero-reveal-item flex flex-col sm:flex-row items-center gap-6">
+      <a href="#contato" class="group relative inline-flex items-center justify-center gap-3 px-10 py-4 bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37] text-dark font-semibold tracking-widest uppercase text-[11px] rounded-full overflow-hidden transition-all shadow-[0_4px_20px_rgba(212,175,55,0.2)] hover:shadow-[0_4px_30px_rgba(212,175,55,0.4)] hover:scale-[1.02]">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#F3E5AB] via-[#D4AF37] to-[#F3E5AB] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <span class="relative z-10">Fale com um Especialista</span>
+        <ArrowRight class="w-4 h-4 relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
+      </a>
+      
+      <a href="#sobre" class="group relative inline-flex items-center gap-4 px-4 py-2 text-white font-medium transition-all">
+        <div class="relative flex items-center justify-center w-12 h-12 rounded-full border border-white/20 bg-white/5 backdrop-blur-md transition-all duration-300 group-hover:border-gold group-hover:bg-gold/10 group-hover:scale-105">
+          <Play class="w-4 h-4 text-white group-hover:text-gold-light ml-1 transition-colors" />
+        </div>
+        <span class="text-xs uppercase tracking-widest text-gray-300 group-hover:text-white transition-colors">Como Trabalhamos</span>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-70 hero-reveal-item">
+    <span class="text-[9px] font-semibold uppercase tracking-[0.3em] text-white">Descubra</span>
+    <div class="w-px h-16 bg-gradient-to-b from-gold to-transparent"></div>
+  </div>
+</section>
+
+<script>
+  import { gsap } from "gsap";
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    // 1. Image slow scale effect
+    gsap.fromTo(".hero-image-scale", 
+      { scale: 1.1, filter: "blur(5px)" },
+      { scale: 1, filter: "blur(0px)", duration: 2.5, ease: "power2.out" }
+    );
+
+    // 2. Title word reveal
+    gsap.fromTo(".hero-title span",
+      { y: 50, opacity: 0, rotationX: -15 },
+      { y: 0, opacity: 1, rotationX: 0, duration: 1.2, stagger: 0.15, ease: "power3.out", delay: 0.2 }
+    );
+
+    // 3. Other items reveal
+    gsap.fromTo(".hero-reveal-item",
+      { y: 30, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, stagger: 0.15, ease: "power3.out", delay: 0.6 }
+    );
+  });
+</script>

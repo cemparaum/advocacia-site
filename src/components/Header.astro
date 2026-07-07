@@ -1,0 +1,68 @@
+---
+import { Menu } from 'lucide-astro';
+---
+
+<header class="fixed top-0 left-0 w-full z-50 transition-all duration-300" id="main-header">
+  <div class="absolute inset-0 bg-white/95 backdrop-blur-md border-b border-dark/5 shadow-sm"></div>
+  <div class="container relative mx-auto px-6 lg:px-12 h-24 flex items-center justify-between transition-all duration-300" id="header-container">
+    <!-- Logo -->
+    <a href="#" class="flex flex-col group">
+      <span class="font-display font-bold text-2xl tracking-widest text-dark uppercase leading-none transition-colors group-hover:text-gold-dark">Karum Rodrigues</span>
+      <span class="font-body text-[9px] tracking-[0.35em] text-gold-dark uppercase mt-1.5">Advocacia Previdenciária</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="#sobre" class="text-xs uppercase tracking-widest font-medium text-gray-600 hover:text-dark transition-colors relative group">
+        Sobre nós
+        <span class="absolute -bottom-1.5 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#areas" class="text-xs uppercase tracking-widest font-medium text-gray-600 hover:text-dark transition-colors relative group">
+        Áreas de Atuação
+        <span class="absolute -bottom-1.5 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#resultados" class="text-xs uppercase tracking-widest font-medium text-gray-600 hover:text-dark transition-colors relative group">
+        Resultados
+        <span class="absolute -bottom-1.5 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#contato" class="text-xs uppercase tracking-widest font-medium text-gray-600 hover:text-dark transition-colors relative group">
+        Contato
+        <span class="absolute -bottom-1.5 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
+      </a>
+    </nav>
+
+    <!-- Header CTA -->
+    <div class="hidden lg:flex">
+      <a href="#consulta" class="group relative px-7 py-3 rounded-sm overflow-hidden border border-gold/30">
+        <div class="absolute inset-0 bg-gradient-to-r from-gold-accent via-gold to-gold-light opacity-0 transition-opacity duration-300 group-hover:opacity-10"></div>
+        <div class="absolute inset-[1px] bg-white rounded-sm transition-all duration-300 group-hover:bg-white/90"></div>
+        <span class="relative text-[11px] font-bold text-gold-dark tracking-widest uppercase transition-colors group-hover:text-gold-accent">Agendar Consulta</span>
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="lg:hidden relative z-10 text-dark p-2">
+      <Menu class="w-6 h-6" />
+    </button>
+  </div>
+</header>
+
+<script>
+  // Shrink header on scroll
+  const headerContainer = document.getElementById('header-container');
+  const headerBg = document.querySelector('#main-header > div:first-child');
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      headerContainer?.classList.add('h-20');
+      headerContainer?.classList.remove('h-24');
+      headerBg?.classList.add('bg-white');
+      headerBg?.classList.remove('bg-white/95');
+    } else {
+      headerContainer?.classList.add('h-24');
+      headerContainer?.classList.remove('h-20');
+      headerBg?.classList.add('bg-white/95');
+      headerBg?.classList.remove('bg-white');
+    }
+  });
+</script>
