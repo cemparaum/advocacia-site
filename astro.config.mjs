@@ -5,7 +5,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://rodriguesfontenelle.com.br',
+  site: 'https://cemparaum.github.io',
+  base: '/advocacia-site',
   
   vite: {
     plugins: [tailwindcss()]
