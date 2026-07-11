@@ -1,101 +1,157 @@
 ---
-import { Star, Quote, PlayCircle, Scale, ShieldCheck } from 'lucide-astro';
+import { Star, Quote, PlayCircle, Scale, ShieldCheck } from "lucide-astro";
 ---
 
-<section id="depoimentos" class="relative bg-[#f8f6f3] overflow-hidden py-24 sm:py-32 lg:py-40">
+<section
+  id="depoimentos"
+  class="relative bg-[#f8f6f3] overflow-hidden py-24 sm:py-32 lg:py-40"
+>
   <!-- Light Marble/Noise Texture -->
-  <div class="absolute inset-0 z-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] pointer-events-none mix-blend-multiply"></div>
-  
+  <div
+    class="absolute inset-0 z-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] pointer-events-none mix-blend-multiply"
+  >
+  </div>
+
   <!-- Subtle Ambient Light Gradients -->
-  <div class="absolute top-0 right-[-10%] w-[800px] h-[800px] bg-[#D4AF37]/[0.05] rounded-full blur-[120px] pointer-events-none"></div>
-  <div class="absolute bottom-0 left-[-10%] w-[600px] h-[600px] bg-[#B38728]/[0.05] rounded-full blur-[100px] pointer-events-none"></div>
+  <div
+    class="absolute top-0 right-[-10%] w-[800px] h-[800px] bg-[#D4AF37]/[0.05] rounded-full blur-[120px] pointer-events-none"
+  >
+  </div>
+  <div
+    class="absolute bottom-0 left-[-10%] w-[600px] h-[600px] bg-[#B38728]/[0.05] rounded-full blur-[100px] pointer-events-none"
+  >
+  </div>
 
   <!-- Header -->
-  <div class="relative z-10 mx-auto w-full max-w-[1400px] px-6 mb-20 reveal-stagger text-left">
+  <div
+    class="relative z-10 mx-auto w-full max-w-[1400px] px-6 mb-20 reveal-stagger text-left"
+  >
     <div class="flex items-center justify-start gap-3 mb-6">
-      <span class="text-xs font-bold tracking-[0.25em] uppercase text-[#B38728]">A Voz de Quem Confia</span>
-      <div class="w-24 h-px bg-gradient-to-r from-[#B38728]/50 to-transparent"></div>
+      <span class="text-xs font-bold tracking-[0.25em] uppercase text-[#B38728]"
+        >A Voz de Quem Confia</span
+      >
+      <div class="w-24 h-px bg-gradient-to-r from-[#B38728]/50 to-transparent">
+      </div>
     </div>
-    <h2 class="font-display leading-[1.05] tracking-tight text-[#0c0a09] mb-6" style="font-size: clamp(2.5rem, 5vw, 4.5rem);">
+    <h2
+      class="font-display leading-[1.05] tracking-tight text-[#0c0a09] mb-6"
+      style="font-size: clamp(2.5rem, 5vw, 4.5rem);"
+    >
       <span class="block text-[#0c0a09]/90">Histórias reais de</span>
-      <span class="block text-gradient-gold-on-light font-bold">direitos conquistados.</span>
+      <span class="block text-gradient-gold-on-light font-bold"
+        >direitos conquistados.</span
+      >
     </h2>
     <p class="text-[#0c0a09]/60 text-lg max-w-2xl leading-relaxed">
-      Nossa maior métrica de sucesso não são apenas os números, mas o impacto transformador na vida e na dignidade de cada cliente que representamos.
+      Nossa maior métrica de sucesso não são apenas os números, mas o impacto
+      transformador na vida e na dignidade de cada cliente que representamos.
     </p>
   </div>
 
   <!-- INFINITE MARQUEE SECTION (Slides Girando Sem Parar) -->
-  <div class="relative z-10 flex flex-col gap-8 mb-32 overflow-hidden w-full mask-edges">
-    
+  <div
+    class="relative z-10 flex flex-col gap-8 mb-32 overflow-hidden w-full mask-edges"
+  >
     <!-- Row 1: Left Scroll -->
     <div class="marquee-track flex w-[max-content]">
       <div class="marquee-content flex gap-6 px-3">
         <!-- Testimonials Set (Repeated 2x for infinite loop) -->
-        {Array(2).fill(0).map(() => (
-          <>
-            <!-- Card A -->
-            <div class="w-[350px] sm:w-[450px] bg-white rounded-3xl p-8 border border-[#D4AF37]/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col hover:-translate-y-2 transition-transform duration-500">
-              <div class="flex items-center justify-between mb-6">
-                <div class="flex gap-1">
-                  {Array(5).fill(0).map(() => <Star class="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />)}
+        {
+          Array(2)
+            .fill(0)
+            .map(() => (
+              <>
+                {/* Card A */}
+                <div class="w-[350px] sm:w-[450px] bg-white rounded-3xl p-8 border border-[#D4AF37]/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col hover:-translate-y-2 transition-transform duration-500">
+                  <div class="flex items-center justify-between mb-6">
+                    <div class="flex gap-1">
+                      {Array(5)
+                        .fill(0)
+                        .map(() => (
+                          <Star class="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />
+                        ))}
+                    </div>
+                    <Quote class="w-8 h-8 text-[#D4AF37]/20" />
+                  </div>
+                  <p class="text-[#0c0a09]/70 text-lg leading-relaxed mb-8 flex-grow">
+                    "O escritório foi impecável. Conseguiram minha aposentadoria
+                    especial em tempo recorde quando outros diziam ser
+                    impossível. Competência absoluta."
+                  </p>
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-[#0c0a09] flex items-center justify-center text-white font-display font-bold">
+                      JC
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-[#0c0a09]">João Carlos M.</h4>
+                      <p class="text-sm text-[#0c0a09]/50">
+                        Aposentadoria Especial
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <Quote class="w-8 h-8 text-[#D4AF37]/20" />
-              </div>
-              <p class="text-[#0c0a09]/70 text-lg leading-relaxed mb-8 flex-grow">
-                "O escritório foi impecável. Conseguiram minha aposentadoria especial em tempo recorde quando outros diziam ser impossível. Competência absoluta."
-              </p>
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-[#0c0a09] flex items-center justify-center text-white font-display font-bold">JC</div>
-                <div>
-                  <h4 class="font-bold text-[#0c0a09]">João Carlos M.</h4>
-                  <p class="text-sm text-[#0c0a09]/50">Aposentadoria Especial</p>
-                </div>
-              </div>
-            </div>
 
-            <!-- Card B -->
-            <div class="w-[350px] sm:w-[450px] bg-[#0c0a09] rounded-3xl p-8 border border-[#B38728]/20 shadow-[0_8px_30px_rgb(212,175,55,0.1)] flex flex-col hover:-translate-y-2 transition-transform duration-500 relative overflow-hidden group">
-              <div class="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div class="flex items-center justify-between mb-6 relative z-10">
-                <div class="flex gap-1">
-                  {Array(5).fill(0).map(() => <Star class="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />)}
+                {/* Card B */}
+                <div class="w-[350px] sm:w-[450px] bg-[#0c0a09] rounded-3xl p-8 border border-[#B38728]/20 shadow-[0_8px_30px_rgb(212,175,55,0.1)] flex flex-col hover:-translate-y-2 transition-transform duration-500 relative overflow-hidden group">
+                  <div class="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div class="flex items-center justify-between mb-6 relative z-10">
+                    <div class="flex gap-1">
+                      {Array(5)
+                        .fill(0)
+                        .map(() => (
+                          <Star class="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />
+                        ))}
+                    </div>
+                    <Quote class="w-8 h-8 text-[#D4AF37]/20" />
+                  </div>
+                  <p class="text-white/80 text-lg leading-relaxed mb-8 flex-grow relative z-10">
+                    "Estava há anos lutando pelo meu auxílio. A equipe resolveu
+                    com uma agilidade absurda. Eles não apenas me defenderam,
+                    devolveram minha dignidade."
+                  </p>
+                  <div class="flex items-center gap-4 relative z-10">
+                    <div class="w-12 h-12 rounded-full bg-[#D4AF37] flex items-center justify-center text-[#0c0a09] font-display font-bold">
+                      AR
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-white">Ana Rosa T.</h4>
+                      <p class="text-sm text-white/50">Auxílio-Doença</p>
+                    </div>
+                  </div>
                 </div>
-                <Quote class="w-8 h-8 text-[#D4AF37]/20" />
-              </div>
-              <p class="text-white/80 text-lg leading-relaxed mb-8 flex-grow relative z-10">
-                "Estava há anos lutando pelo meu auxílio. A equipe resolveu com uma agilidade absurda. Eles não apenas me defenderam, devolveram minha dignidade."
-              </p>
-              <div class="flex items-center gap-4 relative z-10">
-                <div class="w-12 h-12 rounded-full bg-[#D4AF37] flex items-center justify-center text-[#0c0a09] font-display font-bold">AR</div>
-                <div>
-                  <h4 class="font-bold text-white">Ana Rosa T.</h4>
-                  <p class="text-sm text-white/50">Auxílio-Doença</p>
-                </div>
-              </div>
-            </div>
 
-            <!-- Card C -->
-            <div class="w-[350px] sm:w-[450px] bg-white rounded-3xl p-8 border border-[#D4AF37]/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col hover:-translate-y-2 transition-transform duration-500">
-              <div class="flex items-center justify-between mb-6">
-                <div class="flex gap-1">
-                  {Array(5).fill(0).map(() => <Star class="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />)}
+                {/* Card C */}
+                <div class="w-[350px] sm:w-[450px] bg-white rounded-3xl p-8 border border-[#D4AF37]/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col hover:-translate-y-2 transition-transform duration-500">
+                  <div class="flex items-center justify-between mb-6">
+                    <div class="flex gap-1">
+                      {Array(5)
+                        .fill(0)
+                        .map(() => (
+                          <Star class="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />
+                        ))}
+                    </div>
+                    <Quote class="w-8 h-8 text-[#D4AF37]/20" />
+                  </div>
+                  <p class="text-[#0c0a09]/70 text-lg leading-relaxed mb-8 flex-grow">
+                    "Profissionalismo e transparência do início ao fim. Fui
+                    atualizado em cada etapa do processo e sempre me senti
+                    prioridade. Recomendo de olhos fechados."
+                  </p>
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-[#0c0a09] flex items-center justify-center text-white font-display font-bold">
+                      RF
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-[#0c0a09]">Roberto F.</h4>
+                      <p class="text-sm text-[#0c0a09]/50">
+                        Revisão de Benefício
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <Quote class="w-8 h-8 text-[#D4AF37]/20" />
-              </div>
-              <p class="text-[#0c0a09]/70 text-lg leading-relaxed mb-8 flex-grow">
-                "Profissionalismo e transparência do início ao fim. Fui atualizado em cada etapa do processo e sempre me senti prioridade. Recomendo de olhos fechados."
-              </p>
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-[#0c0a09] flex items-center justify-center text-white font-display font-bold">RF</div>
-                <div>
-                  <h4 class="font-bold text-[#0c0a09]">Roberto F.</h4>
-                  <p class="text-sm text-[#0c0a09]/50">Revisão de Benefício</p>
-                </div>
-              </div>
-            </div>
-          </>
-        ))}
+              </>
+            ))
+        }
       </div>
     </div>
 
@@ -103,137 +159,216 @@ import { Star, Quote, PlayCircle, Scale, ShieldCheck } from 'lucide-astro';
     <div class="marquee-track flex w-[max-content]">
       <div class="marquee-content-reverse flex gap-6 px-3">
         <!-- Testimonials Set (Repeated 2x) -->
-        {Array(2).fill(0).map(() => (
-          <>
-            <!-- Card D -->
-            <div class="w-[350px] sm:w-[450px] bg-white rounded-3xl p-8 border border-[#D4AF37]/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col hover:-translate-y-2 transition-transform duration-500">
-              <div class="flex items-center justify-between mb-6">
-                <div class="flex gap-1">
-                  {Array(5).fill(0).map(() => <Star class="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />)}
+        {
+          Array(2)
+            .fill(0)
+            .map(() => (
+              <>
+                {/* Card D */}
+                <div class="w-[350px] sm:w-[450px] bg-white rounded-3xl p-8 border border-[#D4AF37]/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col hover:-translate-y-2 transition-transform duration-500">
+                  <div class="flex items-center justify-between mb-6">
+                    <div class="flex gap-1">
+                      {Array(5)
+                        .fill(0)
+                        .map(() => (
+                          <Star class="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />
+                        ))}
+                    </div>
+                    <Quote class="w-8 h-8 text-[#D4AF37]/20" />
+                  </div>
+                  <p class="text-[#0c0a09]/70 text-lg leading-relaxed mb-8 flex-grow">
+                    "Minha mãe teve o BPC negado duas vezes. O Dr. Karum assumiu
+                    o caso e em menos de dois meses o benefício estava liberado
+                    e caindo na conta."
+                  </p>
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-[#0c0a09] flex items-center justify-center text-white font-display font-bold">
+                      LM
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-[#0c0a09]">Lúcia M.</h4>
+                      <p class="text-sm text-[#0c0a09]/50">BPC / LOAS</p>
+                    </div>
+                  </div>
                 </div>
-                <Quote class="w-8 h-8 text-[#D4AF37]/20" />
-              </div>
-              <p class="text-[#0c0a09]/70 text-lg leading-relaxed mb-8 flex-grow">
-                "Minha mãe teve o BPC negado duas vezes. O Dr. Karum assumiu o caso e em menos de dois meses o benefício estava liberado e caindo na conta."
-              </p>
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-[#0c0a09] flex items-center justify-center text-white font-display font-bold">LM</div>
-                <div>
-                  <h4 class="font-bold text-[#0c0a09]">Lúcia M.</h4>
-                  <p class="text-sm text-[#0c0a09]/50">BPC / LOAS</p>
-                </div>
-              </div>
-            </div>
 
-            <!-- Card E -->
-            <div class="w-[350px] sm:w-[450px] bg-white rounded-3xl p-8 border border-[#D4AF37]/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col hover:-translate-y-2 transition-transform duration-500">
-              <div class="flex items-center justify-between mb-6">
-                <div class="flex gap-1">
-                  {Array(5).fill(0).map(() => <Star class="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />)}
+                {/* Card E */}
+                <div class="w-[350px] sm:w-[450px] bg-white rounded-3xl p-8 border border-[#D4AF37]/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col hover:-translate-y-2 transition-transform duration-500">
+                  <div class="flex items-center justify-between mb-6">
+                    <div class="flex gap-1">
+                      {Array(5)
+                        .fill(0)
+                        .map(() => (
+                          <Star class="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />
+                        ))}
+                    </div>
+                    <Quote class="w-8 h-8 text-[#D4AF37]/20" />
+                  </div>
+                  <p class="text-[#0c0a09]/70 text-lg leading-relaxed mb-8 flex-grow">
+                    "Excelente atendimento. Sempre disponíveis para tirar
+                    dúvidas, muito assertivos na estratégia e justos nos
+                    honorários. Advogados de altíssimo nível."
+                  </p>
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-[#0c0a09] flex items-center justify-center text-white font-display font-bold">
+                      PS
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-[#0c0a09]">Paulo S.</h4>
+                      <p class="text-sm text-[#0c0a09]/50">
+                        Planejamento Previdenciário
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <Quote class="w-8 h-8 text-[#D4AF37]/20" />
-              </div>
-              <p class="text-[#0c0a09]/70 text-lg leading-relaxed mb-8 flex-grow">
-                "Excelente atendimento. Sempre disponíveis para tirar dúvidas, muito assertivos na estratégia e justos nos honorários. Advogados de altíssimo nível."
-              </p>
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-[#0c0a09] flex items-center justify-center text-white font-display font-bold">PS</div>
-                <div>
-                  <h4 class="font-bold text-[#0c0a09]">Paulo S.</h4>
-                  <p class="text-sm text-[#0c0a09]/50">Planejamento Previdenciário</p>
-                </div>
-              </div>
-            </div>
 
-            <!-- Card F -->
-            <div class="w-[350px] sm:w-[450px] bg-white rounded-3xl p-8 border border-[#D4AF37]/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col hover:-translate-y-2 transition-transform duration-500">
-              <div class="flex items-center justify-between mb-6">
-                <div class="flex gap-1">
-                  {Array(5).fill(0).map(() => <Star class="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />)}
+                {/* Card F */}
+                <div class="w-[350px] sm:w-[450px] bg-white rounded-3xl p-8 border border-[#D4AF37]/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col hover:-translate-y-2 transition-transform duration-500">
+                  <div class="flex items-center justify-between mb-6">
+                    <div class="flex gap-1">
+                      {Array(5)
+                        .fill(0)
+                        .map(() => (
+                          <Star class="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />
+                        ))}
+                    </div>
+                    <Quote class="w-8 h-8 text-[#D4AF37]/20" />
+                  </div>
+                  <p class="text-[#0c0a09]/70 text-lg leading-relaxed mb-8 flex-grow">
+                    "Achei que ia perder meus direitos após a reforma, mas o
+                    planejamento que fizeram garantiu que eu me aposentasse com
+                    o valor máximo possível."
+                  </p>
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-[#0c0a09] flex items-center justify-center text-white font-display font-bold">
+                      CG
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-[#0c0a09]">Carlos G.</h4>
+                      <p class="text-sm text-[#0c0a09]/50">
+                        Aposentadoria por Idade
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <Quote class="w-8 h-8 text-[#D4AF37]/20" />
-              </div>
-              <p class="text-[#0c0a09]/70 text-lg leading-relaxed mb-8 flex-grow">
-                "Achei que ia perder meus direitos após a reforma, mas o planejamento que fizeram garantiu que eu me aposentasse com o valor máximo possível."
-              </p>
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-[#0c0a09] flex items-center justify-center text-white font-display font-bold">CG</div>
-                <div>
-                  <h4 class="font-bold text-[#0c0a09]">Carlos G.</h4>
-                  <p class="text-sm text-[#0c0a09]/50">Aposentadoria por Idade</p>
-                </div>
-              </div>
-            </div>
-          </>
-        ))}
+              </>
+            ))
+        }
       </div>
     </div>
   </div>
 
   <!-- FEATURED CASE STUDY (Other options of testimonials) -->
   <div class="relative z-10 mx-auto w-full max-w-[1400px] px-6">
-    <div class="rounded-[2.5rem] bg-white p-2 border border-[#D4AF37]/10 shadow-[0_20px_60px_rgb(0,0,0,0.05)] reveal-slide-up">
+    <div
+      class="rounded-[2.5rem] bg-white p-2 border border-[#D4AF37]/10 shadow-[0_20px_60px_rgb(0,0,0,0.05)] reveal-slide-up"
+    >
       <div class="grid lg:grid-cols-2 rounded-[2rem] overflow-hidden">
-        
         <!-- Left: Interactive Video / Image Mock -->
-        <div class="relative h-[400px] lg:h-auto bg-[#0c0a09] group cursor-pointer overflow-hidden">
-          <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center opacity-40 group-hover:opacity-50 transition-opacity duration-700 mix-blend-luminosity"></div>
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0c0a09] via-transparent to-transparent opacity-80"></div>
-          
-          <div class="absolute inset-0 flex flex-col justify-center items-center">
+        <div
+          class="relative h-[400px] lg:h-auto bg-[#0c0a09] group cursor-pointer overflow-hidden"
+        >
+          <div
+            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center opacity-40 group-hover:opacity-50 transition-opacity duration-700 mix-blend-luminosity"
+          >
+          </div>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-[#0c0a09] via-transparent to-transparent opacity-80"
+          >
+          </div>
+
+          <div
+            class="absolute inset-0 flex flex-col justify-center items-center"
+          >
             <!-- Play Button -->
-            <div class="w-20 h-20 rounded-full bg-[#D4AF37]/20 backdrop-blur-md flex items-center justify-center border border-[#D4AF37]/30 group-hover:scale-110 group-hover:bg-[#D4AF37] transition-all duration-500 mb-6">
-               <PlayCircle class="w-8 h-8 text-white group-hover:text-[#0c0a09] ml-1 transition-colors" />
+            <div
+              class="w-20 h-20 rounded-full bg-[#D4AF37]/20 backdrop-blur-md flex items-center justify-center border border-[#D4AF37]/30 group-hover:scale-110 group-hover:bg-[#D4AF37] transition-all duration-500 mb-6"
+            >
+              <PlayCircle
+                class="w-8 h-8 text-white group-hover:text-[#0c0a09] ml-1 transition-colors"
+              />
             </div>
-            <span class="text-white/80 font-bold tracking-widest uppercase text-sm">Assistir Depoimento</span>
+            <span
+              class="text-white/80 font-bold tracking-widest uppercase text-sm"
+              >Assistir Depoimento</span
+            >
           </div>
 
           <div class="absolute bottom-8 left-8 flex items-center gap-4">
-             <div class="w-12 h-12 rounded-full border-2 border-white/20 bg-white/10 backdrop-blur-md flex items-center justify-center">
-                <Scale class="w-5 h-5 text-white" />
-             </div>
-             <div>
-               <p class="text-white font-bold">Caso Sr. Antônio</p>
-               <p class="text-[#D4AF37] text-sm">Reversão de Negativa do INSS</p>
-             </div>
+            <div
+              class="w-12 h-12 rounded-full border-2 border-white/20 bg-white/10 backdrop-blur-md flex items-center justify-center"
+            >
+              <Scale class="w-5 h-5 text-white" />
+            </div>
+            <div>
+              <p class="text-white font-bold">Caso Sr. Antônio</p>
+              <p class="text-[#D4AF37] text-sm">Reversão de Negativa do INSS</p>
+            </div>
           </div>
         </div>
 
         <!-- Right: Content -->
-        <div class="p-10 lg:p-16 flex flex-col justify-center relative bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#fcf6ba]/30 via-white to-white">
+        <div
+          class="p-10 lg:p-16 flex flex-col justify-center relative bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#fcf6ba]/30 via-white to-white"
+        >
           <div class="absolute top-0 right-0 p-8 opacity-5">
             <Quote class="w-32 h-32 text-[#B38728]" />
           </div>
-          
-          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 w-max mb-8">
+
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 w-max mb-8"
+          >
             <ShieldCheck class="w-4 h-4 text-[#B38728]" />
-            <span class="text-xs font-bold uppercase tracking-wider text-[#B38728]">Estudo de Caso</span>
+            <span
+              class="text-xs font-bold uppercase tracking-wider text-[#B38728]"
+              >Estudo de Caso</span
+            >
           </div>
-          
-          <h3 class="font-display text-3xl sm:text-4xl text-[#0c0a09] font-bold mb-6 tracking-tight">
-            Do indeferimento ao sucesso em <span class="text-gradient-gold-on-light">45 dias.</span>
+
+          <h3
+            class="font-display text-3xl sm:text-4xl text-[#0c0a09] font-bold mb-6 tracking-tight"
+          >
+            Do indeferimento ao sucesso em <span
+              class="text-gradient-gold-on-light">45 dias.</span
+            >
           </h3>
-          
-          <p class="text-[#0c0a09]/60 text-lg leading-relaxed mb-8 relative z-10">
-            "Após 3 negativas administrativas e 2 anos de espera, eu já tinha perdido as esperanças. A equipe da Rodrigues Fontenelle não apenas pegou meu caso, como tratou como se fosse da própria família."
+
+          <p
+            class="text-[#0c0a09]/60 text-lg leading-relaxed mb-8 relative z-10"
+          >
+            "Após 3 negativas administrativas e 2 anos de espera, eu já tinha
+            perdido as esperanças. A equipe da Rodrigues Fontenelle não apenas
+            pegou meu caso, como tratou como se fosse da própria família."
           </p>
 
-          <div class="grid grid-cols-2 gap-8 pt-8 border-t border-black/5 relative z-10">
+          <div
+            class="grid grid-cols-2 gap-8 pt-8 border-t border-black/5 relative z-10"
+          >
             <div>
-              <p class="text-4xl font-display font-bold text-[#B38728] mb-1">3</p>
-              <p class="text-sm text-[#0c0a09]/50 font-bold uppercase tracking-wider">Negativas Revertidas</p>
+              <p class="text-4xl font-display font-bold text-[#B38728] mb-1">
+                3
+              </p>
+              <p
+                class="text-sm text-[#0c0a09]/50 font-bold uppercase tracking-wider"
+              >
+                Negativas Revertidas
+              </p>
             </div>
             <div>
-              <p class="text-4xl font-display font-bold text-[#B38728] mb-1">100%</p>
-              <p class="text-sm text-[#0c0a09]/50 font-bold uppercase tracking-wider">Retroativos Ganhos</p>
+              <p class="text-4xl font-display font-bold text-[#B38728] mb-1">
+                100%
+              </p>
+              <p
+                class="text-sm text-[#0c0a09]/50 font-bold uppercase tracking-wider"
+              >
+                Retroativos Ganhos
+              </p>
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   </div>
-
 </section>
 
 <style>
@@ -261,55 +396,77 @@ import { Star, Quote, PlayCircle, Scale, ShieldCheck } from 'lucide-astro';
   }
 
   @keyframes scroll-left {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
 
   @keyframes scroll-right {
-    0% { transform: translateX(-50%); }
-    100% { transform: translateX(0); }
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 
   /* Máscara de fade nas bordas para dar efeito de surgimento sutil */
   .mask-edges {
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
   }
 </style>
 
 <script>
-  import gsap from 'gsap';
-  import ScrollTrigger from 'gsap/ScrollTrigger';
+  import gsap from "gsap";
+  import ScrollTrigger from "gsap/ScrollTrigger";
 
   gsap.registerPlugin(ScrollTrigger);
 
   // Entrance animations for the testimonials section
-  gsap.fromTo('.reveal-stagger > *', 
+  gsap.fromTo(
+    ".reveal-stagger > *",
     { opacity: 0, y: 30 },
-    { 
-      opacity: 1, 
-      y: 0, 
-      duration: 1, 
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
       stagger: 0.2,
-      ease: 'power3.out', 
-      scrollTrigger: { 
-        trigger: '#depoimentos', 
-        start: 'top 75%' 
-      } 
-    }
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: "#depoimentos",
+        start: "top 75%",
+      },
+    },
   );
 
-  gsap.fromTo('.reveal-slide-up', 
+  gsap.fromTo(
+    ".reveal-slide-up",
     { opacity: 0, y: 60 },
-    { 
-      opacity: 1, 
-      y: 0, 
-      duration: 1.2, 
-      ease: 'power3.out', 
-      scrollTrigger: { 
-        trigger: '.reveal-slide-up', 
-        start: 'top 85%' 
-      } 
-    }
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".reveal-slide-up",
+        start: "top 85%",
+      },
+    },
   );
 </script>

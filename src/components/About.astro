@@ -1,112 +1,191 @@
 ---
-import { Award, ChevronRight } from 'lucide-astro';
+import { Award, ChevronRight } from "lucide-astro";
 ---
 
-<section id="sobre" class="relative py-24 sm:py-32 overflow-hidden bg-[#0c0a09]">
+<section
+  id="sobre"
+  class="relative py-24 sm:py-32 overflow-hidden bg-[#0c0a09]"
+>
   <!-- Subtle background accents -->
-  <div class="absolute inset-0 header-marble opacity-10 pointer-events-none mix-blend-overlay"></div>
-  <div class="absolute -left-[200px] top-[10%] w-[500px] h-[500px] bg-gold/[0.04] rounded-full blur-[150px] pointer-events-none"></div>
-  <div class="absolute -right-[100px] bottom-[10%] w-[400px] h-[400px] bg-gold-accent/[0.03] rounded-full blur-[120px] pointer-events-none"></div>
+  <div
+    class="absolute inset-0 header-marble opacity-10 pointer-events-none mix-blend-overlay"
+  >
+  </div>
+  <div
+    class="absolute -left-[200px] top-[10%] w-[500px] h-[500px] bg-gold/[0.04] rounded-full blur-[150px] pointer-events-none"
+  >
+  </div>
+  <div
+    class="absolute -right-[100px] bottom-[10%] w-[400px] h-[400px] bg-gold-accent/[0.03] rounded-full blur-[120px] pointer-events-none"
+  >
+  </div>
 
-  <div class="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 md:px-8 lg:px-12">
+  <div
+    class="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 md:px-8 lg:px-12"
+  >
     <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-      
       <!-- Left: Image with Gold Frame -->
       <div class="about-reveal relative mx-auto w-full max-w-md lg:max-w-none">
-        
         <!-- The "Incredible Gold Frame" -->
         <!-- We use a gradient background with padding to create the border effect -->
-        <div class="relative p-[3px] rounded-t-[20rem] rounded-b-3xl bg-gradient-to-br from-[#FFDF73] via-[#D4AF37] to-[#8B6914] shadow-[0_20px_50px_rgba(212,175,55,0.25)] group overflow-hidden">
-          
+        <div
+          class="relative p-[3px] rounded-t-[20rem] rounded-b-3xl bg-gradient-to-br from-[#FFDF73] via-[#D4AF37] to-[#8B6914] shadow-[0_20px_50px_rgba(212,175,55,0.25)] group overflow-hidden"
+        >
           <!-- Inner container for the image to mask it with the same shape (minus the padding) -->
-          <div class="relative rounded-t-[calc(20rem-3px)] rounded-b-[calc(1.5rem-3px)] overflow-hidden bg-[#1a1613]">
-            
+          <div
+            class="relative rounded-t-[calc(20rem-3px)] rounded-b-[calc(1.5rem-3px)] overflow-hidden bg-[#1a1613]"
+          >
             <!-- Image (Placeholder for Dra. Karum) -->
             <!-- Using the photo from raw_files -->
-            <img src="/images/dra-karum.jpg" alt="Dra. Karum Rodrigues" class="w-full h-[550px] sm:h-[650px] object-cover object-top transition-transform duration-1000 group-hover:scale-105" />
+            <img
+              src="/images/dra-karum.jpg"
+              alt="Dra. Karum Rodrigues"
+              class="w-full h-[550px] sm:h-[650px] object-cover object-top transition-transform duration-1000 group-hover:scale-105"
+            />
 
             <!-- Dark gradient overlay at the bottom for text legibility (Matching the print) -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"
+            >
+            </div>
 
             <!-- Content inside the image (Bottom) -->
-            <div class="absolute bottom-0 left-0 right-0 p-8 sm:p-10 flex items-end justify-between">
-              
+            <div
+              class="absolute bottom-0 left-0 right-0 p-8 sm:p-10 flex items-end justify-between"
+            >
               <!-- Text Info -->
               <div>
-                <span class="block text-[11px] font-bold tracking-[0.25em] uppercase text-[#D4AF37] mb-2 drop-shadow-md">Sócia Fundadora</span>
-                <h3 class="font-display text-3xl sm:text-4xl text-white tracking-tight drop-shadow-lg leading-none">Dra. Karum<br />Rodrigues</h3>
+                <span
+                  class="block text-[11px] font-bold tracking-[0.25em] uppercase text-[#D4AF37] mb-2 drop-shadow-md"
+                  >Sócia Fundadora</span
+                >
+                <h3
+                  class="font-display text-3xl sm:text-4xl text-white tracking-tight drop-shadow-lg leading-none"
+                >
+                  Dra. Karum<br />Rodrigues
+                </h3>
               </div>
 
               <!-- Badge/Icon on the right -->
-              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center shrink-0 shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-500 group-hover:bg-white/20 group-hover:scale-110">
+              <div
+                class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center shrink-0 shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-500 group-hover:bg-white/20 group-hover:scale-110"
+              >
                 <Award class="w-5 h-5 sm:w-6 sm:h-6 text-[#FFDF73]" />
               </div>
             </div>
-
           </div>
-          
+
           <!-- Shine effect on the frame to make it look metallic and incredible -->
-          <div class="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/40 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -translate-x-full group-hover:animate-shine pointer-events-none"></div>
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/40 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -translate-x-full group-hover:animate-shine pointer-events-none"
+          >
+          </div>
         </div>
 
         <!-- Decorative elements outside the frame -->
-        <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-[radial-gradient(circle,rgba(212,175,55,0.2)_2px,transparent_2px)] bg-[length:16px_16px] -z-10 rounded-full animate-pulse-slow"></div>
-        <div class="absolute -top-8 -left-8 w-24 h-24 border border-gold/40 rounded-full -z-10"></div>
+        <div
+          class="absolute -bottom-8 -right-8 w-32 h-32 bg-[radial-gradient(circle,rgba(212,175,55,0.2)_2px,transparent_2px)] bg-[length:16px_16px] -z-10 rounded-full animate-pulse-slow"
+        >
+        </div>
+        <div
+          class="absolute -top-8 -left-8 w-24 h-24 border border-gold/40 rounded-full -z-10"
+        >
+        </div>
       </div>
 
       <!-- Right: Text Content -->
       <div class="about-reveal lg:pl-8">
-        
         <!-- Section Header (Left aligned matching the rest of the site) -->
         <div class="flex items-center gap-3 mb-6">
-          <span class="text-xs font-bold tracking-[0.25em] uppercase text-[#8B6914]">Sobre Nós</span>
-          <div class="w-24 h-px bg-gradient-to-r from-[#B38728] to-transparent"></div>
+          <span
+            class="text-xs font-bold tracking-[0.25em] uppercase text-[#8B6914]"
+            >Sobre Nós</span
+          >
+          <div class="w-24 h-px bg-gradient-to-r from-[#B38728] to-transparent">
+          </div>
         </div>
 
-        <h2 class="font-display leading-[1.05] tracking-tight text-white mb-6" style="font-size: clamp(2.5rem, 5vw, 4.5rem);">
-          A experiência forjada na <span class="text-gradient-gold">prática.</span>
+        <h2
+          class="font-display leading-[1.05] tracking-tight text-white mb-6"
+          style="font-size: clamp(2.5rem, 5vw, 4.5rem);"
+        >
+          A experiência forjada na <span class="text-gradient-gold"
+            >prática.</span
+          >
         </h2>
-        
+
         <p class="text-lg text-white/60 leading-relaxed">
-          Fundado pela Dra. Karum Rodrigues, nosso escritório nasceu com uma vocação clara: 
-          <strong>entregar resultados onde outros veem impossibilidades.</strong> Não somos apenas 
-          advogados; somos estrategistas da sua segurança financeira futura.
+          Fundado pela Dra. Karum Rodrigues, nosso escritório nasceu com uma
+          vocação clara:
+          <strong>entregar resultados onde outros veem impossibilidades.</strong
+          > Não somos apenas advogados; somos estrategistas da sua segurança financeira
+          futura.
         </p>
 
         <div class="grid sm:grid-cols-2 gap-8 pt-6 mb-12">
           <div class="relative group">
-            <div class="absolute -inset-4 bg-gradient-to-r from-[#B38728]/0 via-[#B38728]/5 to-[#B38728]/0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div
+              class="absolute -inset-4 bg-gradient-to-r from-[#B38728]/0 via-[#B38728]/5 to-[#B38728]/0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            >
+            </div>
             <div class="relative">
-              <h4 class="text-[#D4AF37] font-display text-xl mb-2 font-semibold">Nossa Visão</h4>
-              <p class="text-white/60 text-sm leading-relaxed">Redefinir o padrão de excelência na advocacia previdenciária, combinando agilidade com empatia profunda por cada história.</p>
+              <h4
+                class="text-[#D4AF37] font-display text-xl mb-2 font-semibold"
+              >
+                Nossa Visão
+              </h4>
+              <p class="text-white/60 text-sm leading-relaxed">
+                Redefinir o padrão de excelência na advocacia previdenciária,
+                combinando agilidade com empatia profunda por cada história.
+              </p>
             </div>
           </div>
           <div class="relative group">
-            <div class="absolute -inset-4 bg-gradient-to-r from-[#B38728]/0 via-[#B38728]/5 to-[#B38728]/0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div
+              class="absolute -inset-4 bg-gradient-to-r from-[#B38728]/0 via-[#B38728]/5 to-[#B38728]/0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            >
+            </div>
             <div class="relative">
-              <h4 class="text-[#D4AF37] font-display text-xl mb-2 font-semibold">Foco Estratégico</h4>
-              <p class="text-white/60 text-sm leading-relaxed">Atuação cirúrgica em aposentadorias complexas, recursos administrativos e planejamento previdenciário de alto padrão.</p>
+              <h4
+                class="text-[#D4AF37] font-display text-xl mb-2 font-semibold"
+              >
+                Foco Estratégico
+              </h4>
+              <p class="text-white/60 text-sm leading-relaxed">
+                Atuação cirúrgica em aposentadorias complexas, recursos
+                administrativos e planejamento previdenciário de alto padrão.
+              </p>
             </div>
           </div>
         </div>
 
         <!-- CTA -->
-        <a href="#contato" class="group relative inline-flex items-center justify-center gap-3 px-9 sm:px-12 py-4 sm:py-[1.1rem] bg-gradient-to-r from-[#B38728] via-[#D4AF37] to-[#B38728] text-white font-bold tracking-[0.15em] uppercase text-[10px] sm:text-[11px] rounded-full overflow-hidden transition-all shadow-[0_4px_20px_rgba(212,175,55,0.2)] hover:shadow-[0_6px_35px_rgba(212,175,55,0.4)] hover:-translate-y-0.5">
-          <div class="absolute inset-0 bg-gradient-to-r from-[#D4AF37] via-[#FCF6BA] to-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity duration-600"></div>
+        <a
+          href="#contato"
+          class="group relative inline-flex items-center justify-center gap-3 px-9 sm:px-12 py-4 sm:py-[1.1rem] bg-gradient-to-r from-[#B38728] via-[#D4AF37] to-[#B38728] text-white font-bold tracking-[0.15em] uppercase text-[10px] sm:text-[11px] rounded-full overflow-hidden transition-all shadow-[0_4px_20px_rgba(212,175,55,0.2)] hover:shadow-[0_6px_35px_rgba(212,175,55,0.4)] hover:-translate-y-0.5"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-[#D4AF37] via-[#FCF6BA] to-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity duration-600"
+          >
+          </div>
           <span class="relative z-10 text-[#1a1613]">Saiba mais</span>
-          <ChevronRight class="w-4 h-4 relative z-10 text-[#1a1613] transition-transform duration-300 group-hover:translate-x-1" />
+          <ChevronRight
+            class="w-4 h-4 relative z-10 text-[#1a1613] transition-transform duration-300 group-hover:translate-x-1"
+          />
         </a>
-
       </div>
-
     </div>
   </div>
 </section>
 
 <style>
   @keyframes shine {
-    0% { transform: translateX(-100%) skewX(-15deg); }
-    100% { transform: translateX(200%) skewX(-15deg); }
+    0% {
+      transform: translateX(-100%) skewX(-15deg);
+    }
+    100% {
+      transform: translateX(200%) skewX(-15deg);
+    }
   }
   .animate-shine {
     animation: shine 1.5s ease-in-out infinite;
@@ -124,13 +203,21 @@ import { Award, ChevronRight } from 'lucide-astro';
 
   document.addEventListener("DOMContentLoaded", () => {
     gsap.utils.toArray(".about-reveal").forEach((el: any, i) => {
-      gsap.fromTo(el,
+      gsap.fromTo(
+        el,
         { y: 50, opacity: 0 },
         {
-          y: 0, opacity: 1, duration: 1.1, ease: "power3.out",
+          y: 0,
+          opacity: 1,
+          duration: 1.1,
+          ease: "power3.out",
           delay: i * 0.15,
-          scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none none" },
-        }
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        },
       );
     });
   });

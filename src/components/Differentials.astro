@@ -1,24 +1,42 @@
 ---
-import { UserCheck, Target, Zap, Trophy } from 'lucide-astro';
+import { UserCheck, Target, Zap, Trophy } from "lucide-astro";
 ---
 
-<section id="diferenciais" class="relative bg-[#0c0a09] border-t border-[#B38728]/10 overflow-hidden py-24 sm:py-32 lg:py-40 min-h-screen flex items-center">
+<section
+  id="diferenciais"
+  class="relative bg-[#0c0a09] border-t border-[#B38728]/10 overflow-hidden py-24 sm:py-32 lg:py-40 min-h-screen flex items-center"
+>
   <!-- Noise Texture Overlay -->
-  <div class="absolute inset-0 z-0 opacity-[0.04] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] pointer-events-none mix-blend-overlay"></div>
+  <div
+    class="absolute inset-0 z-0 opacity-[0.04] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] pointer-events-none mix-blend-overlay"
+  >
+  </div>
 
   <!-- Ambient Glows -->
-  <div class="absolute top-1/4 right-0 w-[800px] h-[800px] bg-[#B38728]/[0.02] rounded-full blur-[150px] pointer-events-none"></div>
-  <div class="absolute bottom-0 left-[-20%] w-[600px] h-[600px] bg-[#D4AF37]/[0.02] rounded-full blur-[120px] pointer-events-none"></div>
+  <div
+    class="absolute top-1/4 right-0 w-[800px] h-[800px] bg-[#B38728]/[0.02] rounded-full blur-[150px] pointer-events-none"
+  >
+  </div>
+  <div
+    class="absolute bottom-0 left-[-20%] w-[600px] h-[600px] bg-[#D4AF37]/[0.02] rounded-full blur-[120px] pointer-events-none"
+  >
+  </div>
 
   <div class="relative z-10 mx-auto w-full max-w-[1400px] px-6">
-    
     <!-- Section Header -->
     <div class="text-left mb-16 lg:mb-20 reveal-fade">
       <div class="flex items-center justify-start gap-3 mb-6">
-        <span class="text-xs font-bold tracking-[0.25em] uppercase text-[#D4AF37]">Nossa Assinatura</span>
-        <div class="w-24 h-px bg-gradient-to-r from-[#B38728] to-transparent"></div>
+        <span
+          class="text-xs font-bold tracking-[0.25em] uppercase text-[#D4AF37]"
+          >Nossa Assinatura</span
+        >
+        <div class="w-24 h-px bg-gradient-to-r from-[#B38728] to-transparent">
+        </div>
       </div>
-      <h2 class="font-display leading-[1.05] tracking-tight text-white mb-6" style="font-size: clamp(2.5rem, 5vw, 4.5rem);">
+      <h2
+        class="font-display leading-[1.05] tracking-tight text-white mb-6"
+        style="font-size: clamp(2.5rem, 5vw, 4.5rem);"
+      >
         <span class="block text-white/90">O padrão ouro em</span>
         <span class="block text-gradient-gold">Direito Previdenciário.</span>
       </h2>
@@ -26,198 +44,368 @@ import { UserCheck, Target, Zap, Trophy } from 'lucide-astro';
 
     <!-- Interactive Showcase -->
     <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-      
       <!-- Left Side: Interactive Display Panel -->
-      <div class="lg:col-span-7 relative h-[500px] lg:h-[600px] rounded-[2rem] bg-[#1c1917]/40 backdrop-blur-2xl border border-white/5 overflow-hidden group shadow-2xl shadow-black/50 reveal-slide-right">
-        
+      <div
+        class="lg:col-span-7 relative h-[500px] lg:h-[600px] rounded-[2rem] bg-[#1c1917]/40 backdrop-blur-2xl border border-white/5 overflow-hidden group shadow-2xl shadow-black/50 reveal-slide-right"
+      >
         <!-- Display 1 -->
-        <div id="display-1" class="diff-display absolute inset-0 p-8 sm:p-12 lg:p-16 flex flex-col justify-center transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] opacity-100 translate-y-0 scale-100 z-10">
-          <div class="absolute -right-12 top-1/2 -translate-y-1/2 pointer-events-none opacity-5 transition-transform duration-1000 group-hover:scale-110 group-hover:opacity-10">
+        <div
+          id="display-1"
+          class="diff-display absolute inset-0 p-8 sm:p-12 lg:p-16 flex flex-col justify-center transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] opacity-100 translate-y-0 scale-100 z-10"
+        >
+          <div
+            class="absolute -right-12 top-1/2 -translate-y-1/2 pointer-events-none opacity-5 transition-transform duration-1000 group-hover:scale-110 group-hover:opacity-10"
+          >
             <UserCheck class="w-[300px] h-[300px] text-[#D4AF37]" />
           </div>
-          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#D4AF37]/20 to-transparent border border-[#D4AF37]/30 flex items-center justify-center mb-8 relative z-10 backdrop-blur-md">
+          <div
+            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#D4AF37]/20 to-transparent border border-[#D4AF37]/30 flex items-center justify-center mb-8 relative z-10 backdrop-blur-md"
+          >
             <UserCheck class="w-8 h-8 text-[#D4AF37]" />
           </div>
-          <h3 class="font-display text-4xl sm:text-5xl text-white/90 font-semibold mb-6 tracking-tight relative z-10 leading-[1.1]">Atendimento<br/><span class="text-gradient-gold">Exclusivo.</span></h3>
-          <p class="text-lg sm:text-xl text-white/50 leading-relaxed max-w-md relative z-10">
-            Você não fala com robôs ou intermediários. Seu caso é conduzido com proximidade, atualizações proativas e total transparência.
+          <h3
+            class="font-display text-4xl sm:text-5xl text-white/90 font-semibold mb-6 tracking-tight relative z-10 leading-[1.1]"
+          >
+            Atendimento<br /><span class="text-gradient-gold">Exclusivo.</span>
+          </h3>
+          <p
+            class="text-lg sm:text-xl text-white/50 leading-relaxed max-w-md relative z-10"
+          >
+            Você não fala com robôs ou intermediários. Seu caso é conduzido com
+            proximidade, atualizações proativas e total transparência.
           </p>
         </div>
 
         <!-- Display 2 -->
-        <div id="display-2" class="diff-display absolute inset-0 p-8 sm:p-12 lg:p-16 flex flex-col justify-center transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] opacity-0 translate-y-12 scale-95 pointer-events-none z-0">
-          <div class="absolute -right-12 top-1/2 -translate-y-1/2 pointer-events-none opacity-5 transition-transform duration-1000 group-hover:scale-110 group-hover:opacity-10">
+        <div
+          id="display-2"
+          class="diff-display absolute inset-0 p-8 sm:p-12 lg:p-16 flex flex-col justify-center transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] opacity-0 translate-y-12 scale-95 pointer-events-none z-0"
+        >
+          <div
+            class="absolute -right-12 top-1/2 -translate-y-1/2 pointer-events-none opacity-5 transition-transform duration-1000 group-hover:scale-110 group-hover:opacity-10"
+          >
             <Target class="w-[300px] h-[300px] text-[#D4AF37]" />
           </div>
-          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#D4AF37]/20 to-transparent border border-[#D4AF37]/30 flex items-center justify-center mb-8 relative z-10 backdrop-blur-md">
+          <div
+            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#D4AF37]/20 to-transparent border border-[#D4AF37]/30 flex items-center justify-center mb-8 relative z-10 backdrop-blur-md"
+          >
             <Target class="w-8 h-8 text-[#D4AF37]" />
           </div>
-          <h3 class="font-display text-4xl sm:text-5xl text-white/90 font-semibold mb-6 tracking-tight relative z-10 leading-[1.1]">Estratégia<br/><span class="text-gradient-gold">Implacável.</span></h3>
-          <p class="text-lg sm:text-xl text-white/50 leading-relaxed max-w-md relative z-10">
-            Não nos contentamos com o básico. Analisamos cada detalhe com precisão cirúrgica para garantir a máxima proteção patrimonial.
+          <h3
+            class="font-display text-4xl sm:text-5xl text-white/90 font-semibold mb-6 tracking-tight relative z-10 leading-[1.1]"
+          >
+            Estratégia<br /><span class="text-gradient-gold">Implacável.</span>
+          </h3>
+          <p
+            class="text-lg sm:text-xl text-white/50 leading-relaxed max-w-md relative z-10"
+          >
+            Não nos contentamos com o básico. Analisamos cada detalhe com
+            precisão cirúrgica para garantir a máxima proteção patrimonial.
           </p>
         </div>
 
         <!-- Display 3 -->
-        <div id="display-3" class="diff-display absolute inset-0 p-8 sm:p-12 lg:p-16 flex flex-col justify-center transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] opacity-0 translate-y-12 scale-95 pointer-events-none z-0">
-          <div class="absolute -right-12 top-1/2 -translate-y-1/2 pointer-events-none opacity-5 transition-transform duration-1000 group-hover:scale-110 group-hover:opacity-10">
+        <div
+          id="display-3"
+          class="diff-display absolute inset-0 p-8 sm:p-12 lg:p-16 flex flex-col justify-center transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] opacity-0 translate-y-12 scale-95 pointer-events-none z-0"
+        >
+          <div
+            class="absolute -right-12 top-1/2 -translate-y-1/2 pointer-events-none opacity-5 transition-transform duration-1000 group-hover:scale-110 group-hover:opacity-10"
+          >
             <Zap class="w-[300px] h-[300px] text-[#D4AF37]" />
           </div>
-          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#D4AF37]/20 to-transparent border border-[#D4AF37]/30 flex items-center justify-center mb-8 relative z-10 backdrop-blur-md">
+          <div
+            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#D4AF37]/20 to-transparent border border-[#D4AF37]/30 flex items-center justify-center mb-8 relative z-10 backdrop-blur-md"
+          >
             <Zap class="w-8 h-8 text-[#D4AF37]" />
           </div>
-          <h3 class="font-display text-4xl sm:text-5xl text-white/90 font-semibold mb-6 tracking-tight relative z-10 leading-[1.1]">Agilidade e<br/><span class="text-gradient-gold">Tecnologia.</span></h3>
-          <p class="text-lg sm:text-xl text-white/50 leading-relaxed max-w-md relative z-10">
-            O tempo é o seu maior ativo. Utilizamos as ferramentas mais modernas do direito para acelerar protocolos e antecipar movimentações.
+          <h3
+            class="font-display text-4xl sm:text-5xl text-white/90 font-semibold mb-6 tracking-tight relative z-10 leading-[1.1]"
+          >
+            Agilidade e<br /><span class="text-gradient-gold">Tecnologia.</span>
+          </h3>
+          <p
+            class="text-lg sm:text-xl text-white/50 leading-relaxed max-w-md relative z-10"
+          >
+            O tempo é o seu maior ativo. Utilizamos as ferramentas mais modernas
+            do direito para acelerar protocolos e antecipar movimentações.
           </p>
         </div>
 
         <!-- Display 4 -->
-        <div id="display-4" class="diff-display absolute inset-0 p-8 sm:p-12 lg:p-16 flex flex-col justify-center transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] opacity-0 translate-y-12 scale-95 pointer-events-none z-0">
-          <div class="absolute -right-12 -bottom-10 pointer-events-none opacity-[0.03] transition-transform duration-1000 group-hover:scale-105 group-hover:opacity-10">
-            <span class="font-display font-bold text-[250px] leading-none text-[#D4AF37] tracking-tighter">98%</span>
+        <div
+          id="display-4"
+          class="diff-display absolute inset-0 p-8 sm:p-12 lg:p-16 flex flex-col justify-center transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] opacity-0 translate-y-12 scale-95 pointer-events-none z-0"
+        >
+          <div
+            class="absolute -right-12 -bottom-10 pointer-events-none opacity-[0.03] transition-transform duration-1000 group-hover:scale-105 group-hover:opacity-10"
+          >
+            <span
+              class="font-display font-bold text-[250px] leading-none text-[#D4AF37] tracking-tighter"
+              >98%</span
+            >
           </div>
-          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#D4AF37]/20 to-transparent border border-[#D4AF37]/30 flex items-center justify-center mb-8 relative z-10 backdrop-blur-md">
+          <div
+            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#D4AF37]/20 to-transparent border border-[#D4AF37]/30 flex items-center justify-center mb-8 relative z-10 backdrop-blur-md"
+          >
             <Trophy class="w-8 h-8 text-[#D4AF37]" />
           </div>
-          <h3 class="font-display text-4xl sm:text-5xl text-white/90 font-semibold mb-6 tracking-tight relative z-10 leading-[1.1]">Histórico de<br/><span class="text-gradient-gold">Vitórias.</span></h3>
-          <p class="text-lg sm:text-xl text-white/50 leading-relaxed max-w-md relative z-10">
-            Com 15+ anos de experiência e 98% de aprovação, nossa reputação foi forjada em vitórias consistentes contra o INSS e bancos.
+          <h3
+            class="font-display text-4xl sm:text-5xl text-white/90 font-semibold mb-6 tracking-tight relative z-10 leading-[1.1]"
+          >
+            Histórico de<br /><span class="text-gradient-gold">Vitórias.</span>
+          </h3>
+          <p
+            class="text-lg sm:text-xl text-white/50 leading-relaxed max-w-md relative z-10"
+          >
+            Com 15+ anos de experiência e 98% de aprovação, nossa reputação foi
+            forjada em vitórias consistentes contra o INSS e bancos.
           </p>
         </div>
-
       </div>
 
       <!-- Right Side: Triggers List -->
-      <div class="lg:col-span-5 flex flex-col gap-3 lg:gap-4 relative z-20 reveal-slide-left">
-        
+      <div
+        class="lg:col-span-5 flex flex-col gap-3 lg:gap-4 relative z-20 reveal-slide-left"
+      >
         <!-- Trigger 1 -->
-        <button class="diff-trigger w-full text-left p-6 lg:p-8 rounded-[1.5rem] transition-all duration-500 bg-[#D4AF37]/5 border border-[#D4AF37]/20 active-trigger relative overflow-hidden group" data-target="1">
-           <div class="absolute inset-0 bg-gradient-to-r from-[#D4AF37]/10 to-transparent opacity-100 transition-opacity duration-500 trigger-bg"></div>
-           <div class="flex items-center gap-6 relative z-10">
-             <span class="font-display text-lg lg:text-xl text-[#D4AF37] font-bold trigger-num transition-colors">01</span>
-             <div>
-               <h4 class="font-display text-xl lg:text-2xl text-white font-semibold trigger-title transition-colors">Exclusividade</h4>
-             </div>
-           </div>
+        <button
+          class="diff-trigger w-full text-left p-6 lg:p-8 rounded-[1.5rem] transition-all duration-500 bg-[#D4AF37]/5 border border-[#D4AF37]/20 active-trigger relative overflow-hidden group"
+          data-target="1"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-[#D4AF37]/10 to-transparent opacity-100 transition-opacity duration-500 trigger-bg"
+          >
+          </div>
+          <div class="flex items-center gap-6 relative z-10">
+            <span
+              class="font-display text-lg lg:text-xl text-[#D4AF37] font-bold trigger-num transition-colors"
+              >01</span
+            >
+            <div>
+              <h4
+                class="font-display text-xl lg:text-2xl text-white font-semibold trigger-title transition-colors"
+              >
+                Exclusividade
+              </h4>
+            </div>
+          </div>
         </button>
 
         <!-- Trigger 2 -->
-        <button class="diff-trigger w-full text-left p-6 lg:p-8 rounded-[1.5rem] transition-all duration-500 bg-transparent border border-transparent hover:bg-[#1c1917]/60 group relative overflow-hidden" data-target="2">
-           <div class="absolute inset-0 bg-gradient-to-r from-[#D4AF37]/10 to-transparent opacity-0 transition-opacity duration-500 trigger-bg"></div>
-           <div class="flex items-center gap-6 relative z-10">
-             <span class="font-display text-lg lg:text-xl text-white/20 group-hover:text-[#D4AF37]/50 font-bold trigger-num transition-colors">02</span>
-             <div>
-               <h4 class="font-display text-xl lg:text-2xl text-white/40 group-hover:text-white/80 font-semibold trigger-title transition-colors">Estratégia</h4>
-             </div>
-           </div>
+        <button
+          class="diff-trigger w-full text-left p-6 lg:p-8 rounded-[1.5rem] transition-all duration-500 bg-transparent border border-transparent hover:bg-[#1c1917]/60 group relative overflow-hidden"
+          data-target="2"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-[#D4AF37]/10 to-transparent opacity-0 transition-opacity duration-500 trigger-bg"
+          >
+          </div>
+          <div class="flex items-center gap-6 relative z-10">
+            <span
+              class="font-display text-lg lg:text-xl text-white/20 group-hover:text-[#D4AF37]/50 font-bold trigger-num transition-colors"
+              >02</span
+            >
+            <div>
+              <h4
+                class="font-display text-xl lg:text-2xl text-white/40 group-hover:text-white/80 font-semibold trigger-title transition-colors"
+              >
+                Estratégia
+              </h4>
+            </div>
+          </div>
         </button>
 
         <!-- Trigger 3 -->
-        <button class="diff-trigger w-full text-left p-6 lg:p-8 rounded-[1.5rem] transition-all duration-500 bg-transparent border border-transparent hover:bg-[#1c1917]/60 group relative overflow-hidden" data-target="3">
-           <div class="absolute inset-0 bg-gradient-to-r from-[#D4AF37]/10 to-transparent opacity-0 transition-opacity duration-500 trigger-bg"></div>
-           <div class="flex items-center gap-6 relative z-10">
-             <span class="font-display text-lg lg:text-xl text-white/20 group-hover:text-[#D4AF37]/50 font-bold trigger-num transition-colors">03</span>
-             <div>
-               <h4 class="font-display text-xl lg:text-2xl text-white/40 group-hover:text-white/80 font-semibold trigger-title transition-colors">Tecnologia</h4>
-             </div>
-           </div>
+        <button
+          class="diff-trigger w-full text-left p-6 lg:p-8 rounded-[1.5rem] transition-all duration-500 bg-transparent border border-transparent hover:bg-[#1c1917]/60 group relative overflow-hidden"
+          data-target="3"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-[#D4AF37]/10 to-transparent opacity-0 transition-opacity duration-500 trigger-bg"
+          >
+          </div>
+          <div class="flex items-center gap-6 relative z-10">
+            <span
+              class="font-display text-lg lg:text-xl text-white/20 group-hover:text-[#D4AF37]/50 font-bold trigger-num transition-colors"
+              >03</span
+            >
+            <div>
+              <h4
+                class="font-display text-xl lg:text-2xl text-white/40 group-hover:text-white/80 font-semibold trigger-title transition-colors"
+              >
+                Tecnologia
+              </h4>
+            </div>
+          </div>
         </button>
 
         <!-- Trigger 4 -->
-        <button class="diff-trigger w-full text-left p-6 lg:p-8 rounded-[1.5rem] transition-all duration-500 bg-transparent border border-transparent hover:bg-[#1c1917]/60 group relative overflow-hidden" data-target="4">
-           <div class="absolute inset-0 bg-gradient-to-r from-[#D4AF37]/10 to-transparent opacity-0 transition-opacity duration-500 trigger-bg"></div>
-           <div class="flex items-center gap-6 relative z-10">
-             <span class="font-display text-lg lg:text-xl text-white/20 group-hover:text-[#D4AF37]/50 font-bold trigger-num transition-colors">04</span>
-             <div>
-               <h4 class="font-display text-xl lg:text-2xl text-white/40 group-hover:text-white/80 font-semibold trigger-title transition-colors">Resultados</h4>
-             </div>
-           </div>
+        <button
+          class="diff-trigger w-full text-left p-6 lg:p-8 rounded-[1.5rem] transition-all duration-500 bg-transparent border border-transparent hover:bg-[#1c1917]/60 group relative overflow-hidden"
+          data-target="4"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-[#D4AF37]/10 to-transparent opacity-0 transition-opacity duration-500 trigger-bg"
+          >
+          </div>
+          <div class="flex items-center gap-6 relative z-10">
+            <span
+              class="font-display text-lg lg:text-xl text-white/20 group-hover:text-[#D4AF37]/50 font-bold trigger-num transition-colors"
+              >04</span
+            >
+            <div>
+              <h4
+                class="font-display text-xl lg:text-2xl text-white/40 group-hover:text-white/80 font-semibold trigger-title transition-colors"
+              >
+                Resultados
+              </h4>
+            </div>
+          </div>
         </button>
-
       </div>
-
     </div>
   </div>
 </section>
 
 <script>
-  import gsap from 'gsap';
-  import ScrollTrigger from 'gsap/ScrollTrigger';
+  import gsap from "gsap";
+  import ScrollTrigger from "gsap/ScrollTrigger";
 
   gsap.registerPlugin(ScrollTrigger);
 
   // Entrance Animations
-  gsap.fromTo('.reveal-fade', 
+  gsap.fromTo(
+    ".reveal-fade",
     { opacity: 0, y: 30 },
-    { opacity: 1, y: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '#diferenciais', start: 'top 75%' } }
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: { trigger: "#diferenciais", start: "top 75%" },
+    },
   );
 
-  gsap.fromTo('.reveal-slide-right', 
+  gsap.fromTo(
+    ".reveal-slide-right",
     { opacity: 0, x: -50 },
-    { opacity: 1, x: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '#diferenciais', start: 'top 65%' } }
+    {
+      opacity: 1,
+      x: 0,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: { trigger: "#diferenciais", start: "top 65%" },
+    },
   );
 
-  gsap.fromTo('.reveal-slide-left', 
+  gsap.fromTo(
+    ".reveal-slide-left",
     { opacity: 0, x: 50 },
-    { opacity: 1, x: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '#diferenciais', start: 'top 65%' } }
+    {
+      opacity: 1,
+      x: 0,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: { trigger: "#diferenciais", start: "top 65%" },
+    },
   );
 
   // Interactive Logic
-  const triggers = document.querySelectorAll('.diff-trigger');
-  const displays = document.querySelectorAll('.diff-display');
-  let activeId = '1';
+  const triggers = document.querySelectorAll(".diff-trigger");
+  const displays = document.querySelectorAll(".diff-display");
+  let activeId = "1";
 
-  triggers.forEach(trigger => {
+  triggers.forEach((trigger) => {
     // Usamos 'mouseenter' para Desktop e 'click' para Mobile
     const activate = () => {
-      const targetId = trigger.getAttribute('data-target');
+      const targetId = trigger.getAttribute("data-target");
       if (targetId === activeId) return;
-      
+
       // Update Triggers Styling
-      triggers.forEach(t => {
-        t.classList.remove('bg-[#D4AF37]/5', 'border-[#D4AF37]/20');
-        t.classList.add('bg-transparent', 'border-transparent');
-        
+      triggers.forEach((t) => {
+        t.classList.remove("bg-[#D4AF37]/5", "border-[#D4AF37]/20");
+        t.classList.add("bg-transparent", "border-transparent");
+
         // Reset text colors
-        const num = t.querySelector('.trigger-num');
-        const title = t.querySelector('.trigger-title');
-        const bg = t.querySelector('.trigger-bg');
-        
-        if (num) { num.classList.remove('text-[#D4AF37]'); num.classList.add('text-white/20'); }
-        if (title) { title.classList.remove('text-white'); title.classList.add('text-white/40'); }
-        if (bg) { bg.classList.remove('opacity-100'); bg.classList.add('opacity-0'); }
+        const num = t.querySelector(".trigger-num");
+        const title = t.querySelector(".trigger-title");
+        const bg = t.querySelector(".trigger-bg");
+
+        if (num) {
+          num.classList.remove("text-[#D4AF37]");
+          num.classList.add("text-white/20");
+        }
+        if (title) {
+          title.classList.remove("text-white");
+          title.classList.add("text-white/40");
+        }
+        if (bg) {
+          bg.classList.remove("opacity-100");
+          bg.classList.add("opacity-0");
+        }
       });
 
       // Set Active Trigger Styling
-      trigger.classList.remove('bg-transparent', 'border-transparent');
-      trigger.classList.add('bg-[#D4AF37]/5', 'border-[#D4AF37]/20');
-      
-      const activeNum = trigger.querySelector('.trigger-num');
-      const activeTitle = trigger.querySelector('.trigger-title');
-      const activeBg = trigger.querySelector('.trigger-bg');
-      
-      if (activeNum) { activeNum.classList.remove('text-white/20'); activeNum.classList.add('text-[#D4AF37]'); }
-      if (activeTitle) { activeTitle.classList.remove('text-white/40'); activeTitle.classList.add('text-white'); }
-      if (activeBg) { activeBg.classList.remove('opacity-0'); activeBg.classList.add('opacity-100'); }
+      trigger.classList.remove("bg-transparent", "border-transparent");
+      trigger.classList.add("bg-[#D4AF37]/5", "border-[#D4AF37]/20");
+
+      const activeNum = trigger.querySelector(".trigger-num");
+      const activeTitle = trigger.querySelector(".trigger-title");
+      const activeBg = trigger.querySelector(".trigger-bg");
+
+      if (activeNum) {
+        activeNum.classList.remove("text-white/20");
+        activeNum.classList.add("text-[#D4AF37]");
+      }
+      if (activeTitle) {
+        activeTitle.classList.remove("text-white/40");
+        activeTitle.classList.add("text-white");
+      }
+      if (activeBg) {
+        activeBg.classList.remove("opacity-0");
+        activeBg.classList.add("opacity-100");
+      }
 
       // Update Displays
-      displays.forEach(display => {
+      displays.forEach((display) => {
         if (display.id === `display-${targetId}`) {
           // Show new
-          display.classList.remove('opacity-0', 'translate-y-12', 'scale-95', 'pointer-events-none', 'z-0');
-          display.classList.add('opacity-100', 'translate-y-0', 'scale-100', 'z-10');
+          display.classList.remove(
+            "opacity-0",
+            "translate-y-12",
+            "scale-95",
+            "pointer-events-none",
+            "z-0",
+          );
+          display.classList.add(
+            "opacity-100",
+            "translate-y-0",
+            "scale-100",
+            "z-10",
+          );
         } else {
           // Hide others
-          display.classList.remove('opacity-100', 'translate-y-0', 'scale-100', 'z-10');
-          display.classList.add('opacity-0', 'translate-y-12', 'scale-95', 'pointer-events-none', 'z-0');
+          display.classList.remove(
+            "opacity-100",
+            "translate-y-0",
+            "scale-100",
+            "z-10",
+          );
+          display.classList.add(
+            "opacity-0",
+            "translate-y-12",
+            "scale-95",
+            "pointer-events-none",
+            "z-0",
+          );
         }
       });
 
       activeId = targetId;
     };
 
-    trigger.addEventListener('mouseenter', activate);
-    trigger.addEventListener('click', activate);
+    trigger.addEventListener("mouseenter", activate);
+    trigger.addEventListener("click", activate);
   });
 </script>

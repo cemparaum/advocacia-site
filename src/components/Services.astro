@@ -1,30 +1,65 @@
 ---
-import { ShieldCheck, Scale, Briefcase, Clock, Landmark, Baby, HeartPulse, AlertTriangle, ArrowRight, ChevronRight } from 'lucide-astro';
+import {
+  ShieldCheck,
+  Scale,
+  Briefcase,
+  Clock,
+  Landmark,
+  Baby,
+  HeartPulse,
+  AlertTriangle,
+  ArrowRight,
+  ChevronRight,
+} from "lucide-astro";
 ---
 
-<section id="servicos" class="relative overflow-hidden" style="background-color: #f8f6f3;">
-
+<section
+  id="servicos"
+  class="relative overflow-hidden"
+  style="background-color: #f8f6f3;"
+>
   <!-- Marble texture background -->
-  <div class="absolute inset-0 header-marble opacity-60 pointer-events-none"></div>
+  <div class="absolute inset-0 header-marble opacity-60 pointer-events-none">
+  </div>
 
   <!-- Atmospheric gold glow (subtle on light) -->
-  <div class="absolute top-[20%] -left-[200px] w-[600px] h-[600px] bg-gold/[0.06] rounded-full blur-[180px] pointer-events-none"></div>
-  <div class="absolute bottom-[10%] -right-[200px] w-[500px] h-[500px] bg-gold-accent/[0.04] rounded-full blur-[150px] pointer-events-none"></div>
+  <div
+    class="absolute top-[20%] -left-[200px] w-[600px] h-[600px] bg-gold/[0.06] rounded-full blur-[180px] pointer-events-none"
+  >
+  </div>
+  <div
+    class="absolute bottom-[10%] -right-[200px] w-[500px] h-[500px] bg-gold-accent/[0.04] rounded-full blur-[150px] pointer-events-none"
+  >
+  </div>
 
   <!-- Top gold divider -->
-  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/25 to-transparent"></div>
+  <div
+    class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/25 to-transparent"
+  >
+  </div>
 
   <!-- ===== PART 1: Section Intro ===== -->
-  <div class="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 md:px-8 lg:px-12 pt-24 sm:pt-32 lg:pt-40">
+  <div
+    class="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 md:px-8 lg:px-12 pt-24 sm:pt-32 lg:pt-40"
+  >
     <div class="svc-reveal mb-20 sm:mb-24 lg:mb-28">
       <div>
         <div class="flex items-center justify-start gap-3 mb-6">
-          <span class="text-xs font-bold tracking-[0.25em] uppercase text-[#8B6914]">Áreas de Atuação</span>
-          <div class="w-24 h-px bg-gradient-to-r from-[#8B6914] to-transparent"></div>
+          <span
+            class="text-xs font-bold tracking-[0.25em] uppercase text-[#8B6914]"
+            >Áreas de Atuação</span
+          >
+          <div class="w-24 h-px bg-gradient-to-r from-[#8B6914] to-transparent">
+          </div>
         </div>
-        <h2 class="font-display leading-[1.05] tracking-tight text-[#1a1613]" style="font-size: clamp(2rem, 5vw, 3.75rem);">
+        <h2
+          class="font-display leading-[1.05] tracking-tight text-[#1a1613]"
+          style="font-size: clamp(2rem, 5vw, 3.75rem);"
+        >
           <span class="block">Expertise que</span>
-          <span class="block text-gradient-gold-on-light">transforma direitos</span>
+          <span class="block text-gradient-gold-on-light"
+            >transforma direitos</span
+          >
           <span class="block">em conquistas.</span>
         </h2>
       </div>
@@ -35,225 +70,433 @@ import { ShieldCheck, Scale, Briefcase, Clock, Landmark, Baby, HeartPulse, Alert
   <div class="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 md:px-8 pb-6">
     <div class="grid lg:grid-cols-3 gap-4 sm:gap-5">
       <!-- Card 1 -->
-      <div class="svc-card group relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden border border-[#B38728]/25 shadow-[0_4px_25px_rgba(179,135,40,0.06)] bg-white/70 backdrop-blur-sm flex flex-col justify-end transition-all duration-700 hover:border-[#B38728]/60 hover:shadow-[0_8px_40px_rgba(179,135,40,0.15)]">
-
+      <div
+        class="svc-card group relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden border border-[#B38728]/25 shadow-[0_4px_25px_rgba(179,135,40,0.06)] bg-white/70 backdrop-blur-sm flex flex-col justify-end transition-all duration-700 hover:border-[#B38728]/60 hover:shadow-[0_8px_40px_rgba(179,135,40,0.15)]"
+      >
         <!-- Decorative Metallic Number -->
         <div class="absolute top-4 right-5 pointer-events-none select-none">
-          <span class="font-display font-semibold text-[3.5rem] sm:text-[4.5rem] leading-none bg-gradient-to-br from-[#D4AF37] via-[#FFDF73] to-[#8B6914] opacity-60 bg-clip-text text-transparent tracking-tight drop-shadow-sm" style="-webkit-background-clip: text; -webkit-text-fill-color: transparent;">01</span>
+          <span
+            class="font-display font-semibold text-[3.5rem] sm:text-[4.5rem] leading-none bg-gradient-to-br from-[#D4AF37] via-[#FFDF73] to-[#8B6914] opacity-60 bg-clip-text text-transparent tracking-tight drop-shadow-sm"
+            style="-webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+            >01</span
+          >
         </div>
 
         <!-- Gold glow on hover -->
-        <div class="absolute inset-0 bg-gradient-to-t from-gold/[0.04] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-gold/[0.04] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+        >
+        </div>
 
         <!-- Content -->
         <div class="relative p-5 sm:p-7 pt-16 sm:pt-20">
           <!-- Icon Badge -->
-          <div class="w-10 h-10 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-4 sm:mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_25px_rgba(179,135,40,0.12)]">
+          <div
+            class="w-10 h-10 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-4 sm:mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_25px_rgba(179,135,40,0.12)]"
+          >
             <ShieldCheck class="w-[18px] h-[18px] text-[#8B6914]" />
           </div>
 
           <!-- Category Label -->
-          <span class="inline-block text-[9px] font-bold tracking-[0.25em] uppercase text-[#8B6914]/80 mb-2">Direito Previdenciário</span>
+          <span
+            class="inline-block text-[9px] font-bold tracking-[0.25em] uppercase text-[#8B6914]/80 mb-2"
+            >Direito Previdenciário</span
+          >
 
           <!-- Title -->
-          <h3 class="font-display text-xl sm:text-2xl text-[#1a1613] mb-3 tracking-tight leading-tight">Previdenciária</h3>
+          <h3
+            class="font-display text-xl sm:text-2xl text-[#1a1613] mb-3 tracking-tight leading-tight"
+          >
+            Previdenciária
+          </h3>
 
           <!-- Description -->
           <p class="text-sm text-[#1a1613]/40 leading-relaxed mb-5 max-w-md">
-            O INSS negou seu benefício? Nós transformamos anos de trabalho na aposentadoria segura que você merece.
+            O INSS negou seu benefício? Nós transformamos anos de trabalho na
+            aposentadoria segura que você merece.
           </p>
 
           <!-- Tags Row -->
           <div class="flex flex-wrap gap-2 mb-5">
-            {["Aposentadorias", "Revisões", "BPC/LOAS"].map((tag) => (
-              <span class="px-2.5 py-1 rounded-full bg-[#B38728]/10 border border-[#B38728]/20 text-[10px] font-semibold text-[#7A5C1A] tracking-wide">{tag}</span>
-            ))}
+            {
+              ["Aposentadorias", "Revisões", "BPC/LOAS"].map((tag) => (
+                <span class="px-2.5 py-1 rounded-full bg-[#B38728]/10 border border-[#B38728]/20 text-[10px] font-semibold text-[#7A5C1A] tracking-wide">
+                  {tag}
+                </span>
+              ))
+            }
           </div>
 
           <!-- CTA -->
-          <a href="#contato" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.15em] text-[#8B6914] group-hover:text-[#6B5010] transition-colors duration-500">
+          <a
+            href="#contato"
+            class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.15em] text-[#8B6914] group-hover:text-[#6B5010] transition-colors duration-500"
+          >
             <span>Saiba mais</span>
-            <ChevronRight class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+            <ChevronRight
+              class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5"
+            />
           </a>
         </div>
       </div>
 
-        <!-- Card: Civil -->
-        <div class="svc-card group relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden border border-[#B38728]/25 shadow-[0_4px_25px_rgba(179,135,40,0.06)] bg-white/70 backdrop-blur-sm flex flex-col justify-end transition-all duration-700 hover:border-[#B38728]/60 hover:shadow-[0_8px_40px_rgba(179,135,40,0.15)]">
-          <!-- Metallic Number -->
-          <div class="absolute top-4 right-5 pointer-events-none select-none">
-            <span class="font-display font-semibold text-[3.5rem] sm:text-[4.5rem] leading-none bg-gradient-to-br from-[#D4AF37] via-[#FFDF73] to-[#8B6914] opacity-60 bg-clip-text text-transparent tracking-tight drop-shadow-sm" style="-webkit-background-clip: text; -webkit-text-fill-color: transparent;">02</span>
-          </div>
-
-          <div class="absolute inset-0 bg-gradient-to-t from-gold/[0.03] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
-
-          <div class="relative p-5 sm:p-7 pt-16 sm:pt-20">
-            <div class="w-10 h-10 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-4 sm:mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_25px_rgba(179,135,40,0.12)]">
-              <Scale class="w-[18px] h-[18px] text-[#8B6914]" />
-            </div>
-
-            <span class="inline-block text-[9px] font-bold tracking-[0.25em] uppercase text-[#8B6914]/80 mb-2">Direito Civil</span>
-            <h3 class="font-display text-xl sm:text-2xl text-[#1a1613] mb-3 tracking-tight leading-tight">Civil</h3>
-            <p class="text-sm text-[#1a1613]/40 leading-relaxed mb-5 max-w-md">
-              Proteja seu patrimônio e seus negócios. Resolvemos conflitos contratuais e familiares com estratégias blindadas e segurança jurídica absoluta.
-            </p>
-
-            <div class="flex flex-wrap gap-2 mb-5">
-              {["Contratos", "Indenizações", "Consumidor"].map((tag) => (
-                <span class="px-2.5 py-1 rounded-full bg-[#B38728]/10 border border-[#B38728]/20 text-[10px] font-semibold text-[#7A5C1A] tracking-wide">{tag}</span>
-              ))}
-            </div>
-
-            <a href="#contato" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.15em] text-[#8B6914] group-hover:text-[#6B5010] transition-colors duration-500">
-              <span>Saiba mais</span>
-              <ChevronRight class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
-            </a>
-          </div>
+      <!-- Card: Civil -->
+      <div
+        class="svc-card group relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden border border-[#B38728]/25 shadow-[0_4px_25px_rgba(179,135,40,0.06)] bg-white/70 backdrop-blur-sm flex flex-col justify-end transition-all duration-700 hover:border-[#B38728]/60 hover:shadow-[0_8px_40px_rgba(179,135,40,0.15)]"
+      >
+        <!-- Metallic Number -->
+        <div class="absolute top-4 right-5 pointer-events-none select-none">
+          <span
+            class="font-display font-semibold text-[3.5rem] sm:text-[4.5rem] leading-none bg-gradient-to-br from-[#D4AF37] via-[#FFDF73] to-[#8B6914] opacity-60 bg-clip-text text-transparent tracking-tight drop-shadow-sm"
+            style="-webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+            >02</span
+          >
         </div>
 
-        <!-- Card: Trabalhista -->
-        <div class="svc-card group relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden border border-[#B38728]/25 shadow-[0_4px_25px_rgba(179,135,40,0.06)] bg-white/70 backdrop-blur-sm flex flex-col justify-end transition-all duration-700 hover:border-[#B38728]/60 hover:shadow-[0_8px_40px_rgba(179,135,40,0.15)]">
-          <!-- Metallic Number -->
-          <div class="absolute top-4 right-5 pointer-events-none select-none">
-            <span class="font-display font-semibold text-[3.5rem] sm:text-[4.5rem] leading-none bg-gradient-to-br from-[#D4AF37] via-[#FFDF73] to-[#8B6914] opacity-60 bg-clip-text text-transparent tracking-tight drop-shadow-sm" style="-webkit-background-clip: text; -webkit-text-fill-color: transparent;">03</span>
-          </div>
-
-          <div class="absolute inset-0 bg-gradient-to-t from-gold/[0.03] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
-
-          <div class="relative p-5 sm:p-7 pt-16 sm:pt-20">
-            <div class="w-10 h-10 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-4 sm:mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_25px_rgba(179,135,40,0.12)]">
-              <Briefcase class="w-[18px] h-[18px] text-[#8B6914]" />
-            </div>
-
-            <span class="inline-block text-[9px] font-bold tracking-[0.25em] uppercase text-[#8B6914]/80 mb-2">Direito Trabalhista</span>
-            <h3 class="font-display text-xl sm:text-2xl text-[#1a1613] mb-3 tracking-tight leading-tight">Trabalhista</h3>
-            <p class="text-sm text-[#1a1613]/40 leading-relaxed mb-5 max-w-md">
-              Anos de dedicação não podem ser descartados. Exigimos o pagamento integral de verbas rescisórias, horas extras e todos os direitos que tentaram sonegar de você.
-            </p>
-
-            <div class="flex flex-wrap gap-2 mb-5">
-              {["Rescisões", "Horas Extras", "Acidentes"].map((tag) => (
-                <span class="px-2.5 py-1 rounded-full bg-[#B38728]/10 border border-[#B38728]/20 text-[10px] font-semibold text-[#7A5C1A] tracking-wide">{tag}</span>
-              ))}
-            </div>
-
-            <a href="#contato" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.15em] text-[#8B6914] group-hover:text-[#6B5010] transition-colors duration-500">
-              <span>Saiba mais</span>
-              <ChevronRight class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
-            </a>
-          </div>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-gold/[0.03] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+        >
         </div>
 
+        <div class="relative p-5 sm:p-7 pt-16 sm:pt-20">
+          <div
+            class="w-10 h-10 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-4 sm:mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_25px_rgba(179,135,40,0.12)]"
+          >
+            <Scale class="w-[18px] h-[18px] text-[#8B6914]" />
+          </div>
+
+          <span
+            class="inline-block text-[9px] font-bold tracking-[0.25em] uppercase text-[#8B6914]/80 mb-2"
+            >Direito Civil</span
+          >
+          <h3
+            class="font-display text-xl sm:text-2xl text-[#1a1613] mb-3 tracking-tight leading-tight"
+          >
+            Civil
+          </h3>
+          <p class="text-sm text-[#1a1613]/40 leading-relaxed mb-5 max-w-md">
+            Proteja seu patrimônio e seus negócios. Resolvemos conflitos
+            contratuais e familiares com estratégias blindadas e segurança
+            jurídica absoluta.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mb-5">
+            {
+              ["Contratos", "Indenizações", "Consumidor"].map((tag) => (
+                <span class="px-2.5 py-1 rounded-full bg-[#B38728]/10 border border-[#B38728]/20 text-[10px] font-semibold text-[#7A5C1A] tracking-wide">
+                  {tag}
+                </span>
+              ))
+            }
+          </div>
+
+          <a
+            href="#contato"
+            class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.15em] text-[#8B6914] group-hover:text-[#6B5010] transition-colors duration-500"
+          >
+            <span>Saiba mais</span>
+            <ChevronRight
+              class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5"
+            />
+          </a>
+        </div>
       </div>
+
+      <!-- Card: Trabalhista -->
+      <div
+        class="svc-card group relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden border border-[#B38728]/25 shadow-[0_4px_25px_rgba(179,135,40,0.06)] bg-white/70 backdrop-blur-sm flex flex-col justify-end transition-all duration-700 hover:border-[#B38728]/60 hover:shadow-[0_8px_40px_rgba(179,135,40,0.15)]"
+      >
+        <!-- Metallic Number -->
+        <div class="absolute top-4 right-5 pointer-events-none select-none">
+          <span
+            class="font-display font-semibold text-[3.5rem] sm:text-[4.5rem] leading-none bg-gradient-to-br from-[#D4AF37] via-[#FFDF73] to-[#8B6914] opacity-60 bg-clip-text text-transparent tracking-tight drop-shadow-sm"
+            style="-webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+            >03</span
+          >
+        </div>
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-gold/[0.03] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+        >
+        </div>
+
+        <div class="relative p-5 sm:p-7 pt-16 sm:pt-20">
+          <div
+            class="w-10 h-10 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-4 sm:mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_25px_rgba(179,135,40,0.12)]"
+          >
+            <Briefcase class="w-[18px] h-[18px] text-[#8B6914]" />
+          </div>
+
+          <span
+            class="inline-block text-[9px] font-bold tracking-[0.25em] uppercase text-[#8B6914]/80 mb-2"
+            >Direito Trabalhista</span
+          >
+          <h3
+            class="font-display text-xl sm:text-2xl text-[#1a1613] mb-3 tracking-tight leading-tight"
+          >
+            Trabalhista
+          </h3>
+          <p class="text-sm text-[#1a1613]/40 leading-relaxed mb-5 max-w-md">
+            Anos de dedicação não podem ser descartados. Exigimos o pagamento
+            integral de verbas rescisórias, horas extras e todos os direitos que
+            tentaram sonegar de você.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mb-5">
+            {
+              ["Rescisões", "Horas Extras", "Acidentes"].map((tag) => (
+                <span class="px-2.5 py-1 rounded-full bg-[#B38728]/10 border border-[#B38728]/20 text-[10px] font-semibold text-[#7A5C1A] tracking-wide">
+                  {tag}
+                </span>
+              ))
+            }
+          </div>
+
+          <a
+            href="#contato"
+            class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.15em] text-[#8B6914] group-hover:text-[#6B5010] transition-colors duration-500"
+          >
+            <span>Saiba mais</span>
+            <ChevronRight
+              class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- ===== PART 3: Stats Counter Bar ===== -->
-  <div class="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 md:px-8 lg:px-12 py-16 sm:py-20 lg:py-24">
-    <div class="svc-reveal grid grid-cols-2 lg:grid-cols-4 gap-px rounded-2xl sm:rounded-3xl overflow-hidden border border-[#B38728]/20 bg-[#B38728]/10 shadow-[0_8px_30px_rgba(179,135,40,0.08)]">
-      
-      <div class="bg-white/60 p-6 sm:p-8 lg:p-10 text-center group hover:bg-white/80 backdrop-blur-sm transition-colors duration-500 relative overflow-hidden flex flex-col justify-center">
-        <div class="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-        <div class="relative z-10 font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-gradient-gold mb-2 counter-value" data-target="500">+500</div>
-        <div class="relative z-10 text-[9px] sm:text-[10px] text-[#8B6914] font-bold tracking-[0.2em] uppercase">Clientes atendidos</div>
+  <div
+    class="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 md:px-8 lg:px-12 py-16 sm:py-20 lg:py-24"
+  >
+    <div
+      class="svc-reveal grid grid-cols-2 lg:grid-cols-4 gap-px rounded-2xl sm:rounded-3xl overflow-hidden border border-[#B38728]/20 bg-[#B38728]/10 shadow-[0_8px_30px_rgba(179,135,40,0.08)]"
+    >
+      <div
+        class="bg-white/60 p-6 sm:p-8 lg:p-10 text-center group hover:bg-white/80 backdrop-blur-sm transition-colors duration-500 relative overflow-hidden flex flex-col justify-center"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+        >
+        </div>
+        <div
+          class="relative z-10 font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-gradient-gold mb-2 counter-value"
+          data-target="500"
+        >
+          +500
+        </div>
+        <div
+          class="relative z-10 text-[9px] sm:text-[10px] text-[#8B6914] font-bold tracking-[0.2em] uppercase"
+        >
+          Clientes atendidos
+        </div>
       </div>
-      <div class="bg-white/60 p-6 sm:p-8 lg:p-10 text-center group hover:bg-white/80 backdrop-blur-sm transition-colors duration-500 relative overflow-hidden flex flex-col justify-center">
-        <div class="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-        <div class="relative z-10 font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-gradient-gold mb-2">98%</div>
-        <div class="relative z-10 text-[9px] sm:text-[10px] text-[#8B6914] font-bold tracking-[0.2em] uppercase">Aprovação</div>
+      <div
+        class="bg-white/60 p-6 sm:p-8 lg:p-10 text-center group hover:bg-white/80 backdrop-blur-sm transition-colors duration-500 relative overflow-hidden flex flex-col justify-center"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+        >
+        </div>
+        <div
+          class="relative z-10 font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-gradient-gold mb-2"
+        >
+          98%
+        </div>
+        <div
+          class="relative z-10 text-[9px] sm:text-[10px] text-[#8B6914] font-bold tracking-[0.2em] uppercase"
+        >
+          Aprovação
+        </div>
       </div>
-      <div class="bg-white/60 p-6 sm:p-8 lg:p-10 text-center group hover:bg-white/80 backdrop-blur-sm transition-colors duration-500 relative overflow-hidden flex flex-col justify-center">
-        <div class="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-        <div class="relative z-10 font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-gradient-gold mb-2">15+</div>
-        <div class="relative z-10 text-[9px] sm:text-[10px] text-[#8B6914] font-bold tracking-[0.2em] uppercase">Anos de experiência</div>
+      <div
+        class="bg-white/60 p-6 sm:p-8 lg:p-10 text-center group hover:bg-white/80 backdrop-blur-sm transition-colors duration-500 relative overflow-hidden flex flex-col justify-center"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+        >
+        </div>
+        <div
+          class="relative z-10 font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-gradient-gold mb-2"
+        >
+          15+
+        </div>
+        <div
+          class="relative z-10 text-[9px] sm:text-[10px] text-[#8B6914] font-bold tracking-[0.2em] uppercase"
+        >
+          Anos de experiência
+        </div>
       </div>
-      <div class="bg-white/60 p-6 sm:p-8 lg:p-10 text-center group hover:bg-white/80 backdrop-blur-sm transition-colors duration-500 relative overflow-hidden flex flex-col justify-center">
-        <div class="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-        <div class="relative z-10 font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-gradient-gold mb-2">3</div>
-        <div class="relative z-10 text-[9px] sm:text-[10px] text-[#8B6914] font-bold tracking-[0.2em] uppercase">Áreas de atuação</div>
+      <div
+        class="bg-white/60 p-6 sm:p-8 lg:p-10 text-center group hover:bg-white/80 backdrop-blur-sm transition-colors duration-500 relative overflow-hidden flex flex-col justify-center"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+        >
+        </div>
+        <div
+          class="relative z-10 font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-gradient-gold mb-2"
+        >
+          3
+        </div>
+        <div
+          class="relative z-10 text-[9px] sm:text-[10px] text-[#8B6914] font-bold tracking-[0.2em] uppercase"
+        >
+          Áreas de atuação
+        </div>
       </div>
     </div>
   </div>
 
   <!-- ===== PART 4: Specialized Services ===== -->
-  <div class="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 md:px-8 lg:px-12 pb-24 sm:pb-32 lg:pb-40">
-
+  <div
+    class="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 md:px-8 lg:px-12 pb-24 sm:pb-32 lg:pb-40"
+  >
     <div class="svc-reveal flex items-center gap-3 mb-10">
-      <div class="w-10 h-px bg-gradient-to-r from-[#8B6914] to-transparent"></div>
-      <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-[#8B6914]">Serviços Especializados</span>
+      <div class="w-10 h-px bg-gradient-to-r from-[#8B6914] to-transparent">
+      </div>
+      <span
+        class="text-[10px] font-bold tracking-[0.3em] uppercase text-[#8B6914]"
+        >Serviços Especializados</span
+      >
     </div>
 
     <!-- Horizontal scroll on mobile, grid on desktop -->
-    <div class="flex lg:grid lg:grid-cols-5 gap-4 lg:gap-5 overflow-x-auto pb-4 lg:pb-0 snap-x snap-mandatory scrollbar-hide -mx-5 px-5 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0">
-
+    <div
+      class="flex lg:grid lg:grid-cols-5 gap-4 lg:gap-5 overflow-x-auto pb-4 lg:pb-0 snap-x snap-mandatory scrollbar-hide -mx-5 px-5 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0"
+    >
       <!-- Aposentadorias -->
-      <div class="svc-card snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-auto group relative rounded-2xl overflow-hidden border-x border-b border-[#B38728]/20 border-t-4 border-t-[#B38728] bg-white shadow-[0_8px_30px_rgba(179,135,40,0.08)] transition-all duration-500 hover:border-[#B38728]/50 hover:border-t-[#8B6914] hover:shadow-[0_12px_40px_rgba(179,135,40,0.15)] hover:-translate-y-1">
+      <div
+        class="svc-card snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-auto group relative rounded-2xl overflow-hidden border-x border-b border-[#B38728]/20 border-t-4 border-t-[#B38728] bg-white shadow-[0_8px_30px_rgba(179,135,40,0.08)] transition-all duration-500 hover:border-[#B38728]/50 hover:border-t-[#8B6914] hover:shadow-[0_12px_40px_rgba(179,135,40,0.15)] hover:-translate-y-1"
+      >
         <div class="p-6 sm:p-7">
-          <div class="w-11 h-11 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_20px_rgba(179,135,40,0.15)] group-hover:scale-105">
+          <div
+            class="w-11 h-11 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_20px_rgba(179,135,40,0.15)] group-hover:scale-105"
+          >
             <Clock class="w-5 h-5 text-[#8B6914]" />
           </div>
-          <h4 class="font-display text-base sm:text-lg text-[#1a1613] font-semibold mb-2 tracking-tight">Aposentadorias</h4>
-          <p class="text-[13px] text-[#1a1613]/60 leading-relaxed font-medium">Por idade, tempo de contribuição, especial e por invalidez.</p>
+          <h4
+            class="font-display text-base sm:text-lg text-[#1a1613] font-semibold mb-2 tracking-tight"
+          >
+            Aposentadorias
+          </h4>
+          <p class="text-[13px] text-[#1a1613]/60 leading-relaxed font-medium">
+            Por idade, tempo de contribuição, especial e por invalidez.
+          </p>
         </div>
       </div>
 
       <!-- Revisões -->
-      <div class="svc-card snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-auto group relative rounded-2xl overflow-hidden border-x border-b border-[#B38728]/20 border-t-4 border-t-[#B38728] bg-white shadow-[0_8px_30px_rgba(179,135,40,0.08)] transition-all duration-500 hover:border-[#B38728]/50 hover:border-t-[#8B6914] hover:shadow-[0_12px_40px_rgba(179,135,40,0.15)] hover:-translate-y-1">
+      <div
+        class="svc-card snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-auto group relative rounded-2xl overflow-hidden border-x border-b border-[#B38728]/20 border-t-4 border-t-[#B38728] bg-white shadow-[0_8px_30px_rgba(179,135,40,0.08)] transition-all duration-500 hover:border-[#B38728]/50 hover:border-t-[#8B6914] hover:shadow-[0_12px_40px_rgba(179,135,40,0.15)] hover:-translate-y-1"
+      >
         <div class="p-6 sm:p-7">
-          <div class="w-11 h-11 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_20px_rgba(179,135,40,0.15)] group-hover:scale-105">
+          <div
+            class="w-11 h-11 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_20px_rgba(179,135,40,0.15)] group-hover:scale-105"
+          >
             <Landmark class="w-5 h-5 text-[#8B6914]" />
           </div>
-          <h4 class="font-display text-base sm:text-lg text-[#1a1613] font-semibold mb-2 tracking-tight">Revisões</h4>
-          <p class="text-[13px] text-[#1a1613]/60 leading-relaxed font-medium">Revisão da vida toda, teto e buraco negro do INSS.</p>
+          <h4
+            class="font-display text-base sm:text-lg text-[#1a1613] font-semibold mb-2 tracking-tight"
+          >
+            Revisões
+          </h4>
+          <p class="text-[13px] text-[#1a1613]/60 leading-relaxed font-medium">
+            Revisão da vida toda, teto e buraco negro do INSS.
+          </p>
         </div>
       </div>
 
       <!-- Salário-Maternidade -->
-      <div class="svc-card snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-auto group relative rounded-2xl overflow-hidden border-x border-b border-[#B38728]/20 border-t-4 border-t-[#B38728] bg-white shadow-[0_8px_30px_rgba(179,135,40,0.08)] transition-all duration-500 hover:border-[#B38728]/50 hover:border-t-[#8B6914] hover:shadow-[0_12px_40px_rgba(179,135,40,0.15)] hover:-translate-y-1">
+      <div
+        class="svc-card snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-auto group relative rounded-2xl overflow-hidden border-x border-b border-[#B38728]/20 border-t-4 border-t-[#B38728] bg-white shadow-[0_8px_30px_rgba(179,135,40,0.08)] transition-all duration-500 hover:border-[#B38728]/50 hover:border-t-[#8B6914] hover:shadow-[0_12px_40px_rgba(179,135,40,0.15)] hover:-translate-y-1"
+      >
         <div class="p-6 sm:p-7">
-          <div class="w-11 h-11 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_20px_rgba(179,135,40,0.15)] group-hover:scale-105">
+          <div
+            class="w-11 h-11 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_20px_rgba(179,135,40,0.15)] group-hover:scale-105"
+          >
             <Baby class="w-5 h-5 text-[#8B6914]" />
           </div>
-          <h4 class="font-display text-base sm:text-lg text-[#1a1613] font-semibold mb-2 tracking-tight">Salário-Maternidade</h4>
-          <p class="text-[13px] text-[#1a1613]/60 leading-relaxed font-medium">Concessão e recurso para seguradas do INSS.</p>
+          <h4
+            class="font-display text-base sm:text-lg text-[#1a1613] font-semibold mb-2 tracking-tight"
+          >
+            Salário-Maternidade
+          </h4>
+          <p class="text-[13px] text-[#1a1613]/60 leading-relaxed font-medium">
+            Concessão e recurso para seguradas do INSS.
+          </p>
         </div>
       </div>
 
       <!-- BPC/LOAS -->
-      <div class="svc-card snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-auto group relative rounded-2xl overflow-hidden border-x border-b border-[#B38728]/20 border-t-4 border-t-[#B38728] bg-white shadow-[0_8px_30px_rgba(179,135,40,0.08)] transition-all duration-500 hover:border-[#B38728]/50 hover:border-t-[#8B6914] hover:shadow-[0_12px_40px_rgba(179,135,40,0.15)] hover:-translate-y-1">
+      <div
+        class="svc-card snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-auto group relative rounded-2xl overflow-hidden border-x border-b border-[#B38728]/20 border-t-4 border-t-[#B38728] bg-white shadow-[0_8px_30px_rgba(179,135,40,0.08)] transition-all duration-500 hover:border-[#B38728]/50 hover:border-t-[#8B6914] hover:shadow-[0_12px_40px_rgba(179,135,40,0.15)] hover:-translate-y-1"
+      >
         <div class="p-6 sm:p-7">
-          <div class="w-11 h-11 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_20px_rgba(179,135,40,0.15)] group-hover:scale-105">
+          <div
+            class="w-11 h-11 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_20px_rgba(179,135,40,0.15)] group-hover:scale-105"
+          >
             <HeartPulse class="w-5 h-5 text-[#8B6914]" />
           </div>
-          <h4 class="font-display text-base sm:text-lg text-[#1a1613] font-semibold mb-2 tracking-tight">BPC/LOAS</h4>
-          <p class="text-[13px] text-[#1a1613]/60 leading-relaxed font-medium">Benefício para idosos e pessoas com deficiência.</p>
+          <h4
+            class="font-display text-base sm:text-lg text-[#1a1613] font-semibold mb-2 tracking-tight"
+          >
+            BPC/LOAS
+          </h4>
+          <p class="text-[13px] text-[#1a1613]/60 leading-relaxed font-medium">
+            Benefício para idosos e pessoas com deficiência.
+          </p>
         </div>
       </div>
 
       <!-- Descontos Indevidos -->
-      <div class="svc-card snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-auto group relative rounded-2xl overflow-hidden border-x border-b border-[#B38728]/20 border-t-4 border-t-[#B38728] bg-white shadow-[0_8px_30px_rgba(179,135,40,0.08)] transition-all duration-500 hover:border-[#B38728]/50 hover:border-t-[#8B6914] hover:shadow-[0_12px_40px_rgba(179,135,40,0.15)] hover:-translate-y-1">
+      <div
+        class="svc-card snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-auto group relative rounded-2xl overflow-hidden border-x border-b border-[#B38728]/20 border-t-4 border-t-[#B38728] bg-white shadow-[0_8px_30px_rgba(179,135,40,0.08)] transition-all duration-500 hover:border-[#B38728]/50 hover:border-t-[#8B6914] hover:shadow-[0_12px_40px_rgba(179,135,40,0.15)] hover:-translate-y-1"
+      >
         <div class="p-6 sm:p-7">
-          <div class="w-11 h-11 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_20px_rgba(179,135,40,0.15)] group-hover:scale-105">
+          <div
+            class="w-11 h-11 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_20px_rgba(179,135,40,0.15)] group-hover:scale-105"
+          >
             <AlertTriangle class="w-5 h-5 text-[#8B6914]" />
           </div>
-          <h4 class="font-display text-base sm:text-lg text-[#1a1613] font-semibold mb-2 tracking-tight">Descontos Indevidos</h4>
-          <p class="text-[13px] text-[#1a1613]/60 leading-relaxed font-medium">Restituição de valores descontados sem autorização.</p>
+          <h4
+            class="font-display text-base sm:text-lg text-[#1a1613] font-semibold mb-2 tracking-tight"
+          >
+            Descontos Indevidos
+          </h4>
+          <p class="text-[13px] text-[#1a1613]/60 leading-relaxed font-medium">
+            Restituição de valores descontados sem autorização.
+          </p>
         </div>
       </div>
     </div>
 
     <!-- Bottom CTA -->
-    <div class="svc-reveal flex flex-col sm:flex-row items-center justify-center gap-5 mt-16 sm:mt-20">
-      <a href="#contato" class="group relative inline-flex items-center justify-center gap-3 px-9 sm:px-12 py-4 sm:py-[1.1rem] bg-gradient-to-r from-[#B38728] via-[#D4AF37] to-[#B38728] text-white font-bold tracking-[0.15em] uppercase text-[10px] sm:text-[11px] rounded-full overflow-hidden transition-all shadow-[0_4px_20px_rgba(212,175,55,0.2)] hover:shadow-[0_6px_35px_rgba(212,175,55,0.4)] hover:scale-[1.02]">
-        <div class="absolute inset-0 bg-gradient-to-r from-[#D4AF37] via-[#FCF6BA] to-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity duration-600"></div>
+    <div
+      class="svc-reveal flex flex-col sm:flex-row items-center justify-center gap-5 mt-16 sm:mt-20"
+    >
+      <a
+        href="#contato"
+        class="group relative inline-flex items-center justify-center gap-3 px-9 sm:px-12 py-4 sm:py-[1.1rem] bg-gradient-to-r from-[#B38728] via-[#D4AF37] to-[#B38728] text-white font-bold tracking-[0.15em] uppercase text-[10px] sm:text-[11px] rounded-full overflow-hidden transition-all shadow-[0_4px_20px_rgba(212,175,55,0.2)] hover:shadow-[0_6px_35px_rgba(212,175,55,0.4)] hover:scale-[1.02]"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-[#D4AF37] via-[#FCF6BA] to-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity duration-600"
+        >
+        </div>
         <span class="relative z-10 text-dark">Agendar Consulta Gratuita</span>
-        <ArrowRight class="w-4 h-4 relative z-10 text-dark transition-transform duration-300 group-hover:translate-x-1" />
+        <ArrowRight
+          class="w-4 h-4 relative z-10 text-dark transition-transform duration-300 group-hover:translate-x-1"
+        />
       </a>
     </div>
-
   </div>
 
   <!-- Bottom gold line -->
-  <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent"></div>
+  <div
+    class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent"
+  >
+  </div>
 </section>
 
 <style>
@@ -274,26 +517,41 @@ import { ShieldCheck, Scale, Briefcase, Clock, Landmark, Baby, HeartPulse, Alert
 
   document.addEventListener("DOMContentLoaded", () => {
     gsap.utils.toArray(".svc-reveal").forEach((el: any) => {
-      gsap.fromTo(el,
+      gsap.fromTo(
+        el,
         { y: 50, opacity: 0 },
         {
-          y: 0, opacity: 1, duration: 1.1, ease: "power3.out",
-          scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none none" },
-        }
+          y: 0,
+          opacity: 1,
+          duration: 1.1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        },
       );
     });
 
     const cards = gsap.utils.toArray(".svc-card");
     cards.forEach((card: any, i: number) => {
-      gsap.fromTo(card,
+      gsap.fromTo(
+        card,
         { y: 60, opacity: 0, scale: 0.96 },
         {
-          y: 0, opacity: 1, scale: 1,
+          y: 0,
+          opacity: 1,
+          scale: 1,
           duration: 0.9,
           delay: i * 0.1,
           ease: "power3.out",
-          scrollTrigger: { trigger: card, start: "top 90%", toggleActions: "play none none none" },
-        }
+          scrollTrigger: {
+            trigger: card,
+            start: "top 90%",
+            toggleActions: "play none none none",
+          },
+        },
       );
     });
   });

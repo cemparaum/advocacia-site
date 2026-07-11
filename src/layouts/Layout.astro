@@ -1,13 +1,16 @@
 ---
-import '../styles/global.css';
-import Header from '../components/Header.astro';
+import "../styles/global.css";
+import Header from "../components/Header.astro";
 
 interface Props {
   title: string;
   description?: string;
 }
 
-const { title, description = "Rodrigues Fontenelle Advocacia — Especialistas em Direito Previdenciário, Civil e Trabalhista. Aposentadorias, revisões, BPC, salário-maternidade e mais." } = Astro.props;
+const {
+  title,
+  description = "Rodrigues Fontenelle Advocacia — Especialistas em Direito Previdenciário, Civil e Trabalhista. Aposentadorias, revisões, BPC, salário-maternidade e mais.",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -18,17 +21,34 @@ const { title, description = "Rodrigues Fontenelle Advocacia — Especialistas e
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    
+
+    <!-- Open Graph / SEO -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/images/dra-karum.jpg" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="/images/dra-karum.jpg" />
+
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <title>{title}</title>
   </head>
-  <body class="bg-dark text-white min-h-screen selection:bg-gold/30 selection:text-gold-light">
+  <body
+    class="bg-dark text-white min-h-screen selection:bg-gold/30 selection:text-gold-light"
+  >
     <div class="noise-overlay"></div>
-    
+
     <main id="smooth-wrapper">
       <div id="smooth-content">
         <Header />
@@ -37,14 +57,14 @@ const { title, description = "Rodrigues Fontenelle Advocacia — Especialistas e
     </main>
 
     <script>
-      import Lenis from '@studio-freight/lenis';
-      
+      import Lenis from "@studio-freight/lenis";
+
       // Initialize Lenis for buttery smooth scrolling
       const lenis = new Lenis({
         duration: 1.2,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        orientation: 'vertical',
-        gestureOrientation: 'vertical',
+        orientation: "vertical",
+        gestureOrientation: "vertical",
         smoothWheel: true,
       });
 
