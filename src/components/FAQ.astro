@@ -1,0 +1,69 @@
+---
+import { ChevronDown } from 'lucide-astro';
+
+const faqs = [
+  {
+    question: "Preciso pagar pela análise inicial do meu caso?",
+    answer: "Não. Nossa primeira conversa e a análise de viabilidade do seu caso são realizadas sem compromisso. Só cobramos honorários se identificarmos que você tem direito e decidirmos avançar com a ação."
+  },
+  {
+    question: "Quanto tempo demora um processo de aposentadoria?",
+    answer: "O tempo pode variar de acordo com o INSS e a complexidade do caso (se envolve tempo especial, rural, etc.). Processos administrativos levam em média de 3 a 6 meses, enquanto processos judiciais podem levar de 1 a 2 anos. Nossa equipe acompanha diariamente para garantir a maior agilidade possível."
+  },
+  {
+    question: "O que é o Planejamento Previdenciário e por que preciso dele?",
+    answer: "O Planejamento é um mapa completo da sua vida contributiva. Ele define o momento exato em que você deve se aposentar para garantir o maior valor possível, evitando que você perca dinheiro contribuindo de forma errada ou pedindo a aposentadoria no momento inadequado."
+  },
+  {
+    question: "Meu pedido foi negado pelo INSS. Ainda há solução?",
+    answer: "Sim. A maioria das negativas do INSS ocorre por falta de documentação adequada ou erros na análise do próprio órgão. Com uma estratégia jurídica sólida, podemos reverter essa decisão através de recursos administrativos ou entrando com uma ação judicial."
+  },
+  {
+    question: "Vocês atendem clientes de outras cidades ou estados?",
+    answer: "Sim! Com o processo eletrônico, conseguimos atuar em todo o Brasil de forma 100% digital e segura. O atendimento pode ser feito por videochamada ou WhatsApp, com a mesma qualidade e proximidade do atendimento presencial."
+  }
+];
+---
+<section id="faq" class="relative py-24 sm:py-32 overflow-hidden bg-white">
+  <div class="absolute inset-0 header-marble opacity-40 pointer-events-none"></div>
+  
+  <div class="relative z-10 mx-auto w-full max-w-[1400px] px-6">
+    <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+      
+      <!-- Left Side: Header -->
+      <div class="text-left reveal-fade">
+        <div class="flex items-center justify-start gap-3 mb-6">
+          <span class="text-xs font-bold tracking-[0.25em] uppercase text-[#B38728]">FAQ</span>
+          <div class="w-24 h-px bg-gradient-to-r from-[#B38728] to-transparent"></div>
+        </div>
+        <h2 class="font-display leading-[1.05] tracking-tight text-[#0c0a09] mb-6" style="font-size: clamp(2.5rem, 4vw, 4rem);">
+          Tire suas <span class="text-gradient-gold-on-light">dúvidas.</span>
+        </h2>
+        <p class="text-lg text-[#0c0a09]/70 leading-relaxed max-w-md">
+          A clareza é o primeiro passo para a sua segurança jurídica. Listamos as perguntas mais comuns dos nossos clientes.
+        </p>
+      </div>
+
+      <!-- Right Side: Accordion -->
+      <div class="reveal-slide-up">
+        <div class="flex flex-col gap-4">
+          {faqs.map((faq, index) => (
+            <details class="group bg-[#f8f6f3] rounded-2xl border border-[#B38728]/10 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+              <summary class="flex justify-between items-center cursor-pointer p-6 list-none">
+                <span class="font-display text-xl text-[#0c0a09] font-semibold pr-4">{faq.question}</span>
+                <span class="flex-shrink-0 w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm border border-[#B38728]/10 transition-transform duration-300 group-open:rotate-180">
+                  <ChevronDown class="w-5 h-5 text-[#B38728]" />
+                </span>
+              </summary>
+              <div class="px-6 pb-6 text-[#0c0a09]/70 leading-relaxed">
+                <div class="h-px w-full bg-[#B38728]/10 mb-6"></div>
+                {faq.answer}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>

@@ -21,6 +21,14 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  /* Stronger gold for light backgrounds — higher contrast */
+  .text-gradient-gold-on-light {
+    background: linear-gradient(135deg, #9A7B2A, #B38728, #D4AF37, #9A7B2A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
   
   .glass-panel {
     background: rgba(28, 25, 23, 0.4);
@@ -59,4 +67,24 @@ html.lenis, html.lenis body {
 /* Utility to split lines/chars for GSAP */
 .split-line {
   overflow: hidden;
+}
+
+/* Marble texture for header - CSS only, resolution independent */
+.header-marble {
+  background-color: #f8f6f3;
+  background-image:
+    /* Gold vein accents */
+    linear-gradient(125deg, transparent 38%, rgba(212, 175, 55, 0.08) 39%, rgba(212, 175, 55, 0.12) 39.5%, transparent 40.5%),
+    linear-gradient(62deg, transparent 55%, rgba(191, 149, 63, 0.06) 56%, rgba(191, 149, 63, 0.1) 56.5%, transparent 57.5%),
+    linear-gradient(155deg, transparent 70%, rgba(212, 175, 55, 0.07) 71%, rgba(212, 175, 55, 0.1) 71.3%, transparent 72%),
+    linear-gradient(38deg, transparent 25%, rgba(179, 135, 40, 0.05) 26%, rgba(179, 135, 40, 0.08) 26.3%, transparent 27%),
+    /* Subtle gray marble veins */
+    linear-gradient(130deg, transparent 20%, rgba(180, 175, 168, 0.08) 21%, rgba(180, 175, 168, 0.12) 21.5%, transparent 23%),
+    linear-gradient(175deg, transparent 45%, rgba(200, 195, 188, 0.06) 46%, rgba(200, 195, 188, 0.1) 46.3%, transparent 47%),
+    linear-gradient(95deg, transparent 60%, rgba(190, 185, 178, 0.07) 61%, rgba(190, 185, 178, 0.1) 61.3%, transparent 62%),
+    linear-gradient(145deg, transparent 75%, rgba(170, 165, 158, 0.06) 76%, rgba(170, 165, 158, 0.09) 76.3%, transparent 77%),
+    /* Warm marble base tones */
+    radial-gradient(ellipse at 20% 50%, rgba(248, 244, 238, 0.8) 0%, transparent 70%),
+    radial-gradient(ellipse at 80% 30%, rgba(252, 248, 242, 0.6) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 80%, rgba(245, 240, 232, 0.5) 0%, transparent 50%);
 }
