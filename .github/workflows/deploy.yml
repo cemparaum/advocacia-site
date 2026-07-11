@@ -26,6 +26,7 @@ jobs:
         with:
           # Define o diretório raiz do projeto caso esteja em uma subpasta (como está na raiz, usamos .)
           path: .
+          node-version: 22
           
   deploy:
     needs: build
