@@ -17,22 +17,44 @@
 @layer utilities {
   .text-gradient-gold {
     background: linear-gradient(
-      135deg,
-      var(--color-gold-light),
-      var(--color-gold),
-      var(--color-gold-accent)
+      -45deg,
+      #D4AF37 20%,
+      #B38728 35%,
+      #FFFFFF 50%,
+      #B38728 65%,
+      #D4AF37 80%
     );
+    background-size: 300% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: textShine 5s linear infinite;
   }
 
   /* Stronger gold for light backgrounds — higher contrast */
   .text-gradient-gold-on-light {
-    background: linear-gradient(135deg, #9a7b2a, #b38728, #d4af37, #9a7b2a);
+    background: linear-gradient(
+      -45deg,
+      #b38728 20%,
+      #9a7b2a 35%,
+      #ffe8a1 50%,
+      #9a7b2a 65%,
+      #b38728 80%
+    );
+    background-size: 300% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: textShine 5s linear infinite;
+  }
+
+  @keyframes textShine {
+    0% {
+      background-position: 100% center;
+    }
+    100% {
+      background-position: 0% center;
+    }
   }
 
   .glass-panel {
@@ -153,4 +175,135 @@ html.lenis body {
       rgba(245, 240, 232, 0.5) 0%,
       transparent 50%
     );
+}
+
+/* Animated Aurora/Mesh Gradient for Heroes */
+@keyframes aurora-gold {
+  0%, 100% { transform: translate(0%, 0%) scale(1) rotate(0deg); opacity: 0.8; }
+  25% { transform: translate(15%, -15%) scale(1.2) rotate(15deg); opacity: 0.6; }
+  50% { transform: translate(-10%, -20%) scale(0.9) rotate(-10deg); opacity: 0.9; }
+  75% { transform: translate(-20%, 10%) scale(1.3) rotate(5deg); opacity: 0.5; }
+}
+
+@keyframes aurora-dark {
+  0%, 100% { transform: translate(0%, 0%) scale(1.1) rotate(0deg); opacity: 0.7; }
+  33% { transform: translate(-20%, 20%) scale(0.9) rotate(-15deg); opacity: 0.9; }
+  66% { transform: translate(20%, -10%) scale(1.4) rotate(15deg); opacity: 0.5; }
+}
+
+@keyframes aurora-ruby {
+  0%, 100% { transform: translate(0%, 0%) scale(1.3) rotate(0deg); opacity: 0.4; }
+  50% { transform: translate(15%, 25%) scale(0.8) rotate(20deg); opacity: 0.7; }
+}
+
+.aurora-mesh {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(ellipse at 80% 20%, rgba(212, 175, 55, 0.2) 0%, transparent 40%),
+    radial-gradient(ellipse at 20% 80%, rgba(179, 135, 40, 0.15) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 50%, rgba(5, 10, 20, 0.6) 0%, transparent 60%);
+  filter: blur(80px);
+  animation: aurora-dark 25s ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.aurora-mesh::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 30%, rgba(200, 150, 40, 0.2) 0%, transparent 50%);
+  animation: aurora-gold 30s ease-in-out infinite;
+  mix-blend-mode: screen;
+}
+
+.aurora-mesh::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 70%, rgba(10, 5, 20, 0.5) 0%, transparent 50%);
+  animation: aurora-ruby 20s ease-in-out infinite;
+  mix-blend-mode: multiply;
+}
+
+/* Animated Rotating Gold Border */
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+.animated-border-card {
+  position: relative;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  z-index: 1;
+}
+
+.animated-border-card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -1px; /* accounts for border width */
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--border-angle),
+    transparent 20%,
+    var(--color-gold-dark) 40%,
+    var(--color-gold-light) 50%,
+    var(--color-gold-dark) 60%,
+    transparent 80%
+  );
+  animation: border-spin 6s linear infinite;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1px; /* border thickness */
+}
+
+@keyframes border-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+/* Animated CTA Pulse */
+a[class*="bg-gradient-to-r"][class*="from-[#B38728]"],
+button[class*="bg-gradient-to-r"][class*="from-[#B38728]"],
+a[class*="bg-gradient-to-r"][class*="from-[#b38728]"],
+button[class*="bg-gradient-to-r"][class*="from-[#b38728]"],
+a[class*="bg-gradient-to-r"][class*="from-[#D4AF37]"],
+button[class*="bg-gradient-to-r"][class*="from-[#D4AF37]"],
+a[class*="bg-gradient-to-r"][class*="from-[#d4af37]"],
+button[class*="bg-gradient-to-r"][class*="from-[#d4af37]"] {
+  animation: cta-breathe 2.5s infinite ease-in-out;
+}
+
+a[class*="bg-gradient-to-r"][class*="from-[#B38728]"]:hover,
+button[class*="bg-gradient-to-r"][class*="from-[#B38728]"]:hover,
+a[class*="bg-gradient-to-r"][class*="from-[#b38728]"]:hover,
+button[class*="bg-gradient-to-r"][class*="from-[#b38728]"]:hover,
+a[class*="bg-gradient-to-r"][class*="from-[#D4AF37]"]:hover,
+button[class*="bg-gradient-to-r"][class*="from-[#D4AF37]"]:hover,
+a[class*="bg-gradient-to-r"][class*="from-[#d4af37]"]:hover,
+button[class*="bg-gradient-to-r"][class*="from-[#d4af37]"]:hover {
+  animation-play-state: paused;
+}
+
+@keyframes cta-breathe {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px rgba(212, 175, 55, 0.1)) brightness(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.5)) brightness(1.15);
+  }
 }

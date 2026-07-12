@@ -1,0 +1,386 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import Contact from "../../components/Contact.astro";
+import { ShieldCheck, Target, TrendingUp, Clock, ChevronRight, Scale, CheckCircle2, ArrowRight } from "lucide-astro";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O que fazer se minha aposentadoria for negada pelo INSS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Se o seu benefício foi negado, não faça um novo pedido imediatamente. Procure um advogado especialista para analisar o motivo da negativa e ingressar com um recurso administrativo ou ação judicial, garantindo os atrasados desde o primeiro pedido."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vale a pena pedir a Revisão da Vida Toda?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Revisão da Vida Toda é indicada para quem teve salários altos antes de julho de 1994 e se aposentou sob as regras antigas ou regras de transição. É necessário um cálculo previdenciário minucioso para confirmar se o benefício irá aumentar."
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Direito Previdenciário | Rodrigues Fontenelle Advocacia"
+  description="Aposentadorias, BPC/LOAS, Pensões e Revisões. Não deixe o INSS decidir o seu futuro. Consulte especialistas e garanta seus direitos."
+>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-dark pt-20">
+    <!-- Refined Luxury Dark Background -->
+    <div class="absolute inset-0 z-0 overflow-hidden bg-dark">
+      <!-- Animated Subtle Golden Corner Glows -->
+      <div class="absolute top-[-20%] right-[-10%] w-[70%] h-[70%] rounded-full bg-[radial-gradient(circle,rgba(212,175,55,0.07)_0%,transparent_70%)] blur-[80px]" style="animation: glow-pulse 8s ease-in-out infinite;"></div>
+      <div class="absolute bottom-[-20%] left-[-10%] w-[60%] h-[60%] rounded-full bg-[radial-gradient(circle,rgba(212,175,55,0.05)_0%,transparent_70%)] blur-[80px]" style="animation: glow-pulse 10s ease-in-out infinite reverse;"></div>
+      
+      <!-- Elegant Animated Diagonal Lines (Metallic Gold) -->
+      <div class="absolute inset-0 opacity-[0.85]">
+        <div class="absolute -top-[50%] left-[20%] w-[2px] h-[200%] origin-center shadow-[0_0_15px_rgba(252,246,186,0.6)]" style="background: linear-gradient(to bottom, transparent 0%, rgba(179,135,40,0.6) 35%, #FCF6BA 50%, rgba(212,175,55,0.8) 65%, transparent 100%); transform: rotate(35deg); animation: beam-slide-down 12s linear infinite;"></div>
+        <div class="absolute -top-[50%] right-[20%] w-[2px] h-[200%] origin-center shadow-[0_0_15px_rgba(252,246,186,0.6)]" style="background: linear-gradient(to bottom, transparent 0%, rgba(179,135,40,0.6) 35%, #FCF6BA 50%, rgba(212,175,55,0.8) 65%, transparent 100%); transform: rotate(-35deg); animation: beam-slide-up 15s linear infinite;"></div>
+      </div>
+      
+      <!-- Premium Matte Noise Texture -->
+      <div class="absolute inset-0 opacity-[0.04] mix-blend-overlay pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E');"></div>
+      
+      <!-- Base Gradient to ensure text readability -->
+      <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
+    </div>
+
+    <!-- Gold Orbs -->
+    <div class="absolute top-[30%] -left-[10%] w-[500px] h-[500px] bg-gold-primary/10 rounded-full blur-[150px] pointer-events-none"></div>
+    <div class="absolute bottom-[10%] -right-[10%] w-[600px] h-[600px] bg-gold-accent/10 rounded-full blur-[150px] pointer-events-none"></div>
+
+    <div class="relative z-10 mx-auto max-w-5xl px-6 text-center">
+      <div class="hero-badge-anim inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold-primary/30 bg-gold-primary/10 backdrop-blur-md mb-8">
+        <ShieldCheck class="w-4 h-4 text-gold-primary" />
+        <span class="text-xs font-bold tracking-[0.2em] text-gold-light uppercase">Especialistas em INSS</span>
+      </div>
+
+      <h1 class="hero-title-anim font-display text-[clamp(2.5rem,6vw,5.5rem)] leading-[1.05] tracking-tight mb-8 text-white">
+        Não deixe o sistema <br/>
+        <span class="text-gradient-gold">
+          decidir o seu futuro.
+        </span>
+      </h1>
+
+      <p class="hero-desc-anim text-lg md:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed mb-12">
+        Transformamos anos de suor e trabalho em um benefício justo e blindado contra cortes. 
+        Com estratégia e inteligência previdenciária, nós recuperamos aquilo que é seu por direito.
+      </p>
+
+      <div class="hero-cta-anim flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contato" class="group relative inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37] text-dark font-semibold tracking-widest uppercase text-[10px] sm:text-[11px] rounded-full overflow-hidden transition-all shadow-[0_4px_20px_rgba(212,175,55,0.2)] hover:shadow-[0_4px_30px_rgba(212,175,55,0.4)] hover:scale-[1.02]">
+          <div class="absolute inset-0 bg-gradient-to-r from-[#F3E5AB] via-[#D4AF37] to-[#F3E5AB] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <span class="relative z-10">Falar com um especialista</span>
+          <ArrowRight class="w-3.5 h-3.5 sm:w-4 sm:h-4 relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sub-serviços (Glassmorphism) -->
+  <section class="py-24 bg-[#0c0a09] relative overflow-hidden">
+    <!-- Animated Glowing Orbs -->
+    <div class="absolute top-1/4 -left-[20%] w-[600px] h-[600px] bg-gold-primary/10 rounded-full blur-[150px] pointer-events-none"></div>
+    <div class="absolute bottom-1/4 -right-[20%] w-[600px] h-[600px] bg-gold-accent/10 rounded-full blur-[150px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid lg:grid-cols-3 gap-8">
+        
+        <div class="service-feature-card relative p-8 rounded-2xl bg-gradient-to-b from-[#1a1510] to-[#0a0804] border border-gold-primary/20 backdrop-blur-md hover:border-gold-primary/60 transition-all duration-500 hover:shadow-[0_8px_40px_rgba(212,175,55,0.15)] hover:-translate-y-2 group overflow-hidden">
+          <div class="absolute inset-0 noise-bg opacity-20 pointer-events-none"></div>
+          <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold-primary/50 to-transparent"></div>
+          
+          <div class="relative z-10 w-12 h-12 rounded-full bg-gold-primary/10 flex items-center justify-center mb-6 text-gold-light border border-gold-primary/20 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_15px_rgba(212,175,55,0.2)] group-hover:shadow-[0_0_25px_rgba(252,246,186,0.4)]">
+            <Target class="w-6 h-6" />
+          </div>
+          <h3 class="relative z-10 font-display text-2xl text-gold-light mb-4 group-hover:text-white transition-colors">Aposentadorias</h3>
+          <p class="relative z-10 text-white/70 text-sm leading-relaxed mb-6">
+            Análise meticulosa de tempo de contribuição, idades e regras de transição para garantir a aposentadoria com o maior valor possível, incluindo <strong class="text-gold-light">Aposentadoria Especial</strong>.
+          </p>
+          <ul class="relative z-10 space-y-2 mb-6">
+            {["Aposentadoria por Idade", "Tempo de Contribuição", "Aposentadoria Especial", "Aposentadoria Rural"].map(item => (
+              <li class="flex items-center gap-2 text-sm text-white/80 group-hover:text-white transition-colors">
+                <CheckCircle2 class="w-4 h-4 text-gold-primary flex-shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="service-feature-card relative p-8 rounded-2xl bg-gradient-to-b from-[#1a1510] to-[#0a0804] border border-gold-primary/20 backdrop-blur-md hover:border-gold-primary/60 transition-all duration-500 hover:shadow-[0_8px_40px_rgba(212,175,55,0.15)] hover:-translate-y-2 group overflow-hidden">
+          <div class="absolute inset-0 noise-bg opacity-20 pointer-events-none"></div>
+          <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold-primary/50 to-transparent"></div>
+          
+          <div class="relative z-10 w-12 h-12 rounded-full bg-gold-primary/10 flex items-center justify-center mb-6 text-gold-light border border-gold-primary/20 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_15px_rgba(212,175,55,0.2)] group-hover:shadow-[0_0_25px_rgba(252,246,186,0.4)]">
+            <TrendingUp class="w-6 h-6" />
+          </div>
+          <h3 class="relative z-10 font-display text-2xl text-gold-light mb-4 group-hover:text-white transition-colors">Revisões de Benefício</h3>
+          <p class="relative z-10 text-white/70 text-sm leading-relaxed mb-6">
+            O INSS frequentemente comete erros de cálculo. Fazemos uma varredura no seu histórico para encontrar brechas que permitam aumentar o valor da sua parcela mensal e cobrar os retroativos.
+          </p>
+          <ul class="relative z-10 space-y-2 mb-6">
+            {["Revisão da Vida Toda", "Atividades Concomitantes", "Inclusão de Tempo Especial", "Correção de Erros de Cálculo"].map(item => (
+              <li class="flex items-center gap-2 text-sm text-white/80 group-hover:text-white transition-colors">
+                <CheckCircle2 class="w-4 h-4 text-gold-primary flex-shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="service-feature-card relative p-8 rounded-2xl bg-gradient-to-b from-[#1a1510] to-[#0a0804] border border-gold-primary/20 backdrop-blur-md hover:border-gold-primary/60 transition-all duration-500 hover:shadow-[0_8px_40px_rgba(212,175,55,0.15)] hover:-translate-y-2 group overflow-hidden">
+          <div class="absolute inset-0 noise-bg opacity-20 pointer-events-none"></div>
+          <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold-primary/50 to-transparent"></div>
+          
+          <div class="relative z-10 w-12 h-12 rounded-full bg-gold-primary/10 flex items-center justify-center mb-6 text-gold-light border border-gold-primary/20 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_15px_rgba(212,175,55,0.2)] group-hover:shadow-[0_0_25px_rgba(252,246,186,0.4)]">
+            <Scale class="w-6 h-6" />
+          </div>
+          <h3 class="relative z-10 font-display text-2xl text-gold-light mb-4 group-hover:text-white transition-colors">Benefícios e Auxílios</h3>
+          <p class="relative z-10 text-white/70 text-sm leading-relaxed mb-6">
+            Atuamos fortemente na concessão de BPC/LOAS para idosos e PCD, além de destravar benefícios por incapacidade que foram negados injustamente por peritos do INSS.
+          </p>
+          <ul class="relative z-10 space-y-2 mb-6">
+            {["BPC/LOAS (Idoso e PCD)", "Auxílio-Doença", "Aposentadoria por Invalidez", "Pensão por Morte"].map(item => (
+              <li class="flex items-center gap-2 text-sm text-white/80 group-hover:text-white transition-colors">
+                <CheckCircle2 class="w-4 h-4 text-gold-primary flex-shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Por que nós? -->
+  <section class="py-24 bg-[#f8f6f3] text-dark relative overflow-hidden">
+    <!-- Texture Overlay -->
+    <div class="absolute inset-0 header-marble opacity-60 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="why-us-reveal">
+          <h2 class="font-display text-4xl md:text-5xl mb-6">
+            Planejamento Previdenciário <span class="text-[#8B6914] block">de Alta Performance.</span>
+          </h2>
+          <p class="text-lg text-dark/70 leading-relaxed mb-8">
+            Advocacia previdenciária não é preencher formulários; é matemática, estratégia e antecipação. 
+            Nós simulamos todos os cenários possíveis para identificar a data exata e a regra mais vantajosa para você dar entrada no seu pedido.
+          </p>
+          
+          <div class="space-y-6">
+            <!-- Item 01 -->
+            <div class="group relative p-6 bg-white rounded-2xl border border-gold-primary/20 hover:border-gold-primary/60 transition-all duration-500 hover:shadow-[0_8px_30px_rgba(212,175,55,0.15)] overflow-hidden">
+               <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-gold-light via-gold-primary to-gold-dark"></div>
+               <div class="flex gap-4">
+                 <div class="w-12 h-12 rounded-full bg-gold-primary/10 flex-shrink-0 flex items-center justify-center border border-gold-primary/30 group-hover:bg-gold-primary/20 transition-colors">
+                   <span class="font-display font-bold text-gold-dark text-lg">01</span>
+                 </div>
+                 <div>
+                   <h4 class="font-display text-xl mb-2 text-dark group-hover:text-gold-dark transition-colors">Cálculo Preciso</h4>
+                   <p class="text-dark/70 text-sm leading-relaxed">Projetamos seu futuro financeiro cruzando as regras antigas e as regras pós-reforma.</p>
+                 </div>
+               </div>
+            </div>
+            
+            <!-- Item 02 -->
+            <div class="group relative p-6 bg-white rounded-2xl border border-gold-primary/20 hover:border-gold-primary/60 transition-all duration-500 hover:shadow-[0_8px_30px_rgba(212,175,55,0.15)] overflow-hidden">
+               <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-gold-light via-gold-primary to-gold-dark"></div>
+               <div class="flex gap-4">
+                 <div class="w-12 h-12 rounded-full bg-gold-primary/10 flex-shrink-0 flex items-center justify-center border border-gold-primary/30 group-hover:bg-gold-primary/20 transition-colors">
+                   <span class="font-display font-bold text-gold-dark text-lg">02</span>
+                 </div>
+                 <div>
+                   <h4 class="font-display text-xl mb-2 text-dark group-hover:text-gold-dark transition-colors">Auditoria de Vínculos (CNIS)</h4>
+                   <p class="text-dark/70 text-sm leading-relaxed">Corrigimos falhas e empresas que não repassaram contribuições, evitando surpresas no dia de se aposentar.</p>
+                 </div>
+               </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative why-us-image w-full aspect-square md:aspect-auto md:h-full min-h-[450px]">
+          <!-- Luxury Abstract Glassmorphism Dashboard Element -->
+          <div class="absolute inset-0 bg-[#0a0a0a] rounded-3xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 border border-gold/10 group transform transition-transform duration-700 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(212,175,55,0.15)]">
+            <!-- Background elements -->
+            <div class="absolute top-[-20%] right-[-20%] w-[70%] h-[70%] bg-[radial-gradient(circle,rgba(212,175,55,0.12)_0%,transparent_70%)] blur-[40px] rounded-full group-hover:scale-110 transition-transform duration-700"></div>
+            
+            <!-- Decorative diagonal line -->
+            <div class="absolute top-[-50%] right-[30%] w-[1px] h-[200%] bg-gradient-to-b from-transparent via-gold/30 to-transparent transform rotate-[35deg] shadow-[0_0_10px_rgba(212,175,55,0.2)]"></div>
+
+            <!-- Header -->
+            <div class="relative z-10 flex justify-between items-start">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-dark to-gold-primary p-[1px]">
+                  <div class="w-full h-full bg-[#0a0a0a] rounded-xl flex items-center justify-center">
+                    <TrendingUp class="w-6 h-6 text-gold-light" />
+                  </div>
+                </div>
+                <div>
+                  <h5 class="text-white font-display text-lg lg:text-xl">Projeção Previdenciária</h5>
+                  <p class="text-gold/60 text-xs uppercase tracking-widest font-bold mt-1">Simulação de Cenários</p>
+                </div>
+              </div>
+              <div class="px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-bold tracking-widest shadow-[0_0_10px_rgba(34,197,94,0.1)]">
+                +35% RMI
+              </div>
+            </div>
+
+            <!-- Chart / Graphic area -->
+            <div class="relative z-10 mt-12 flex-1 flex flex-col justify-end gap-4">
+              <!-- Abstract Bar Chart -->
+              <div class="flex items-end gap-2 md:gap-4 h-32 w-full justify-between px-2">
+                <div class="w-1/4 bg-white/5 rounded-t-md h-[30%] border-t border-white/10"></div>
+                <div class="w-1/4 bg-white/10 rounded-t-md h-[45%] border-t border-white/20"></div>
+                
+                <div class="w-1/4 bg-gold-dark/30 rounded-t-md h-[65%] border-t border-gold-dark relative group-hover:h-[70%] transition-all duration-500">
+                  <div class="absolute -top-8 left-1/2 -translate-x-1/2 text-gold-dark text-[10px] md:text-xs font-bold tracking-wider">COMUM</div>
+                </div>
+                
+                <div class="w-1/4 bg-gradient-to-t from-gold-dark via-gold-primary to-gold-light rounded-t-md h-[95%] shadow-[0_0_20px_rgba(252,246,186,0.3)] relative border-t-2 border-[#fff] group-hover:h-[100%] transition-all duration-700">
+                  <div class="absolute -top-10 left-1/2 -translate-x-1/2 text-[#0a0a0a] text-[10px] md:text-xs font-bold shadow-[0_4px_10px_rgba(212,175,55,0.4)] bg-gradient-to-r from-gold-light to-gold-primary px-3 py-1.5 rounded text-center whitespace-nowrap">
+                    ESTRATÉGIA
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Bottom Info -->
+              <div class="flex justify-between items-center p-5 bg-white/5 rounded-2xl border border-white/5 mt-6 backdrop-blur-md">
+                <div>
+                  <p class="text-white/40 text-[10px] md:text-xs uppercase tracking-[0.2em] mb-1">Diferença Projetada (Longo Prazo)</p>
+                  <p class="text-gold-light text-2xl md:text-3xl font-display font-bold">+ R$ 247.500</p>
+                </div>
+                <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                  <Target class="w-5 h-5 text-white/60" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schema.org Injection -->
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <Contact />
+  <Footer />
+</Layout>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Hero Animations
+    const tl = gsap.timeline();
+
+    tl.fromTo(".hero-bg-anim", 
+      { scale: 1.2, opacity: 0, filter: "blur(20px)" },
+      { scale: 1, opacity: 0.2, filter: "blur(0px)", duration: 2.5, ease: "power3.out" }
+    )
+    .fromTo(".hero-badge-anim", 
+      { y: 30, opacity: 0, filter: "blur(10px)" },
+      { y: 0, opacity: 1, filter: "blur(0px)", duration: 1, ease: "power3.out" },
+      "-=1.8"
+    )
+    .fromTo(".hero-title-anim",
+      { y: 40, opacity: 0, filter: "blur(15px)" },
+      { y: 0, opacity: 1, filter: "blur(0px)", duration: 1.2, ease: "power3.out" },
+      "-=0.8"
+    )
+    .fromTo(".hero-desc-anim",
+      { y: 20, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "power3.out" },
+      "-=0.8"
+    )
+    .fromTo(".hero-cta-anim",
+      { y: 20, opacity: 0, scale: 0.95 },
+      { y: 0, opacity: 1, scale: 1, duration: 0.8, ease: "back.out(1.5)" },
+      "-=0.6"
+    );
+
+    // Animate Service Cards
+    const cards = gsap.utils.toArray(".service-feature-card");
+    cards.forEach((card: any, i: number) => {
+      gsap.fromTo(card, 
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          delay: i * 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 85%",
+            toggleActions: "play none none none"
+          }
+        }
+      );
+    });
+
+    // Animate Why Us Text
+    gsap.fromTo(".why-us-reveal",
+      { x: -50, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".why-us-reveal",
+          start: "top 80%",
+        }
+      }
+    );
+
+    // Animate Why Us Image
+    gsap.fromTo(".why-us-image",
+      { scale: 0.9, opacity: 0, rotate: -2 },
+      {
+        scale: 1,
+        opacity: 1,
+        rotate: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".why-us-image",
+          start: "top 80%",
+        }
+      }
+    );
+  });
+</script>
+
+<style>
+  @keyframes glow-pulse {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+  }
+  @keyframes beam-slide-down {
+    0% { transform: translateY(-20%) rotate(35deg); }
+    50% { transform: translateY(20%) rotate(35deg); }
+    100% { transform: translateY(-20%) rotate(35deg); }
+  }
+  @keyframes beam-slide-up {
+    0% { transform: translateY(20%) rotate(-35deg); }
+    50% { transform: translateY(-20%) rotate(-35deg); }
+    100% { transform: translateY(20%) rotate(-35deg); }
+  }
+</style>

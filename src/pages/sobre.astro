@@ -1,0 +1,254 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { ArrowRight, Target, Eye, Gem, Award, Scale, Users } from "lucide-astro";
+---
+
+<Layout title="Sobre Nós | Rodrigues Fontenelle Advocacia">
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-24 overflow-hidden min-h-[60vh] flex items-center">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img
+        src={`${import.meta.env.BASE_URL}/images/hero-bg.webp`}
+        alt="Background"
+        class="w-full h-full object-cover opacity-20"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-dark via-dark/80 to-dark"></div>
+    </div>
+    <div class="absolute inset-0 header-marble opacity-10 pointer-events-none mix-blend-overlay"></div>
+    
+    <div class="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-12 text-center">
+      <span class="block text-gold font-bold tracking-[0.3em] uppercase text-xs sm:text-sm mb-6 hero-reveal-item">
+        Sobre Nós
+      </span>
+      <h1 class="hero-title-anim font-display text-[clamp(2.5rem,6vw,5.5rem)] leading-[1.05] tracking-tight mb-8 text-white">
+        A história por trás da <br/>
+        <span class="text-gradient-gold">excelência.</span>
+      </h1>
+      <p class="hero-desc-anim text-lg md:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
+        Nossa vocação é redefinir o padrão da advocacia no Brasil. Unimos estratégia profunda, atendimento humanizado e uma sede incansável por justiça.
+      </p>
+    </div>
+  </section>
+
+  <!-- Fundadora Section -->
+  <section class="relative py-24 sm:py-32 bg-[#0a0804] overflow-hidden">
+    <!-- Decorative -->
+    <div class="absolute -left-[20%] top-[20%] w-[600px] h-[600px] bg-gold/[0.03] rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute -right-[10%] bottom-[10%] w-[500px] h-[500px] bg-gold-accent/[0.04] rounded-full blur-[100px] pointer-events-none"></div>
+
+    <div class="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-12">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <!-- Photo Side (Cols 1-5) -->
+        <div class="lg:col-span-5 relative about-reveal">
+          <div class="relative p-[2px] rounded-t-[15rem] rounded-b-2xl bg-gradient-to-br from-[#FFDF73] via-[#D4AF37] to-[#8B6914] shadow-[0_20px_50px_rgba(212,175,55,0.15)] group overflow-hidden">
+            <div class="relative rounded-t-[calc(15rem-2px)] rounded-b-[calc(1rem-2px)] overflow-hidden bg-[#1a1613]">
+              <img
+                src={`${import.meta.env.BASE_URL}/images/dra-karum.jpg`}
+                alt="Dra. Karum Rodrigues"
+                class="w-full h-[600px] object-cover object-top transition-transform duration-1000 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+              
+              <div class="absolute bottom-0 left-0 right-0 p-8">
+                <span class="block text-[10px] font-bold tracking-[0.3em] uppercase text-[#D4AF37] mb-1">
+                  Sócia Fundadora
+                </span>
+                <h3 class="font-display text-3xl text-white tracking-tight leading-none">
+                  Dra. Karum<br/>Rodrigues
+                </h3>
+              </div>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/40 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -translate-x-full group-hover:animate-shine pointer-events-none"></div>
+          </div>
+          
+          <!-- Floating badge -->
+          <div class="absolute -right-6 top-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-[#120f0c] border border-gold/30 flex items-center justify-center shadow-2xl z-20 animate-float hidden lg:flex">
+             <Scale class="w-10 h-10 text-gold" stroke-width="1.5" />
+          </div>
+        </div>
+
+        <!-- Text Side (Cols 7-12) -->
+        <div class="lg:col-start-7 lg:col-span-6 about-reveal">
+          <h2 class="font-display text-3xl sm:text-4xl text-white mb-8 leading-tight">
+            "A advocacia não é apenas uma profissão, é um compromisso inegociável com a história de cada cliente."
+          </h2>
+          
+          <div class="space-y-6 text-white/60 text-lg leading-relaxed">
+            <p>
+              Com uma trajetória marcada por desafios superados e grandes vitórias, a Dra. Karum Rodrigues fundou o escritório com um propósito muito claro: preencher a lacuna entre o direito técnico e a necessidade humana.
+            </p>
+            <p>
+              Entendemos que por trás de cada processo previdenciário, civil ou trabalhista, existe uma família, um projeto de vida, um sonho que precisa ser protegido. Nossa equipe atua de forma cirúrgica, analisando cada vírgula do seu caso para garantir que nenhum direito passe despercebido.
+            </p>
+            <p>
+              Acreditamos que a verdadeira excelência não está apenas no conhecimento profundo das leis, mas na capacidade de usar esse conhecimento para transformar vidas. É essa paixão que nos move todos os dias.
+            </p>
+          </div>
+
+          <div class="mt-12 flex flex-wrap gap-6">
+            <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl">
+              <div class="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
+                <Award class="w-6 h-6 text-gold" />
+              </div>
+              <div>
+                <span class="block text-white font-bold font-display text-xl">10+ Anos</span>
+                <span class="block text-white/50 text-xs uppercase tracking-wider">de Experiência</span>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl">
+              <div class="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
+                <Users class="w-6 h-6 text-gold" />
+              </div>
+              <div>
+                <span class="block text-white font-bold font-display text-xl">Milhares</span>
+                <span class="block text-white/50 text-xs uppercase tracking-wider">de Vidas Transformadas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pilares Section -->
+  <section class="relative py-24 sm:py-32 bg-dark overflow-hidden">
+    <div class="absolute inset-0 header-marble opacity-5 mix-blend-overlay pointer-events-none"></div>
+    <div class="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-12">
+      <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-24 about-reveal">
+        <span class="block text-gold font-bold tracking-[0.25em] uppercase text-xs mb-4">Nossa Essência</span>
+        <h2 class="font-display text-3xl sm:text-5xl text-white leading-tight">
+          Os pilares que sustentam a <span class="text-gradient-gold">nossa atuação.</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Missão -->
+        <div class="about-reveal group relative p-8 rounded-3xl bg-white/[0.02] border border-white/[0.05] backdrop-blur-sm hover:bg-white/[0.04] transition-colors duration-500">
+          <div class="absolute inset-0 bg-gradient-to-b from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl pointer-events-none"></div>
+          
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#2a241f] to-[#1a1613] border border-gold/20 flex items-center justify-center mb-8 shadow-lg group-hover:scale-110 transition-transform duration-500">
+            <Target class="w-8 h-8 text-gold" />
+          </div>
+          
+          <h3 class="font-display text-2xl text-white mb-4">Missão</h3>
+          <p class="text-white/60 leading-relaxed">
+            Oferecer soluções jurídicas de alta complexidade com agilidade e transparência, garantindo a proteção e a restituição dos direitos de nossos clientes em cada detalhe.
+          </p>
+        </div>
+
+        <!-- Visão -->
+        <div class="about-reveal group relative p-8 rounded-3xl bg-white/[0.02] border border-white/[0.05] backdrop-blur-sm hover:bg-white/[0.04] transition-colors duration-500">
+          <div class="absolute inset-0 bg-gradient-to-b from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl pointer-events-none"></div>
+          
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#2a241f] to-[#1a1613] border border-gold/20 flex items-center justify-center mb-8 shadow-lg group-hover:scale-110 transition-transform duration-500">
+            <Eye class="w-8 h-8 text-gold" />
+          </div>
+          
+          <h3 class="font-display text-2xl text-white mb-4">Visão</h3>
+          <p class="text-white/60 leading-relaxed">
+            Ser a referência nacional em advocacia estratégica, redefinindo o padrão de atendimento no Brasil ao combinar profunda técnica jurídica com empatia genuína.
+          </p>
+        </div>
+
+        <!-- Valores -->
+        <div class="about-reveal group relative p-8 rounded-3xl bg-white/[0.02] border border-white/[0.05] backdrop-blur-sm hover:bg-white/[0.04] transition-colors duration-500">
+          <div class="absolute inset-0 bg-gradient-to-b from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl pointer-events-none"></div>
+          
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#2a241f] to-[#1a1613] border border-gold/20 flex items-center justify-center mb-8 shadow-lg group-hover:scale-110 transition-transform duration-500">
+            <Gem class="w-8 h-8 text-gold" />
+          </div>
+          
+          <h3 class="font-display text-2xl text-white mb-4">Valores</h3>
+          <p class="text-white/60 leading-relaxed">
+            Integridade inabalável, combatividade estratégica, inovação constante e um compromisso absoluto com a justiça e a história de quem confia em nós.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="py-24 sm:py-32 relative overflow-hidden bg-[#0a0804]">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.15)_0%,transparent_70%)] pointer-events-none"></div>
+    <div class="relative z-10 mx-auto w-full max-w-4xl px-5 text-center about-reveal">
+      <h2 class="font-display text-3xl sm:text-5xl text-white mb-6">
+        Pronto para proteger o seu <span class="text-gradient-gold">futuro?</span>
+      </h2>
+      <p class="text-lg text-white/60 mb-10 max-w-2xl mx-auto">
+        Nossa equipe de especialistas está a postos para analisar seu caso. Dê o primeiro passo em direção à justiça.
+      </p>
+      
+      <a href={`${import.meta.env.BASE_URL}/#contato`} class="group relative inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37] text-dark font-semibold tracking-widest uppercase text-[10px] sm:text-[11px] rounded-full overflow-hidden transition-all shadow-[0_4px_20px_rgba(212,175,55,0.2)] hover:shadow-[0_4px_30px_rgba(212,175,55,0.4)] hover:scale-[1.02]">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#F3E5AB] via-[#D4AF37] to-[#F3E5AB] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <span class="relative z-10 text-dark">Falar com um especialista</span>
+        <ArrowRight class="w-3.5 h-3.5 sm:w-4 sm:h-4 relative z-10 text-dark transition-transform duration-300 group-hover:translate-x-1" />
+      </a>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  @keyframes shine {
+    0% { transform: translateX(-100%) skewX(-15deg); }
+    100% { transform: translateX(200%) skewX(-15deg); }
+  }
+  .animate-shine { animation: shine 1.5s ease-in-out infinite; }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+  .animate-float { animation: float 6s ease-in-out infinite; }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Hero Animations
+    const tl = gsap.timeline();
+    
+    tl.fromTo(
+      ".hero-reveal-item",
+      { y: 30, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
+    )
+    .fromTo(
+      ".hero-title-anim",
+      { y: 40, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1.2, ease: "power3.out" },
+      "-=0.6"
+    )
+    .fromTo(
+      ".hero-desc-anim",
+      { y: 30, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "power3.out" },
+      "-=0.8"
+    );
+
+    // Scroll Animations
+    gsap.utils.toArray(".about-reveal").forEach((el: any, i) => {
+      gsap.fromTo(
+        el,
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1.1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    });
+  });
+</script>

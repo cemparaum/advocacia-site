@@ -53,11 +53,12 @@ import { Star, Quote, PlayCircle, Scale, ShieldCheck } from "lucide-astro";
     class="relative z-10 flex flex-col gap-8 mb-32 overflow-hidden w-full mask-edges"
   >
     <!-- Row 1: Left Scroll -->
-    <div class="marquee-track flex w-[max-content]">
-      <div class="marquee-content flex gap-6 px-3">
-        <!-- Testimonials Set (Repeated 2x for infinite loop) -->
-        {
-          Array(2)
+    <div class="marquee-track drag-container flex w-[max-content] cursor-grab active:cursor-grabbing">
+      <div class="drag-wrapper flex">
+        <div class="marquee-content flex gap-6 px-3">
+          <!-- Testimonials Set (Repeated 4x for infinite loop + drag buffer) -->
+          {
+            Array(4)
             .fill(0)
             .map(() => (
               <>
@@ -152,15 +153,17 @@ import { Star, Quote, PlayCircle, Scale, ShieldCheck } from "lucide-astro";
               </>
             ))
         }
+        </div>
       </div>
     </div>
 
     <!-- Row 2: Right Scroll (Reverse) -->
-    <div class="marquee-track flex w-[max-content]">
-      <div class="marquee-content-reverse flex gap-6 px-3">
-        <!-- Testimonials Set (Repeated 2x) -->
-        {
-          Array(2)
+    <div class="marquee-track drag-container flex w-[max-content] cursor-grab active:cursor-grabbing">
+      <div class="drag-wrapper flex">
+        <div class="marquee-content-reverse flex gap-6 px-3">
+          <!-- Testimonials Set (Repeated 4x) -->
+          {
+            Array(4)
             .fill(0)
             .map(() => (
               <>
@@ -254,6 +257,7 @@ import { Star, Quote, PlayCircle, Scale, ShieldCheck } from "lucide-astro";
               </>
             ))
         }
+        </div>
       </div>
     </div>
   </div>
@@ -469,4 +473,43 @@ import { Star, Quote, PlayCircle, Scale, ShieldCheck } from "lucide-astro";
       },
     },
   );
+
+  // Drag to scroll logic for testimonials
+  const dragContainers = document.querySelectorAll(".drag-container");
+  dragContainers.forEach((container) => {
+    const wrapper = container.querySelector(".drag-wrapper");
+    let isDragging = false;
+    let startX = 0;
+    let initialX = 0;
+
+    container.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      startX = e.pageX;
+      
+      // Get current transform value
+      const style = window.getComputedStyle(wrapper);
+      const matrix = new DOMMatrix(style.transform);
+      initialX = matrix.m41; // Get the translateX value
+      
+      container.classList.remove("cursor-grab");
+      container.classList.add("cursor-grabbing");
+    });
+
+    window.addEventListener("mouseup", () => {
+      isDragging = false;
+      container.classList.add("cursor-grab");
+      container.classList.remove("cursor-grabbing");
+    });
+
+    window.addEventListener("mousemove", (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      
+      const dx = e.pageX - startX;
+      const currentX = initialX + dx;
+      
+      // Apply the drag translation
+      wrapper.style.transform = `translateX(${currentX}px)`;
+    });
+  });
 </script>

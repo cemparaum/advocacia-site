@@ -1,0 +1,444 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import Contact from "../../components/Contact.astro";
+import { Briefcase, Clock, AlertTriangle, FileText, ChevronRight, CheckCircle2, ArrowRight, Scale, Calculator } from "lucide-astro";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Fui demitido e não recebi minhas verbas, o que fazer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A empresa tem o prazo de 10 dias após o término do contrato para pagar as verbas rescisórias. Caso não o faça, você tem direito a receber o valor com multa (art. 477 da CLT), além de poder ingressar com uma ação trabalhista para cobrar todas as horas extras e adicionais devidos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tenho direito a hora extra se trabalho pelo celular fora do expediente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. O regime de sobreaviso ou trabalho à distância fora do seu horário estipulado configura hora extra, desde que fique comprovado o controle ou a exigência de respostas por parte do empregador via WhatsApp ou e-mail."
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Direito Trabalhista | Rodrigues Fontenelle Advocacia"
+  description="Reclamações Trabalhistas, Horas Extras, Rescisão Indireta e Assédio Moral. Exigimos o respeito absoluto aos seus direitos e garantimos o que lhe foi negado."
+>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-dark pt-20">
+    <!-- Refined Luxury Dark Background -->
+    <div class="absolute inset-0 z-0 overflow-hidden bg-dark">
+      <!-- Animated Subtle Golden Corner Glows -->
+      <div class="absolute top-[-20%] right-[-10%] w-[70%] h-[70%] rounded-full bg-[radial-gradient(circle,rgba(212,175,55,0.07)_0%,transparent_70%)] blur-[80px]" style="animation: glow-pulse 8s ease-in-out infinite;"></div>
+      <div class="absolute bottom-[-20%] left-[-10%] w-[60%] h-[60%] rounded-full bg-[radial-gradient(circle,rgba(212,175,55,0.05)_0%,transparent_70%)] blur-[80px]" style="animation: glow-pulse 10s ease-in-out infinite reverse;"></div>
+      
+      <!-- Elegant Animated Diagonal Lines (Metallic Gold) -->
+      <div class="absolute inset-0 opacity-[0.85]">
+        <div class="absolute -top-[50%] left-[20%] w-[2px] h-[200%] origin-center shadow-[0_0_15px_rgba(252,246,186,0.6)]" style="background: linear-gradient(to bottom, transparent 0%, rgba(179,135,40,0.6) 35%, #FCF6BA 50%, rgba(212,175,55,0.8) 65%, transparent 100%); transform: rotate(35deg); animation: beam-slide-down 12s linear infinite;"></div>
+        <div class="absolute -top-[50%] right-[20%] w-[2px] h-[200%] origin-center shadow-[0_0_15px_rgba(252,246,186,0.6)]" style="background: linear-gradient(to bottom, transparent 0%, rgba(179,135,40,0.6) 35%, #FCF6BA 50%, rgba(212,175,55,0.8) 65%, transparent 100%); transform: rotate(-35deg); animation: beam-slide-up 15s linear infinite;"></div>
+      </div>
+      
+      <!-- Premium Matte Noise Texture -->
+      <div class="absolute inset-0 opacity-[0.04] mix-blend-overlay pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E');"></div>
+      
+      <!-- Base Gradient to ensure text readability -->
+      <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
+    </div>
+
+    <!-- Gold Orbs -->
+    <div class="absolute top-[30%] -left-[10%] w-[500px] h-[500px] bg-gold-primary/10 rounded-full blur-[150px] pointer-events-none"></div>
+    <div class="absolute bottom-[10%] -right-[10%] w-[600px] h-[600px] bg-gold-accent/10 rounded-full blur-[150px] pointer-events-none"></div>
+
+    <div class="relative z-10 mx-auto max-w-5xl px-6 text-center">
+      <div class="hero-badge-anim inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold-primary/30 bg-gold-primary/10 backdrop-blur-md mb-8">
+        <Scale class="w-4 h-4 text-gold-primary" />
+        <span class="text-xs font-bold tracking-[0.2em] text-gold-light uppercase">Força contra os Abusos</span>
+      </div>
+
+      <h1 class="hero-title-anim font-display text-[clamp(2.5rem,6vw,5.5rem)] leading-[1.05] tracking-tight mb-8 text-white">
+        Eles ditam as regras, <br/>
+        <span class="text-gradient-gold">
+          nós cobramos a fatura.
+        </span>
+      </h1>
+
+      <p class="hero-desc-anim text-lg md:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed mb-12">
+        Mapeamos todas as violações aos seus direitos trabalhistas. Se você sofreu abusos, cumpriu horas não pagas ou foi demitido sem justa causa, nós iremos equalizar o jogo a seu favor.
+      </p>
+
+      <div class="hero-cta-anim flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contato" class="group relative inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37] text-dark font-semibold tracking-widest uppercase text-[10px] sm:text-[11px] rounded-full overflow-hidden transition-all shadow-[0_4px_20px_rgba(212,175,55,0.2)] hover:shadow-[0_4px_30px_rgba(212,175,55,0.4)] hover:scale-[1.02]">
+          <div class="absolute inset-0 bg-gradient-to-r from-[#F3E5AB] via-[#D4AF37] to-[#F3E5AB] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <span class="relative z-10">Falar com um especialista</span>
+          <ArrowRight class="w-3.5 h-3.5 sm:w-4 sm:h-4 relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sub-serviços (Glassmorphism) -->
+  <section class="py-24 bg-[#0c0a09] relative overflow-hidden">
+    <!-- Animated Glowing Orbs -->
+    <div class="absolute top-1/4 -left-[20%] w-[600px] h-[600px] bg-gold-primary/10 rounded-full blur-[150px] pointer-events-none"></div>
+    <div class="absolute bottom-1/4 -right-[20%] w-[600px] h-[600px] bg-gold-accent/10 rounded-full blur-[150px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid lg:grid-cols-3 gap-8">
+        
+        <div class="service-feature-card relative p-8 rounded-2xl bg-gradient-to-b from-[#1a1510] to-[#0a0804] border border-gold-primary/20 backdrop-blur-md hover:border-gold-primary/60 transition-all duration-500 hover:shadow-[0_8px_40px_rgba(212,175,55,0.15)] hover:-translate-y-2 group overflow-hidden">
+          <div class="absolute inset-0 noise-bg opacity-20 pointer-events-none"></div>
+          <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold-primary/50 to-transparent"></div>
+          
+          <div class="relative z-10 w-12 h-12 rounded-full bg-gold-primary/10 flex items-center justify-center mb-6 text-gold-light border border-gold-primary/20 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_15px_rgba(212,175,55,0.2)] group-hover:shadow-[0_0_25px_rgba(252,246,186,0.4)]">
+            <FileText class="w-6 h-6" />
+          </div>
+          <h3 class="relative z-10 font-display text-2xl text-gold-light mb-4 group-hover:text-white transition-colors">Verbas Rescisórias</h3>
+          <p class="relative z-10 text-white/70 text-sm leading-relaxed mb-6">
+            Analisamos seu termo de rescisão linha por linha. Garantimos que Fundo de Garantia, férias, 13º e multas sejam pagos integralmente, e entramos com Rescisão Indireta caso a empresa não cumpra o contrato.
+          </p>
+          <ul class="relative z-10 space-y-2 mb-6">
+            {["Rescisão Indireta", "Reconhecimento de Vínculo", "Multas por Atraso", "Liberação de FGTS e Seguro"].map(item => (
+              <li class="flex items-center gap-2 text-sm text-white/80 group-hover:text-white transition-colors">
+                <CheckCircle2 class="w-4 h-4 text-gold-primary flex-shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="service-feature-card relative p-8 rounded-2xl bg-gradient-to-b from-[#1a1510] to-[#0a0804] border border-gold-primary/20 backdrop-blur-md hover:border-gold-primary/60 transition-all duration-500 hover:shadow-[0_8px_40px_rgba(212,175,55,0.15)] hover:-translate-y-2 group overflow-hidden">
+          <div class="absolute inset-0 noise-bg opacity-20 pointer-events-none"></div>
+          <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold-primary/50 to-transparent"></div>
+          
+          <div class="relative z-10 w-12 h-12 rounded-full bg-gold-primary/10 flex items-center justify-center mb-6 text-gold-light border border-gold-primary/20 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_15px_rgba(212,175,55,0.2)] group-hover:shadow-[0_0_25px_rgba(252,246,186,0.4)]">
+            <Clock class="w-6 h-6" />
+          </div>
+          <h3 class="relative z-10 font-display text-2xl text-gold-light mb-4 group-hover:text-white transition-colors">Jornada Exaustiva</h3>
+          <p class="relative z-10 text-white/70 text-sm leading-relaxed mb-6">
+            Mapeamos todas as fraudes em controle de ponto, sobreaviso em grupos de WhatsApp e supressão de horário de almoço. Cobraremos todas as horas extras com os devidos reflexos financeiros.
+          </p>
+          <ul class="relative z-10 space-y-2 mb-6">
+            {["Horas Extras Não Pagas", "Intervalo Intrajornada", "Trabalho Noturno", "Sobreaviso (Teletrabalho)"].map(item => (
+              <li class="flex items-center gap-2 text-sm text-white/80 group-hover:text-white transition-colors">
+                <CheckCircle2 class="w-4 h-4 text-gold-primary flex-shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="service-feature-card relative p-8 rounded-2xl bg-gradient-to-b from-[#1a1510] to-[#0a0804] border border-gold-primary/20 backdrop-blur-md hover:border-gold-primary/60 transition-all duration-500 hover:shadow-[0_8px_40px_rgba(212,175,55,0.15)] hover:-translate-y-2 group overflow-hidden">
+          <div class="absolute inset-0 noise-bg opacity-20 pointer-events-none"></div>
+          <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold-primary/50 to-transparent"></div>
+          
+          <div class="relative z-10 w-12 h-12 rounded-full bg-gold-primary/10 flex items-center justify-center mb-6 text-gold-light border border-gold-primary/20 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_15px_rgba(212,175,55,0.2)] group-hover:shadow-[0_0_25px_rgba(252,246,186,0.4)]">
+            <AlertTriangle class="w-6 h-6" />
+          </div>
+          <h3 class="relative z-10 font-display text-2xl text-gold-light mb-4 group-hover:text-white transition-colors">Danos e Assédio</h3>
+          <p class="relative z-10 text-white/70 text-sm leading-relaxed mb-6">
+            Seu ambiente de trabalho não pode ser um fator de adoecimento. Atuamos fortemente em casos de Burnout, acidentes de trabalho e assédio moral/sexual para garantir a justa indenização.
+          </p>
+          <ul class="relative z-10 space-y-2 mb-6">
+            {["Assédio Moral e Sexual", "Acidentes de Trabalho", "Doenças Ocupacionais (Burnout)", "Adicional de Insalubridade/Periculosidade"].map(item => (
+              <li class="flex items-center gap-2 text-sm text-white/80 group-hover:text-white transition-colors">
+                <CheckCircle2 class="w-4 h-4 text-gold-primary flex-shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Por que nós? -->
+  <section class="py-24 bg-[#f8f6f3] text-dark relative overflow-hidden">
+    <!-- Texture Overlay -->
+    <div class="absolute inset-0 header-marble opacity-60 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="why-us-reveal">
+          <h2 class="font-display text-4xl md:text-5xl mb-6">
+            Estratégia Implacável <span class="text-[#8B6914] block">na Justiça do Trabalho.</span>
+          </h2>
+          <p class="text-lg text-dark/70 leading-relaxed mb-8">
+            Enfrentar grandes empresas exige preparo, inteligência e as provas certas.
+            Nós conduzimos toda a etapa de colheita de provas (áudios, mensagens, documentos) antes mesmo da audiência para que o juiz já conheça a verdade irrefutável do seu caso.
+          </p>
+          
+          <div class="space-y-6">
+            <!-- Item 01 -->
+            <div class="group relative p-6 bg-white rounded-2xl border border-gold-primary/20 hover:border-gold-primary/60 transition-all duration-500 hover:shadow-[0_8px_30px_rgba(212,175,55,0.15)] overflow-hidden">
+               <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-gold-light via-gold-primary to-gold-dark"></div>
+               <div class="flex gap-4">
+                 <div class="w-12 h-12 rounded-full bg-gold-primary/10 flex-shrink-0 flex items-center justify-center border border-gold-primary/30 group-hover:bg-gold-primary/20 transition-colors">
+                   <span class="font-display font-bold text-gold-dark text-lg">01</span>
+                 </div>
+                 <div>
+                   <h4 class="font-display text-xl mb-2 text-dark group-hover:text-gold-dark transition-colors">Instrução Probatória</h4>
+                   <p class="text-dark/70 text-sm leading-relaxed">Não deixamos brechas para a defesa do patrão. Orientamos você de ponta a ponta sobre testemunhas e registros digitais essenciais.</p>
+                 </div>
+               </div>
+            </div>
+            
+            <!-- Item 02 -->
+            <div class="group relative p-6 bg-white rounded-2xl border border-gold-primary/20 hover:border-gold-primary/60 transition-all duration-500 hover:shadow-[0_8px_30px_rgba(212,175,55,0.15)] overflow-hidden">
+               <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-gold-light via-gold-primary to-gold-dark"></div>
+               <div class="flex gap-4">
+                 <div class="w-12 h-12 rounded-full bg-gold-primary/10 flex-shrink-0 flex items-center justify-center border border-gold-primary/30 group-hover:bg-gold-primary/20 transition-colors">
+                   <span class="font-display font-bold text-gold-dark text-lg">02</span>
+                 </div>
+                 <div>
+                   <h4 class="font-display text-xl mb-2 text-dark group-hover:text-gold-dark transition-colors">Cálculo de Verbas Profissional</h4>
+                   <p class="text-dark/70 text-sm leading-relaxed">Nosso setor financeiro calcula os centavos exatos que lhe foram tirados, garantindo que o valor da causa reflita a realidade, forçando acordos justos.</p>
+                 </div>
+               </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative why-us-image w-full aspect-square md:aspect-auto md:h-full min-h-[450px]">
+          <!-- Luxury Abstract Glassmorphism Dashboard Element -->
+          <div class="absolute inset-0 bg-[#0a0a0a] rounded-3xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 border border-gold/10 group transform transition-transform duration-700 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(212,175,55,0.15)]">
+            <!-- Background elements -->
+            <div class="absolute top-[-20%] right-[-20%] w-[70%] h-[70%] bg-[radial-gradient(circle,rgba(212,175,55,0.12)_0%,transparent_70%)] blur-[40px] rounded-full group-hover:scale-110 transition-transform duration-700"></div>
+            
+            <!-- Decorative diagonal line -->
+            <div class="absolute top-[-50%] right-[30%] w-[1px] h-[200%] bg-gradient-to-b from-transparent via-gold/30 to-transparent transform rotate-[35deg] shadow-[0_0_10px_rgba(212,175,55,0.2)]"></div>
+
+            <!-- Header -->
+            <div class="relative z-10 flex justify-between items-start">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-dark to-gold-primary p-[1px]">
+                  <div class="w-full h-full bg-[#0a0a0a] rounded-xl flex items-center justify-center">
+                    <FileText class="w-6 h-6 text-gold-light" />
+                  </div>
+                </div>
+                <div>
+                  <h5 class="text-white font-display text-base lg:text-lg leading-tight uppercase tracking-wide">Avaliação e Cálculo<br/><span class="text-white/70">de Dano Moral</span></h5>
+                </div>
+              </div>
+              <div class="px-2 py-1 rounded-full bg-gold/10 border border-gold/20 text-gold-light text-[10px] uppercase font-bold tracking-widest shadow-[0_0_10px_rgba(212,175,55,0.1)]">
+                IMPACTO PSICOSSOCIAL
+              </div>
+            </div>
+
+            <!-- Center Graphic area (Radar Chart) -->
+            <div class="relative z-10 mt-8 mb-4 flex-1 flex flex-col items-center justify-center">
+              <div class="relative w-full max-w-[280px] aspect-square group">
+                <!-- SVG Radar Chart -->
+                <svg viewBox="0 0 200 200" class="w-full h-full overflow-visible">
+                  <!-- Background Pentagon grid -->
+                  <!-- Center is 100,100. Radius is 60 -->
+                  <polygon points="100,40 157,81 135,148 65,148 43,81" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                  <polygon points="100,55 142,86 126,136 74,136 58,86" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                  <polygon points="100,70 128,91 117,124 83,124 72,91" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                  <polygon points="100,85 114,96 109,112 91,112 86,96" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                  
+                  <!-- Axes lines -->
+                  <line x1="100" y1="100" x2="100" y2="40" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                  <line x1="100" y1="100" x2="157" y2="81" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                  <line x1="100" y1="100" x2="135" y2="148" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                  <line x1="100" y1="100" x2="65" y2="148" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                  <line x1="100" y1="100" x2="43" y2="81" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                  
+                  <!-- Data Area 1: Pré-intervenção (Grey) -->
+                  <!-- Small values -->
+                  <polygon points="100,75 110,95 105,120 90,115 80,90" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" class="transition-all duration-700"/>
+                  
+                  <!-- Data Area 2: Pós-intervenção (Gold) -->
+                  <!-- High values -->
+                  <polygon points="100,45 150,85 130,140 70,140 45,90" fill="rgba(212,175,55,0.3)" stroke="#D4AF37" stroke-width="2" class="group-hover:fill-gold/40 transition-all duration-700 shadow-[0_0_15px_rgba(212,175,55,0.5)]"/>
+                  
+                  <!-- Labels -->
+                  <text x="100" y="30" fill="white" font-size="8" text-anchor="middle" class="opacity-80">Integridade Moral</text>
+                  <text x="165" y="81" fill="white" font-size="8" text-anchor="start" class="opacity-80">
+                    <tspan x="165" dy="0">Reputação</tspan>
+                    <tspan x="165" dy="10">Profissional</tspan>
+                  </text>
+                  <text x="145" y="160" fill="white" font-size="8" text-anchor="middle" class="opacity-80">
+                    <tspan x="145" dy="0">Ambiente de</tspan>
+                    <tspan x="145" dy="10">Trabalho</tspan>
+                  </text>
+                  <text x="55" y="160" fill="white" font-size="8" text-anchor="middle" class="opacity-80">
+                    <tspan x="55" dy="0">Projeção de</tspan>
+                    <tspan x="55" dy="10">Carreira</tspan>
+                  </text>
+                  <text x="35" y="81" fill="white" font-size="8" text-anchor="end" class="opacity-80">
+                    <tspan x="35" dy="0">Bem-Estar</tspan>
+                    <tspan x="35" dy="10">Psicológico</tspan>
+                  </text>
+                </svg>
+              </div>
+
+              <!-- Legend -->
+              <div class="flex items-center justify-center gap-4 mt-2 text-[8px] sm:text-[9px] uppercase tracking-widest text-white/60">
+                <div class="flex items-center gap-1.5">
+                  <div class="w-2 h-2 bg-white/30 rounded-sm"></div>
+                  <span>Pré-Intervenção</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <div class="w-2 h-2 bg-gold/80 rounded-sm"></div>
+                  <span class="text-gold-light">Pós-Intervenção Jurídica</span>
+                </div>
+              </div>
+              
+              <!-- Data Stats -->
+              <div class="flex justify-between w-full items-center px-2 mt-6">
+                <div class="flex flex-col">
+                   <span class="text-[9px] text-white/60 uppercase tracking-widest mb-1">Dignidade Restaurada</span>
+                   <div class="flex items-center gap-1">
+                     <span class="text-gold-light font-display font-bold text-xl leading-none">90%</span>
+                     <span class="text-green-400 font-bold text-sm">↑</span>
+                   </div>
+                </div>
+                <div class="flex flex-col text-right">
+                   <span class="text-[9px] text-white/60 uppercase tracking-widest mb-1">Redução de Risco de Abuso</span>
+                   <div class="flex items-center gap-1 justify-end">
+                     <span class="text-gold-light font-display font-bold text-xl leading-none">98%</span>
+                     <span class="text-green-400 font-bold text-sm">↑</span>
+                   </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Bottom Info -->
+            <div class="flex justify-between items-center p-4 bg-white/5 rounded-2xl border border-white/10 mt-4 backdrop-blur-md">
+              <div>
+                <p class="text-white/40 text-[9px] uppercase tracking-[0.2em] mb-1">Estratégia de Mensuração Subjetiva</p>
+                <div class="flex items-center gap-2">
+                  <Briefcase class="w-4 h-4 text-gold-light" />
+                  <p class="text-gold-light text-lg font-display font-bold uppercase tracking-wide">Técnica Exclusiva</p>
+                </div>
+              </div>
+              <div class="w-6 h-6 text-gold/30">
+                <!-- Decorative Sparkle Icon -->
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full"><path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10L12 0Z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schema.org Injection -->
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <Contact />
+  <Footer />
+</Layout>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Hero Animations
+    const tl = gsap.timeline();
+
+    tl.fromTo(".hero-bg-anim", 
+      { scale: 1.2, opacity: 0, filter: "blur(20px)" },
+      { scale: 1, opacity: 0.2, filter: "blur(0px)", duration: 2.5, ease: "power3.out" }
+    )
+    .fromTo(".hero-badge-anim", 
+      { y: 30, opacity: 0, filter: "blur(10px)" },
+      { y: 0, opacity: 1, filter: "blur(0px)", duration: 1, ease: "power3.out" },
+      "-=1.8"
+    )
+    .fromTo(".hero-title-anim",
+      { y: 40, opacity: 0, filter: "blur(15px)" },
+      { y: 0, opacity: 1, filter: "blur(0px)", duration: 1.2, ease: "power3.out" },
+      "-=0.8"
+    )
+    .fromTo(".hero-desc-anim",
+      { y: 20, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "power3.out" },
+      "-=0.8"
+    )
+    .fromTo(".hero-cta-anim",
+      { y: 20, opacity: 0, scale: 0.95 },
+      { y: 0, opacity: 1, scale: 1, duration: 0.8, ease: "back.out(1.5)" },
+      "-=0.6"
+    );
+
+    // Animate Service Cards
+    const cards = gsap.utils.toArray(".service-feature-card");
+    cards.forEach((card: any, i: number) => {
+      gsap.fromTo(card, 
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          delay: i * 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 85%",
+            toggleActions: "play none none none"
+          }
+        }
+      );
+    });
+
+    // Animate Why Us Text
+    gsap.fromTo(".why-us-reveal",
+      { x: -50, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".why-us-reveal",
+          start: "top 80%",
+        }
+      }
+    );
+
+    // Animate Why Us Image
+    gsap.fromTo(".why-us-image",
+      { scale: 0.9, opacity: 0, rotate: -2 },
+      {
+        scale: 1,
+        opacity: 1,
+        rotate: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".why-us-image",
+          start: "top 80%",
+        }
+      }
+    );
+  });
+</script>
+
+<style>
+  @keyframes liquid-mesh {
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.1) rotate(10deg); }
+    100% { transform: scale(1) rotate(-5deg); }
+  }
+  @keyframes float-orb {
+    0%, 100% { transform: translateY(0) translateX(0) scale(1); }
+    33% { transform: translateY(-40px) translateX(20px) scale(1.1); }
+    66% { transform: translateY(20px) translateX(-20px) scale(0.9); }
+  }
+</style>

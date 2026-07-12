@@ -71,7 +71,7 @@ import {
     <div class="grid lg:grid-cols-3 gap-4 sm:gap-5">
       <!-- Card 1 -->
       <div
-        class="svc-card group relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden border border-[#B38728]/25 shadow-[0_4px_25px_rgba(179,135,40,0.06)] bg-white/70 backdrop-blur-sm flex flex-col justify-end transition-all duration-700 hover:border-[#B38728]/60 hover:shadow-[0_8px_40px_rgba(179,135,40,0.15)]"
+        class="svc-card group relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden border border-[#B38728]/25 shadow-[0_4px_25px_rgba(179,135,40,0.06)] bg-white/70 backdrop-blur-sm flex flex-col justify-end transition-all duration-700 hover:border-[#B38728] hover:shadow-[0_15px_50px_rgba(212,175,55,0.25)] hover:-translate-y-2"
       >
         <!-- Decorative Metallic Number -->
         <div class="absolute top-4 right-5 pointer-events-none select-none">
@@ -84,7 +84,7 @@ import {
 
         <!-- Gold glow on hover -->
         <div
-          class="absolute inset-0 bg-gradient-to-t from-gold/[0.04] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+          class="absolute inset-0 bg-gradient-to-t from-[#D4AF37]/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
         >
         </div>
 
@@ -92,7 +92,7 @@ import {
         <div class="relative p-5 sm:p-7 pt-16 sm:pt-20">
           <!-- Icon Badge -->
           <div
-            class="w-10 h-10 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-4 sm:mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_25px_rgba(179,135,40,0.12)]"
+            class="w-10 h-10 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-4 sm:mb-5 transition-all duration-500 group-hover:bg-[#B38728]/30 group-hover:border-[#B38728]/50 group-hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] group-hover:scale-110 origin-left"
           >
             <ShieldCheck class="w-[18px] h-[18px] text-[#8B6914]" />
           </div>
@@ -111,7 +111,7 @@ import {
           </h3>
 
           <!-- Description -->
-          <p class="text-sm text-[#1a1613]/40 leading-relaxed mb-5 max-w-md">
+          <p class="text-sm text-[#1a1613]/40 group-hover:text-[#1a1613]/70 transition-colors duration-500 leading-relaxed mb-5 max-w-md">
             O INSS negou seu benefício? Nós transformamos anos de trabalho na
             aposentadoria segura que você merece.
           </p>
@@ -129,7 +129,7 @@ import {
 
           <!-- CTA -->
           <a
-            href="#contato"
+            href={`${import.meta.env.BASE_URL}/servicos/previdenciario`}
             class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.15em] text-[#8B6914] group-hover:text-[#6B5010] transition-colors duration-500"
           >
             <span>Saiba mais</span>
@@ -142,7 +142,7 @@ import {
 
       <!-- Card: Civil -->
       <div
-        class="svc-card group relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden border border-[#B38728]/25 shadow-[0_4px_25px_rgba(179,135,40,0.06)] bg-white/70 backdrop-blur-sm flex flex-col justify-end transition-all duration-700 hover:border-[#B38728]/60 hover:shadow-[0_8px_40px_rgba(179,135,40,0.15)]"
+        class="svc-card group relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden border border-[#B38728]/25 shadow-[0_4px_25px_rgba(179,135,40,0.06)] bg-white/70 backdrop-blur-sm flex flex-col justify-end transition-all duration-700 hover:border-[#B38728] hover:shadow-[0_15px_50px_rgba(212,175,55,0.25)] hover:-translate-y-2"
       >
         <!-- Metallic Number -->
         <div class="absolute top-4 right-5 pointer-events-none select-none">
@@ -154,13 +154,13 @@ import {
         </div>
 
         <div
-          class="absolute inset-0 bg-gradient-to-t from-gold/[0.03] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+          class="absolute inset-0 bg-gradient-to-t from-[#D4AF37]/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
         >
         </div>
 
         <div class="relative p-5 sm:p-7 pt-16 sm:pt-20">
           <div
-            class="w-10 h-10 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-4 sm:mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_25px_rgba(179,135,40,0.12)]"
+            class="w-10 h-10 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-4 sm:mb-5 transition-all duration-500 group-hover:bg-[#B38728]/30 group-hover:border-[#B38728]/50 group-hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] group-hover:scale-110 origin-left"
           >
             <Scale class="w-[18px] h-[18px] text-[#8B6914]" />
           </div>
@@ -174,7 +174,7 @@ import {
           >
             Civil
           </h3>
-          <p class="text-sm text-[#1a1613]/40 leading-relaxed mb-5 max-w-md">
+          <p class="text-sm text-[#1a1613]/40 group-hover:text-[#1a1613]/70 transition-colors duration-500 leading-relaxed mb-5 max-w-md">
             Proteja seu patrimônio e seus negócios. Resolvemos conflitos
             contratuais e familiares com estratégias blindadas e segurança
             jurídica absoluta.
@@ -191,7 +191,7 @@ import {
           </div>
 
           <a
-            href="#contato"
+            href={`${import.meta.env.BASE_URL}/servicos/civil`}
             class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.15em] text-[#8B6914] group-hover:text-[#6B5010] transition-colors duration-500"
           >
             <span>Saiba mais</span>
@@ -204,7 +204,7 @@ import {
 
       <!-- Card: Trabalhista -->
       <div
-        class="svc-card group relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden border border-[#B38728]/25 shadow-[0_4px_25px_rgba(179,135,40,0.06)] bg-white/70 backdrop-blur-sm flex flex-col justify-end transition-all duration-700 hover:border-[#B38728]/60 hover:shadow-[0_8px_40px_rgba(179,135,40,0.15)]"
+        class="svc-card group relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden border border-[#B38728]/25 shadow-[0_4px_25px_rgba(179,135,40,0.06)] bg-white/70 backdrop-blur-sm flex flex-col justify-end transition-all duration-700 hover:border-[#B38728] hover:shadow-[0_15px_50px_rgba(212,175,55,0.25)] hover:-translate-y-2"
       >
         <!-- Metallic Number -->
         <div class="absolute top-4 right-5 pointer-events-none select-none">
@@ -216,13 +216,13 @@ import {
         </div>
 
         <div
-          class="absolute inset-0 bg-gradient-to-t from-gold/[0.03] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+          class="absolute inset-0 bg-gradient-to-t from-[#D4AF37]/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
         >
         </div>
 
         <div class="relative p-5 sm:p-7 pt-16 sm:pt-20">
           <div
-            class="w-10 h-10 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-4 sm:mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_25px_rgba(179,135,40,0.12)]"
+            class="w-10 h-10 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-4 sm:mb-5 transition-all duration-500 group-hover:bg-[#B38728]/30 group-hover:border-[#B38728]/50 group-hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] group-hover:scale-110 origin-left"
           >
             <Briefcase class="w-[18px] h-[18px] text-[#8B6914]" />
           </div>
@@ -236,7 +236,7 @@ import {
           >
             Trabalhista
           </h3>
-          <p class="text-sm text-[#1a1613]/40 leading-relaxed mb-5 max-w-md">
+          <p class="text-sm text-[#1a1613]/40 group-hover:text-[#1a1613]/70 transition-colors duration-500 leading-relaxed mb-5 max-w-md">
             Anos de dedicação não podem ser descartados. Exigimos o pagamento
             integral de verbas rescisórias, horas extras e todos os direitos que
             tentaram sonegar de você.
@@ -253,7 +253,7 @@ import {
           </div>
 
           <a
-            href="#contato"
+            href={`${import.meta.env.BASE_URL}/servicos/trabalhista`}
             class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.15em] text-[#8B6914] group-hover:text-[#6B5010] transition-colors duration-500"
           >
             <span>Saiba mais</span>
@@ -368,20 +368,20 @@ import {
     >
       <!-- Aposentadorias -->
       <div
-        class="svc-card snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-auto group relative rounded-2xl overflow-hidden border-x border-b border-[#B38728]/20 border-t-4 border-t-[#B38728] bg-white shadow-[0_8px_30px_rgba(179,135,40,0.08)] transition-all duration-500 hover:border-[#B38728]/50 hover:border-t-[#8B6914] hover:shadow-[0_12px_40px_rgba(179,135,40,0.15)] hover:-translate-y-1"
+        class="svc-card snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-auto group relative rounded-2xl overflow-hidden border-x border-b border-[#B38728]/20 border-t-4 border-t-[#B38728] bg-white shadow-[0_8px_30px_rgba(179,135,40,0.08)] transition-all duration-500 hover:border-[#B38728] hover:border-t-[#D4AF37] hover:shadow-[0_15px_40px_rgba(212,175,55,0.25)] hover:-translate-y-2"
       >
         <div class="p-6 sm:p-7">
           <div
-            class="w-11 h-11 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_20px_rgba(179,135,40,0.15)] group-hover:scale-105"
+            class="w-11 h-11 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-[#B38728]/30 group-hover:border-[#B38728]/50 group-hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] group-hover:scale-110 origin-left"
           >
             <Clock class="w-5 h-5 text-[#8B6914]" />
           </div>
           <h4
-            class="font-display text-base sm:text-lg text-[#1a1613] font-semibold mb-2 tracking-tight"
+            class="font-display text-base sm:text-lg text-[#1a1613] font-semibold mb-2 tracking-tight group-hover:text-[#8B6914] transition-colors duration-300"
           >
             Aposentadorias
           </h4>
-          <p class="text-[13px] text-[#1a1613]/60 leading-relaxed font-medium">
+          <p class="text-[13px] text-[#1a1613]/60 group-hover:text-[#1a1613]/90 transition-colors duration-300 leading-relaxed font-medium">
             Por idade, tempo de contribuição, especial e por invalidez.
           </p>
         </div>
@@ -389,20 +389,20 @@ import {
 
       <!-- Revisões -->
       <div
-        class="svc-card snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-auto group relative rounded-2xl overflow-hidden border-x border-b border-[#B38728]/20 border-t-4 border-t-[#B38728] bg-white shadow-[0_8px_30px_rgba(179,135,40,0.08)] transition-all duration-500 hover:border-[#B38728]/50 hover:border-t-[#8B6914] hover:shadow-[0_12px_40px_rgba(179,135,40,0.15)] hover:-translate-y-1"
+        class="svc-card snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-auto group relative rounded-2xl overflow-hidden border-x border-b border-[#B38728]/20 border-t-4 border-t-[#B38728] bg-white shadow-[0_8px_30px_rgba(179,135,40,0.08)] transition-all duration-500 hover:border-[#B38728] hover:border-t-[#D4AF37] hover:shadow-[0_15px_40px_rgba(212,175,55,0.25)] hover:-translate-y-2"
       >
         <div class="p-6 sm:p-7">
           <div
-            class="w-11 h-11 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_20px_rgba(179,135,40,0.15)] group-hover:scale-105"
+            class="w-11 h-11 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-[#B38728]/30 group-hover:border-[#B38728]/50 group-hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] group-hover:scale-110 origin-left"
           >
             <Landmark class="w-5 h-5 text-[#8B6914]" />
           </div>
           <h4
-            class="font-display text-base sm:text-lg text-[#1a1613] font-semibold mb-2 tracking-tight"
+            class="font-display text-base sm:text-lg text-[#1a1613] font-semibold mb-2 tracking-tight group-hover:text-[#8B6914] transition-colors duration-300"
           >
             Revisões
           </h4>
-          <p class="text-[13px] text-[#1a1613]/60 leading-relaxed font-medium">
+          <p class="text-[13px] text-[#1a1613]/60 group-hover:text-[#1a1613]/90 transition-colors duration-300 leading-relaxed font-medium">
             Revisão da vida toda, teto e buraco negro do INSS.
           </p>
         </div>
@@ -410,20 +410,20 @@ import {
 
       <!-- Salário-Maternidade -->
       <div
-        class="svc-card snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-auto group relative rounded-2xl overflow-hidden border-x border-b border-[#B38728]/20 border-t-4 border-t-[#B38728] bg-white shadow-[0_8px_30px_rgba(179,135,40,0.08)] transition-all duration-500 hover:border-[#B38728]/50 hover:border-t-[#8B6914] hover:shadow-[0_12px_40px_rgba(179,135,40,0.15)] hover:-translate-y-1"
+        class="svc-card snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-auto group relative rounded-2xl overflow-hidden border-x border-b border-[#B38728]/20 border-t-4 border-t-[#B38728] bg-white shadow-[0_8px_30px_rgba(179,135,40,0.08)] transition-all duration-500 hover:border-[#B38728] hover:border-t-[#D4AF37] hover:shadow-[0_15px_40px_rgba(212,175,55,0.25)] hover:-translate-y-2"
       >
         <div class="p-6 sm:p-7">
           <div
-            class="w-11 h-11 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_20px_rgba(179,135,40,0.15)] group-hover:scale-105"
+            class="w-11 h-11 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-[#B38728]/30 group-hover:border-[#B38728]/50 group-hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] group-hover:scale-110 origin-left"
           >
             <Baby class="w-5 h-5 text-[#8B6914]" />
           </div>
           <h4
-            class="font-display text-base sm:text-lg text-[#1a1613] font-semibold mb-2 tracking-tight"
+            class="font-display text-base sm:text-lg text-[#1a1613] font-semibold mb-2 tracking-tight group-hover:text-[#8B6914] transition-colors duration-300"
           >
             Salário-Maternidade
           </h4>
-          <p class="text-[13px] text-[#1a1613]/60 leading-relaxed font-medium">
+          <p class="text-[13px] text-[#1a1613]/60 group-hover:text-[#1a1613]/90 transition-colors duration-300 leading-relaxed font-medium">
             Concessão e recurso para seguradas do INSS.
           </p>
         </div>
@@ -431,20 +431,20 @@ import {
 
       <!-- BPC/LOAS -->
       <div
-        class="svc-card snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-auto group relative rounded-2xl overflow-hidden border-x border-b border-[#B38728]/20 border-t-4 border-t-[#B38728] bg-white shadow-[0_8px_30px_rgba(179,135,40,0.08)] transition-all duration-500 hover:border-[#B38728]/50 hover:border-t-[#8B6914] hover:shadow-[0_12px_40px_rgba(179,135,40,0.15)] hover:-translate-y-1"
+        class="svc-card snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-auto group relative rounded-2xl overflow-hidden border-x border-b border-[#B38728]/20 border-t-4 border-t-[#B38728] bg-white shadow-[0_8px_30px_rgba(179,135,40,0.08)] transition-all duration-500 hover:border-[#B38728] hover:border-t-[#D4AF37] hover:shadow-[0_15px_40px_rgba(212,175,55,0.25)] hover:-translate-y-2"
       >
         <div class="p-6 sm:p-7">
           <div
-            class="w-11 h-11 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_20px_rgba(179,135,40,0.15)] group-hover:scale-105"
+            class="w-11 h-11 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-[#B38728]/30 group-hover:border-[#B38728]/50 group-hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] group-hover:scale-110 origin-left"
           >
             <HeartPulse class="w-5 h-5 text-[#8B6914]" />
           </div>
           <h4
-            class="font-display text-base sm:text-lg text-[#1a1613] font-semibold mb-2 tracking-tight"
+            class="font-display text-base sm:text-lg text-[#1a1613] font-semibold mb-2 tracking-tight group-hover:text-[#8B6914] transition-colors duration-300"
           >
             BPC/LOAS
           </h4>
-          <p class="text-[13px] text-[#1a1613]/60 leading-relaxed font-medium">
+          <p class="text-[13px] text-[#1a1613]/60 group-hover:text-[#1a1613]/90 transition-colors duration-300 leading-relaxed font-medium">
             Benefício para idosos e pessoas com deficiência.
           </p>
         </div>
@@ -452,20 +452,20 @@ import {
 
       <!-- Descontos Indevidos -->
       <div
-        class="svc-card snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-auto group relative rounded-2xl overflow-hidden border-x border-b border-[#B38728]/20 border-t-4 border-t-[#B38728] bg-white shadow-[0_8px_30px_rgba(179,135,40,0.08)] transition-all duration-500 hover:border-[#B38728]/50 hover:border-t-[#8B6914] hover:shadow-[0_12px_40px_rgba(179,135,40,0.15)] hover:-translate-y-1"
+        class="svc-card snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-auto group relative rounded-2xl overflow-hidden border-x border-b border-[#B38728]/20 border-t-4 border-t-[#B38728] bg-white shadow-[0_8px_30px_rgba(179,135,40,0.08)] transition-all duration-500 hover:border-[#B38728] hover:border-t-[#D4AF37] hover:shadow-[0_15px_40px_rgba(212,175,55,0.25)] hover:-translate-y-2"
       >
         <div class="p-6 sm:p-7">
           <div
-            class="w-11 h-11 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-[#B38728]/25 group-hover:shadow-[0_0_20px_rgba(179,135,40,0.15)] group-hover:scale-105"
+            class="w-11 h-11 rounded-xl bg-[#B38728]/15 border border-[#B38728]/25 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-[#B38728]/30 group-hover:border-[#B38728]/50 group-hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] group-hover:scale-110 origin-left"
           >
             <AlertTriangle class="w-5 h-5 text-[#8B6914]" />
           </div>
           <h4
-            class="font-display text-base sm:text-lg text-[#1a1613] font-semibold mb-2 tracking-tight"
+            class="font-display text-base sm:text-lg text-[#1a1613] font-semibold mb-2 tracking-tight group-hover:text-[#8B6914] transition-colors duration-300"
           >
             Descontos Indevidos
           </h4>
-          <p class="text-[13px] text-[#1a1613]/60 leading-relaxed font-medium">
+          <p class="text-[13px] text-[#1a1613]/60 group-hover:text-[#1a1613]/90 transition-colors duration-300 leading-relaxed font-medium">
             Restituição de valores descontados sem autorização.
           </p>
         </div>
@@ -478,15 +478,15 @@ import {
     >
       <a
         href="#contato"
-        class="group relative inline-flex items-center justify-center gap-3 px-9 sm:px-12 py-4 sm:py-[1.1rem] bg-gradient-to-r from-[#B38728] via-[#D4AF37] to-[#B38728] text-white font-bold tracking-[0.15em] uppercase text-[10px] sm:text-[11px] rounded-full overflow-hidden transition-all shadow-[0_4px_20px_rgba(212,175,55,0.2)] hover:shadow-[0_6px_35px_rgba(212,175,55,0.4)] hover:scale-[1.02]"
+        class="group relative inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37] text-dark font-semibold tracking-widest uppercase text-[10px] sm:text-[11px] rounded-full overflow-hidden transition-all shadow-[0_4px_20px_rgba(212,175,55,0.2)] hover:shadow-[0_4px_30px_rgba(212,175,55,0.4)] hover:scale-[1.02]"
       >
         <div
-          class="absolute inset-0 bg-gradient-to-r from-[#D4AF37] via-[#FCF6BA] to-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity duration-600"
+          class="absolute inset-0 bg-gradient-to-r from-[#F3E5AB] via-[#D4AF37] to-[#F3E5AB] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         >
         </div>
-        <span class="relative z-10 text-dark">Agendar Consulta Gratuita</span>
+        <span class="relative z-10 text-dark">Falar com um especialista</span>
         <ArrowRight
-          class="w-4 h-4 relative z-10 text-dark transition-transform duration-300 group-hover:translate-x-1"
+          class="w-3.5 h-3.5 sm:w-4 sm:h-4 relative z-10 text-dark transition-transform duration-300 group-hover:translate-x-1"
         />
       </a>
     </div>

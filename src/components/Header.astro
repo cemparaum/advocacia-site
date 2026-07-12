@@ -16,7 +16,7 @@ import { Menu } from "lucide-astro";
     id="header-container"
   >
     <!-- Logo -->
-    <a href="#" class="flex items-center gap-3 group min-w-0">
+    <a href={`${import.meta.env.BASE_URL}/`} class="flex items-center gap-3 group min-w-0">
       <img
         src={`${import.meta.env.BASE_URL}/images/logo-rf.jpeg`}
         alt="Rodrigues Fontenelle Advocacia"
@@ -24,8 +24,8 @@ import { Menu } from "lucide-astro";
       />
       <div class="flex flex-col">
         <span
-          class="font-display font-bold text-base sm:text-xl tracking-widest text-dark uppercase leading-none transition-colors group-hover:text-gold-dark"
-          >Rodrigues Fontenelle</span
+          class="font-display font-bold text-base sm:text-xl tracking-widest text-dark uppercase leading-[1.1] transition-colors group-hover:text-gold-dark"
+          >Rodrigues<br/>Fontenelle</span
         >
         <span
           class="font-body text-[7px] sm:text-[9px] tracking-[0.2em] sm:tracking-[0.35em] text-gold-dark uppercase mt-0.5 sm:mt-1"
@@ -35,61 +35,52 @@ import { Menu } from "lucide-astro";
     </a>
 
     <!-- Desktop Navigation -->
-    <nav class="hidden lg:flex items-center gap-5 xl:gap-8">
+    <nav class="hidden lg:flex items-center gap-4 xl:gap-7">
       <a
-        href="#sobre"
-        class="text-xs uppercase tracking-widest font-medium text-gray-600 hover:text-dark transition-colors relative group"
-      >
-        Sobre nós
-        <span
-          class="absolute -bottom-1.5 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"
-        ></span>
-      </a>
-      <a
-        href="#areas"
-        class="text-xs uppercase tracking-widest font-medium text-gray-600 hover:text-dark transition-colors relative group"
+        href={`${import.meta.env.BASE_URL}/#servicos`}
+        class="text-[11px] xl:text-xs uppercase tracking-widest font-medium text-gray-600 hover:text-dark transition-colors relative group"
       >
         Áreas de Atuação
-        <span
-          class="absolute -bottom-1.5 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"
-        ></span>
+        <span class="absolute -bottom-1.5 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
       </a>
       <a
-        href="#resultados"
-        class="text-xs uppercase tracking-widest font-medium text-gray-600 hover:text-dark transition-colors relative group"
+        href={`${import.meta.env.BASE_URL}/#diferenciais`}
+        class="text-[11px] xl:text-xs uppercase tracking-widest font-medium text-gray-600 hover:text-dark transition-colors relative group"
+      >
+        Diferenciais
+        <span class="absolute -bottom-1.5 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a
+        href={`${import.meta.env.BASE_URL}/#depoimentos`}
+        class="text-[11px] xl:text-xs uppercase tracking-widest font-medium text-gray-600 hover:text-dark transition-colors relative group"
       >
         Resultados
-        <span
-          class="absolute -bottom-1.5 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"
-        ></span>
+        <span class="absolute -bottom-1.5 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
       </a>
       <a
-        href="#contato"
-        class="text-xs uppercase tracking-widest font-medium text-gray-600 hover:text-dark transition-colors relative group"
+        href={`${import.meta.env.BASE_URL}/#sobre`}
+        class="text-[11px] xl:text-xs uppercase tracking-widest font-medium text-gray-600 hover:text-dark transition-colors relative group"
+      >
+        Sobre nós
+        <span class="absolute -bottom-1.5 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a
+        href={`${import.meta.env.BASE_URL}/#faq`}
+        class="text-[11px] xl:text-xs uppercase tracking-widest font-medium text-gray-600 hover:text-dark transition-colors relative group"
+      >
+        Dúvidas
+        <span class="absolute -bottom-1.5 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a
+        href={`${import.meta.env.BASE_URL}/#contato`}
+        class="text-[11px] xl:text-xs uppercase tracking-widest font-medium text-gray-600 hover:text-dark transition-colors relative group"
       >
         Contato
-        <span
-          class="absolute -bottom-1.5 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"
-        ></span>
+        <span class="absolute -bottom-1.5 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
       </a>
     </nav>
 
-    <!-- Header CTA -->
-    <div class="hidden lg:flex">
-      <a
-        href="#consulta"
-        class="group relative inline-flex items-center gap-2 px-7 py-3 rounded-full overflow-hidden bg-gradient-to-r from-[#B38728] via-[#D4AF37] to-[#B38728] shadow-[0_2px_12px_rgba(212,175,55,0.3)] hover:shadow-[0_4px_20px_rgba(212,175,55,0.5)] transition-all duration-300 hover:scale-[1.03]"
-      >
-        <div
-          class="absolute inset-0 bg-gradient-to-r from-[#D4AF37] via-[#FCF6BA] to-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-        >
-        </div>
-        <span
-          class="relative text-[11px] font-bold text-dark tracking-widest uppercase"
-          >Agendar Consulta</span
-        >
-      </a>
-    </div>
+
 
     <!-- Mobile Menu Button -->
     <button class="lg:hidden relative z-10 text-dark p-2">
