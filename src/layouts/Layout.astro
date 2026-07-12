@@ -50,9 +50,9 @@ const {
   >
     <div class="noise-overlay"></div>
 
+    <Header />
     <main id="smooth-wrapper">
       <div id="smooth-content">
-        <Header />
         <slot />
       </div>
     </main>
@@ -77,6 +77,9 @@ const {
         gestureOrientation: "vertical",
         smoothWheel: true,
       });
+
+      // Expose lenis globally to stop/start scroll from other components (like Header)
+      window.lenis = lenis;
 
       function raf(time: number) {
         lenis.raf(time);

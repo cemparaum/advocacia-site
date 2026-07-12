@@ -1,5 +1,5 @@
 ---
-import { Menu } from "lucide-astro";
+import { Menu, X } from "lucide-astro";
 ---
 
 <header
@@ -83,18 +83,31 @@ import { Menu } from "lucide-astro";
 
 
     <!-- Mobile Menu Button -->
-    <button class="lg:hidden relative z-10 text-dark p-2">
-      <Menu class="w-6 h-6" />
+    <button id="mobile-menu-btn" class="lg:hidden relative z-[60] text-dark p-2" aria-label="Menu">
+      <Menu id="menu-icon" class="w-6 h-6 transition-transform duration-300" />
+      <X id="close-icon" class="w-6 h-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 rotate-90 transition-all duration-300" />
     </button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 bg-dark/60 backdrop-blur-lg z-[55] flex flex-col justify-center items-center opacity-0 pointer-events-none transition-all duration-300 translate-x-full">
+    <nav class="flex flex-col items-center gap-8 relative z-10">
+      <a href={`${import.meta.env.BASE_URL}/#servicos`} class="mobile-link text-xl uppercase tracking-widest font-medium text-gold hover:text-gold-light transition-colors drop-shadow-md">Áreas de Atuação</a>
+      <a href={`${import.meta.env.BASE_URL}/#diferenciais`} class="mobile-link text-xl uppercase tracking-widest font-medium text-gold hover:text-gold-light transition-colors drop-shadow-md">Diferenciais</a>
+      <a href={`${import.meta.env.BASE_URL}/#depoimentos`} class="mobile-link text-xl uppercase tracking-widest font-medium text-gold hover:text-gold-light transition-colors drop-shadow-md">Resultados</a>
+      <a href={`${import.meta.env.BASE_URL}/#sobre`} class="mobile-link text-xl uppercase tracking-widest font-medium text-gold hover:text-gold-light transition-colors drop-shadow-md">Sobre nós</a>
+      <a href={`${import.meta.env.BASE_URL}/#faq`} class="mobile-link text-xl uppercase tracking-widest font-medium text-gold hover:text-gold-light transition-colors drop-shadow-md">Dúvidas</a>
+      <a href={`${import.meta.env.BASE_URL}/#contato`} class="mobile-link text-xl uppercase tracking-widest font-medium text-gold hover:text-gold-light transition-colors drop-shadow-md">Contato</a>
+    </nav>
   </div>
 </header>
 
 <script>
   // Shrink header on scroll
   const headerContainer = document.getElementById("header-container");
+  const headerBgEl = document.getElementById("header-bg");
 
   window.addEventListener("scroll", () => {
-    const headerBgEl = document.getElementById("header-bg");
     if (window.scrollY > 50) {
       headerContainer?.classList.add("h-16", "sm:h-20");
       headerContainer?.classList.remove("h-20", "sm:h-24");
@@ -103,6 +116,60 @@ import { Menu } from "lucide-astro";
       headerContainer?.classList.add("h-20", "sm:h-24");
       headerContainer?.classList.remove("h-16", "sm:h-20");
       headerBgEl?.classList.remove("shadow-md");
+    }
+  });
+
+  // Mobile menu toggle
+  const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuIcon = document.getElementById("menu-icon");
+  const closeIcon = document.getElementById("close-icon");
+  const mobileLinks = document.querySelectorAll(".mobile-link");
+  
+  let isMenuOpen = false;
+
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    console.log("Menu toggled", isMenuOpen);
+      if (isMenuOpen) {
+        mobileMenuBtn?.classList.remove("text-dark");
+        mobileMenuBtn?.classList.add("text-gold");
+        mobileMenu?.classList.remove("opacity-0", "pointer-events-none", "translate-x-full");
+        mobileMenu?.classList.add("opacity-100", "pointer-events-auto", "translate-x-0");
+        menuIcon?.classList.add("opacity-0", "-rotate-90");
+        closeIcon?.classList.remove("opacity-0", "rotate-90");
+        closeIcon?.classList.add("opacity-100", "rotate-0");
+        document.body.style.overflow = "hidden"; // Prevent native scrolling
+        if ((window as any).lenis) (window as any).lenis.stop(); // Prevent Lenis scrolling
+      } else {
+        mobileMenuBtn?.classList.remove("text-gold");
+        mobileMenuBtn?.classList.add("text-dark");
+        mobileMenu?.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
+        mobileMenu?.classList.remove("opacity-100", "pointer-events-auto", "translate-x-0");
+        menuIcon?.classList.remove("opacity-0", "-rotate-90");
+        closeIcon?.classList.add("opacity-0", "rotate-90");
+        closeIcon?.classList.remove("opacity-100", "rotate-0");
+        document.body.style.overflow = ""; // Restore native scrolling
+        if ((window as any).lenis) (window as any).lenis.start(); // Restore Lenis scrolling
+      }
+  }
+
+  mobileMenuBtn?.addEventListener("click", (e) => {
+    e.preventDefault();
+    toggleMenu();
+  });
+
+  // Close menu when clicking a link
+  mobileLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      if (isMenuOpen) toggleMenu();
+    });
+  });
+
+  // Close menu when clicking outside the nav (on the background overlay)
+  mobileMenu?.addEventListener("click", (e) => {
+    if (e.target === mobileMenu && isMenuOpen) {
+      toggleMenu();
     }
   });
 </script>

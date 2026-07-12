@@ -38,24 +38,22 @@ import { Scale, ArrowRight, Play } from "lucide-astro";
   >
     <!-- Badge -->
     <div
-      class="hero-reveal-item flex items-center justify-start gap-3"
-      style="margin-bottom: clamp(1rem, 2.5vh, 2rem);"
+      class="hero-reveal-item flex flex-col items-start gap-2 mb-6 sm:mb-8"
     >
-      <span class="text-xs font-bold tracking-[0.25em] uppercase text-[#D4AF37]"
+      <span class="text-[10px] sm:text-xs font-bold tracking-[0.15em] sm:tracking-[0.25em] uppercase text-[#D4AF37]"
         >Previdência • Civil • Trabalhista</span
       >
-      <div class="w-24 h-px bg-gradient-to-r from-[#B38728] to-transparent">
+      <div class="w-12 sm:w-24 h-px bg-gradient-to-r from-[#B38728] to-transparent">
       </div>
     </div>
 
     <!-- Main Headline -->
     <h1
-      class="hero-title font-display font-semibold leading-[1.15] max-w-3xl"
-      style="font-size: clamp(1.6rem, 4.5vw, 3.75rem); margin-bottom: clamp(0.75rem, 2vh, 1.5rem);"
+      class="hero-title font-display font-semibold leading-[1.25] sm:leading-[1.15] max-w-3xl mb-6 sm:mb-8"
+      style="font-size: clamp(2rem, 4.5vw, 3.75rem);"
     >
       <span
-        class="block text-white"
-        style="margin-bottom: clamp(0.15rem, 0.5vh, 0.5rem);"
+        class="block text-white mb-2 sm:mb-3"
         >Seu futuro não é uma aposta.</span
       >
       <span class="block text-gradient-gold"
@@ -65,8 +63,7 @@ import { Scale, ArrowRight, Play } from "lucide-astro";
 
     <!-- Subheadline -->
     <p
-      class="hero-reveal-item text-gray-300 max-w-xl md:max-w-2xl leading-relaxed font-light"
-      style="font-size: clamp(0.8rem, 1.5vw, 1.125rem); margin-bottom: clamp(1.25rem, 3vh, 2.5rem);"
+      class="hero-reveal-item text-gray-300 max-w-xl md:max-w-2xl leading-relaxed sm:leading-relaxed font-light text-[0.95rem] sm:text-lg mb-10 sm:mb-12"
     >
       Advocacia de excelência para quem não pode arriscar o próprio patrimônio,
       a aposentadoria ou os direitos trabalhistas. Agimos com precisão técnica
@@ -75,11 +72,11 @@ import { Scale, ArrowRight, Play } from "lucide-astro";
 
     <!-- CTAs -->
     <div
-      class="hero-reveal-item flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6"
+      class="hero-reveal-item flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-4 sm:gap-6 w-full sm:w-auto mt-2"
     >
       <a
         href="#contato"
-        class="group relative inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37] text-dark font-semibold tracking-widest uppercase text-[10px] sm:text-[11px] rounded-full overflow-hidden transition-all shadow-[0_4px_20px_rgba(212,175,55,0.2)] hover:shadow-[0_4px_30px_rgba(212,175,55,0.4)] hover:scale-[1.02]"
+        class="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-10 py-4 sm:py-4 bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37] text-dark font-semibold tracking-widest uppercase text-xs sm:text-[11px] rounded-full overflow-hidden transition-all shadow-[0_4px_20px_rgba(212,175,55,0.2)] hover:shadow-[0_4px_30px_rgba(212,175,55,0.4)] hover:scale-[1.02]"
       >
         <div
           class="absolute inset-0 bg-gradient-to-r from-[#F3E5AB] via-[#D4AF37] to-[#F3E5AB] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -87,23 +84,23 @@ import { Scale, ArrowRight, Play } from "lucide-astro";
         </div>
         <span class="relative z-10">Falar com um especialista</span>
         <ArrowRight
-          class="w-3.5 h-3.5 sm:w-4 sm:h-4 relative z-10 transition-transform duration-300 group-hover:translate-x-1"
+          class="w-4 h-4 sm:w-4 sm:h-4 relative z-10 transition-transform duration-300 group-hover:translate-x-1"
         />
       </a>
 
       <a
         href="#sobre"
-        class="group relative inline-flex items-center gap-3 sm:gap-4 px-2 sm:px-4 py-2 text-white font-medium transition-all"
+        class="w-full sm:w-auto group relative inline-flex items-center justify-center sm:justify-start gap-3 sm:gap-4 px-4 sm:px-4 py-2 text-white font-medium transition-all"
       >
         <div
-          class="relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/20 bg-white/5 backdrop-blur-md transition-all duration-300 group-hover:border-gold group-hover:bg-gold/10 group-hover:scale-105"
+          class="relative flex items-center justify-center w-12 h-12 rounded-full border border-white/20 bg-white/5 backdrop-blur-md transition-all duration-300 group-hover:border-gold group-hover:bg-gold/10 group-hover:scale-105"
         >
           <Play
-            class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white group-hover:text-gold-light ml-0.5 sm:ml-1 transition-colors"
+            class="w-4 h-4 text-white group-hover:text-gold-light ml-1 transition-colors"
           />
         </div>
         <span
-          class="text-[10px] sm:text-xs uppercase tracking-widest text-gray-300 group-hover:text-white transition-colors"
+          class="text-xs uppercase tracking-widest text-gray-300 group-hover:text-white transition-colors"
           >Como Trabalhamos</span
         >
       </a>

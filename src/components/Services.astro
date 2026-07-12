@@ -44,7 +44,7 @@ import {
   >
     <div class="svc-reveal mb-20 sm:mb-24 lg:mb-28">
       <div>
-        <div class="flex items-center justify-start gap-3 mb-6">
+        <div class="flex flex-col items-start gap-2 mb-6">
           <span
             class="text-xs font-bold tracking-[0.25em] uppercase text-[#8B6914]"
             >Áreas de Atuação</span
@@ -364,7 +364,8 @@ import {
 
     <!-- Horizontal scroll on mobile, grid on desktop -->
     <div
-      class="flex lg:grid lg:grid-cols-5 gap-4 lg:gap-5 overflow-x-auto pb-4 lg:pb-0 snap-x snap-mandatory scrollbar-hide -mx-5 px-5 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0"
+      id="services-carousel"
+      class="flex lg:grid lg:grid-cols-5 gap-4 lg:gap-5 overflow-x-auto pb-4 lg:pb-0 snap-x snap-mandatory scrollbar-hide -mx-5 px-5 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0 scroll-smooth"
     >
       <!-- Aposentadorias -->
       <div
@@ -554,5 +555,48 @@ import {
         },
       );
     });
+
+    // Mobile Carousel Logic
+    const carousel = document.getElementById("services-carousel");
+    const prevBtn = document.getElementById("carousel-prev");
+    const nextBtn = document.getElementById("carousel-next");
+    const dots = document.getElementById("carousel-dots")?.children;
+
+    if (carousel && prevBtn && nextBtn && dots) {
+      const sCards = carousel.querySelectorAll('.svc-card');
+      
+      const updateDots = () => {
+        const scrollLeft = carousel.scrollLeft;
+        const cardWidth = (sCards[0] as HTMLElement).offsetWidth + 16; // width + gap
+        let index = Math.round(scrollLeft / cardWidth);
+        if (index > dots.length - 1) index = dots.length - 1;
+        
+        Array.from(dots).forEach((dot, i) => {
+          if (i === index) {
+            dot.classList.replace("bg-[#B38728]/30", "bg-[#B38728]");
+            dot.classList.add("w-4");
+            dot.classList.remove("w-2");
+          } else {
+            dot.classList.replace("bg-[#B38728]", "bg-[#B38728]/30");
+            dot.classList.remove("w-4");
+            dot.classList.add("w-2");
+          }
+        });
+      };
+
+      carousel.addEventListener("scroll", () => {
+        requestAnimationFrame(updateDots);
+      });
+      
+      prevBtn.addEventListener("click", () => {
+        const cardWidth = (sCards[0] as HTMLElement).offsetWidth + 16;
+        carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+      });
+
+      nextBtn.addEventListener("click", () => {
+        const cardWidth = (sCards[0] as HTMLElement).offsetWidth + 16;
+        carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      });
+    }
   });
 </script>
